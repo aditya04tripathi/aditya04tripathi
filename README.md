@@ -4,13 +4,9 @@
 🌏 Originally from India | Currently in Melbourne, Australia  
 💻 Passionate about building full-stack web applications and solving real-world problems with code.
 
----
-
 ## 🚀 About Me
 
 I'm a highly motivated and adaptable international student with hands-on experience in front-end and full-stack development. I love creating intuitive user experiences, working with modern frameworks, and constantly learning something new every day.
-
----
 
 ## 💼 Experience
 
@@ -25,8 +21,6 @@ I'm a highly motivated and adaptable international student with hands-on experie
   - Developed responsive UIs with Next.js and ShadCn
   - Integrated RESTful APIs and ensured cross-browser compatibility
 
----
-
 ## 🛠️ Tech Stack
 
 **Languages:** JavaScript, Python  
@@ -34,8 +28,6 @@ I'm a highly motivated and adaptable international student with hands-on experie
 **State Management:** Redux, Redux Toolkit, Context API  
 **Backend:** Node.js, Express.js  
 **Tools & Platforms:** Git, Docker, Kubernetes, MongoDB
-
----
 
 ## 📌 Projects
 
@@ -47,15 +39,11 @@ I'm a highly motivated and adaptable international student with hands-on experie
   Redesigned a university site using modern UI frameworks like Next.js and Tailwind CSS  
   [View Repository](https://github.com/aditya04tripathi/amity-cse-website)
 
----
-
 ## 🌱 Currently Learning
 
 - Backend Optimization Techniques
 - Advanced DevOps with Kubernetes
 - Flutter Native Development
-
----
 
 ## 📊 GitHub Stats
 
@@ -73,14 +61,10 @@ I'm a highly motivated and adaptable international student with hands-on experie
   </tr>
 </table>
 
----
-
 ## 📫 Connect with Me
 
 - 📧 [adityatripathi.at04@gmail.com](mailto:adityatripathi.at04@gmail.com)
 - 💼 [LinkedIn](https://linkedin.com/in/aditya-tripathi-at04)
 - 🧑‍💻 [GitHub](https://github.com/aditya04tripathi)
-
----
 
 _“Code is not just syntax, it's a craft.”_ ✨
