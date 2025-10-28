@@ -64,7 +64,7 @@ export const metadata: Metadata = {
 		siteName: "Aditya Tripathi Portfolio",
 		images: [
 			{
-				url: "https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
+				url: "/og-image.png",
 				width: 1200,
 				height: 630,
 				alt: "Aditya Tripathi - Full-Stack Developer",
@@ -76,9 +76,7 @@ export const metadata: Metadata = {
 		title: "Aditya Tripathi | Full-Stack Developer",
 		description:
 			"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. View my portfolio and projects.",
-		images: [
-			"https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
-		],
+		images: ["/og-image.png"],
 	},
 	robots: {
 		index: true,

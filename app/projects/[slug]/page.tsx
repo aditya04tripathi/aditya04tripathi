@@ -29,14 +29,14 @@ export async function generateMetadata({
 		openGraph: {
 			title: `${project.name} | Aditya Tripathi`,
 			description: project.description,
-			images: project.image ? [project.image] : [],
+			images: project.image ? [project.image] : ["/og-image.png"],
 			type: "article",
 		},
 		twitter: {
 			card: "summary_large_image",
 			title: `${project.name} | Aditya Tripathi`,
 			description: project.description,
-			images: project.image ? [project.image] : [],
+			images: project.image ? [project.image] : ["/og-image.png"],
 		},
 	};
 }
