@@ -8,6 +8,7 @@ import {
 	MailIcon,
 	MapPinIcon,
 } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -20,6 +21,80 @@ import {
 	SKILLS,
 	WORK_EXPERIENCE,
 } from "@/lib/constants";
+
+export const metadata: Metadata = {
+	title:
+		"Aditya Tripathi | Software Engineering Student & Full-Stack Developer",
+	description:
+		"Portfolio of Aditya Tripathi, a Software Engineering student at Monash University specializing in full-stack web development with Next.js, React, TypeScript, and MongoDB. Explore my projects, skills, and experience.",
+	keywords: [
+		"Aditya Tripathi",
+		"Software Engineer",
+		"Full-Stack Developer",
+		"Next.js Developer",
+		"React Developer",
+		"TypeScript",
+		"MongoDB",
+		"Web Development",
+		"Portfolio",
+		"Monash University",
+		"Melbourne Developer",
+		"Australia",
+	],
+	authors: [
+		{ name: "Aditya Tripathi", url: "https://github.com/aditya04tripathi" },
+	],
+	creator: "Aditya Tripathi",
+	publisher: "Aditya Tripathi",
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	metadataBase: new URL("https://adityatripathi.up.railway.app"),
+	alternates: {
+		canonical: "/",
+	},
+	openGraph: {
+		type: "website",
+		locale: "en_US",
+		url: "https://adityatripathi.up.railway.app",
+		title:
+			"Aditya Tripathi | Software Engineering Student & Full-Stack Developer",
+		description:
+			"Portfolio of Aditya Tripathi, showcasing full-stack web development projects built with Next.js, React, TypeScript, and MongoDB. Currently studying Software Engineering at Monash University.",
+		siteName: "Aditya Tripathi Portfolio",
+		images: [
+			{
+				url: "https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
+				width: 1200,
+				height: 630,
+				alt: "Aditya Tripathi - Software Engineering Student & Developer",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title:
+			"Aditya Tripathi | Software Engineering Student & Full-Stack Developer",
+		description:
+			"Portfolio showcasing full-stack web development projects with Next.js, React, TypeScript, and MongoDB.",
+		images: [
+			"https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
+		],
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-video-preview": -1,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+		},
+	},
+};
 
 export default function AboutPage() {
 	return (
