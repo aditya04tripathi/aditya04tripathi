@@ -1,4 +1,5 @@
 import { ArrowLeftIcon, ExternalLinkIcon, GithubIcon } from "lucide-react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -7,6 +8,38 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { PROJECTS } from "@/lib/constants";
+
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+	const { slug } = await params;
+	const project = PROJECTS.find((p) => slugify(p.name).toLowerCase() === slug);
+
+	if (!project) {
+		return {
+			title: "Project Not Found",
+		};
+	}
+
+	return {
+		title: `${project.name} | Aditya Tripathi`,
+		description: `${project.description} Built with ${project.technologies.join(", ")}.`,
+		openGraph: {
+			title: `${project.name} | Aditya Tripathi`,
+			description: project.description,
+			images: project.image ? [project.image] : [],
+			type: "article",
+		},
+		twitter: {
+			card: "summary_large_image",
+			title: `${project.name} | Aditya Tripathi`,
+			description: project.description,
+			images: project.image ? [project.image] : [],
+		},
+	};
+}
 
 export default async function ProjectPage({
 	params,

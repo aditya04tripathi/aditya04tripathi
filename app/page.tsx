@@ -23,10 +23,9 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-	title:
-		"Aditya Tripathi | Software Engineering Student & Full-Stack Developer",
+	title: "Aditya Tripathi | Full-Stack Developer & Software Engineer",
 	description:
-		"Portfolio of Aditya Tripathi, a Software Engineering student at Monash University specializing in full-stack web development with Next.js, React, TypeScript, and MongoDB. Explore my projects, skills, and experience.",
+		"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Software Engineering student at Monash University. View my portfolio and projects.",
 	keywords: [
 		"Aditya Tripathi",
 		"Software Engineer",
@@ -59,26 +58,24 @@ export const metadata: Metadata = {
 		type: "website",
 		locale: "en_US",
 		url: "https://adityatripathi.up.railway.app",
-		title:
-			"Aditya Tripathi | Software Engineering Student & Full-Stack Developer",
+		title: "Aditya Tripathi | Full-Stack Developer Portfolio",
 		description:
-			"Portfolio of Aditya Tripathi, showcasing full-stack web development projects built with Next.js, React, TypeScript, and MongoDB. Currently studying Software Engineering at Monash University.",
+			"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.",
 		siteName: "Aditya Tripathi Portfolio",
 		images: [
 			{
 				url: "https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
 				width: 1200,
 				height: 630,
-				alt: "Aditya Tripathi - Software Engineering Student & Developer",
+				alt: "Aditya Tripathi - Full-Stack Developer",
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title:
-			"Aditya Tripathi | Software Engineering Student & Full-Stack Developer",
+		title: "Aditya Tripathi | Full-Stack Developer",
 		description:
-			"Portfolio showcasing full-stack web development projects with Next.js, React, TypeScript, and MongoDB.",
+			"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. View my portfolio and projects.",
 		images: [
 			"https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
 		],
