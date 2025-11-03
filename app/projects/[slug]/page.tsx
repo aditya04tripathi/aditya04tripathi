@@ -201,9 +201,6 @@ export default async function ProjectPage({
 					</p>
 				</div>
 				<div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
-					<Link href="/contact" className="w-full sm:w-auto">
-						<Button className="w-full sm:w-auto">Get in Touch</Button>
-					</Link>
 					<Link href="/" className="w-full sm:w-auto">
 						<Button variant="outline" className="w-full sm:w-auto">
 							<ArrowLeftIcon className="size-4 mr-2" />
