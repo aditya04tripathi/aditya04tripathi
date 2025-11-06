@@ -15,7 +15,7 @@ export const EDUCATION = [
     degree: "Bachelor of Technology in Computer Science and Engineering",
     institution: "Amity University, Noida",
     location: "Noida, Uttar Pradesh, India",
-    period: "September 2022 - July 2022",
+    period: "September 2022 - July 2024",
     status: "Graduated",
   },
   {
