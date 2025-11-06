@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js 15, showcasing my proj
 
 ## 🚀 Live Demo
 
-Visit the live site: [adityatripathi.up.railway.app](https://adityatripathi.up.railway.app)
+Visit the live site: [adityatripathi.dev](https://adityatripathi.dev)
 
 ## ✨ Features
 

@@ -134,58 +134,41 @@ export default async function ProjectPage({
 			<Separator className="my-8 sm:my-10 md:my-12" />
 
 			{/* Key Features Section */}
-			<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
-				<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
-					Key Features
-				</h2>
-				<ul className="list-disc list-inside space-y-3 text-muted-foreground text-base sm:text-sm">
-					<li>Full-stack event management with CRUD operations</li>
-					<li>Real-time search and filtering with pagination</li>
-					<li>Image upload and CDN integration with Cloudinary</li>
-					<li>Responsive design with Tailwind CSS and shadcn/ui</li>
-					<li>Server actions and API routes for data handling</li>
-					<li>MongoDB database with Mongoose ODM</li>
-					<li>Type-safe development with TypeScript</li>
-					<li>Optimized performance and SEO</li>
-				</ul>
-			</section>
+			{project.features && project.features.length > 0 && (
+				<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
+					<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
+						Key Features
+					</h2>
+					<ul className="list-disc list-inside space-y-3 text-muted-foreground text-base sm:text-sm">
+						{project.features.map((feature, index) => (
+							<li key={index}>{feature}</li>
+						))}
+					</ul>
+				</section>
+			)}
 
-			<Separator className="my-8 sm:my-10 md:my-12" />
+			{project.features && project.features.length > 0 && (
+				<Separator className="my-8 sm:my-10 md:my-12" />
+			)}
 
 			{/* Technical Highlights Section */}
-			<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
-				<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
-					Technical Highlights
-				</h2>
-				<div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
-					<p>
-						<strong className="text-foreground">Frontend Architecture:</strong>{" "}
-						Built with Next.js 15 and React, utilizing the App Router for
-						optimal performance and SEO. The UI is crafted with Tailwind CSS and
-						shadcn/ui components, ensuring a modern and accessible user
-						experience across all devices.
-					</p>
-					<p>
-						<strong className="text-foreground">Backend & Database:</strong>{" "}
-						Leverages Next.js Server Actions and API routes for seamless
-						client-server communication. MongoDB serves as the database with
-						Mongoose ODM for robust data modeling and validation.
-					</p>
-					<p>
-						<strong className="text-foreground">Cloud Integration:</strong>{" "}
-						Integrated with Cloudinary for efficient image management, including
-						upload, optimization, and CDN delivery. This ensures fast loading
-						times and excellent user experience.
-					</p>
-					<p>
-						<strong className="text-foreground">Developer Experience:</strong>{" "}
-						Full TypeScript implementation provides type safety and enhanced
-						developer productivity. The codebase follows best practices with
-						proper error handling, loading states, and responsive design
-						patterns.
-					</p>
-				</div>
-			</section>
+			{project.technicalHighlights && project.technicalHighlights.length > 0 && (
+				<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
+					<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
+						Technical Highlights
+					</h2>
+					<div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+						{project.technicalHighlights.map((highlight, index) => (
+							<p key={index}>
+								<strong className="text-foreground">
+									{highlight.title}:
+								</strong>{" "}
+								{highlight.description}
+							</p>
+						))}
+					</div>
+				</section>
+			)}
 
 			<Separator className="my-8 sm:my-10 md:my-12" />
 

@@ -3,7 +3,7 @@ import slugify from "slugify";
 export const CREATOR_INFO = {
   name: "Aditya Tripathi",
   title: "Software Engineering Student & Developer",
-  email: "adityatripathi.at04@gmail.com",
+  email: "me@adityatripathi.dev",
   location: "Victoria, Australia",
   linkedin: "https://www.linkedin.com/in/aditya-tripathi-887586379",
   github: "https://github.com/aditya04tripathi",
@@ -11,6 +11,13 @@ export const CREATOR_INFO = {
 };
 
 export const EDUCATION = [
+  {
+    degree: "Bachelor of Technology in Computer Science and Engineering",
+    institution: "Amity University, Noida",
+    location: "Noida, Uttar Pradesh, India",
+    period: "September 2022 - July 2022",
+    status: "Graduated",
+  },
   {
     degree: "Bachelor of Software Engineering (Honours)",
     institution: "Monash University",
@@ -92,14 +99,97 @@ export const PROJECTS = [
       "Tailwind CSS",
       "shadcn/ui",
     ],
-    link: "https://dev-event.up.railway.app",
+    link: "https://dev-event.adityatripathi.dev",
     github: "https://github.com/aditya04tripathi/dev-event",
     featured: true,
+    features: [
+      "Full-stack event management with CRUD operations",
+      "Real-time search and filtering with pagination",
+      "Image upload and CDN integration with Cloudinary",
+      "Responsive design with Tailwind CSS and shadcn/ui",
+      "Server actions and API routes for data handling",
+      "MongoDB database with Mongoose ODM",
+      "Type-safe development with TypeScript",
+      "Optimized performance and SEO",
+    ],
+    technicalHighlights: [
+      {
+        title: "Frontend Architecture",
+        description:
+          "Built with Next.js 15 and React, utilizing the App Router for optimal performance and SEO. The UI is crafted with Tailwind CSS and shadcn/ui components, ensuring a modern and accessible user experience across all devices.",
+      },
+      {
+        title: "Backend & Database",
+        description:
+          "Leverages Next.js Server Actions and API routes for seamless client-server communication. MongoDB serves as the database with Mongoose ODM for robust data modeling and validation.",
+      },
+      {
+        title: "Cloud Integration",
+        description:
+          "Integrated with Cloudinary for efficient image management, including upload, optimization, and CDN delivery. This ensures fast loading times and excellent user experience.",
+      },
+      {
+        title: "Developer Experience",
+        description:
+          "Full TypeScript implementation provides type safety and enhanced developer productivity. The codebase follows best practices with proper error handling, loading states, and responsive design patterns.",
+      },
+    ],
+  },
+  {
+    name: "Gnosis",
+    slug: slugify("Gnosis", { lower: true }),
+    image: "/gnosis.png",
+    description:
+      "A full-stack AI-powered startup validation platform, which allows users to validate their startup ideas and get feedback from AI. With a detailed analysis of the startup idea, the platform provides a score and a detailed flowchart, and a SCRUM board of the startup idea.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Groq",
+      "OpenAI",
+      "PayPal",
+    ],
+    link: "https://gnosis.adityatripathi.dev",
+    github: "https://github.com/aditya04tripathi/gnosis",
+    featured: false,
+    features: [
+      "AI-powered startup idea validation and analysis",
+      "Comprehensive startup scoring system",
+      "Interactive flowchart generation for startup roadmap",
+      "SCRUM board creation for project management",
+      "Payment integration with PayPal",
+      "Responsive design with Tailwind CSS and shadcn/ui",
+      "Type-safe development with TypeScript",
+      "Optimized performance and SEO",
+    ],
+    technicalHighlights: [
+      {
+        title: "AI Integration",
+        description:
+          "Leverages Groq and OpenAI APIs to provide intelligent startup validation and analysis. The platform uses advanced AI models to generate comprehensive feedback, scores, and actionable insights for startup ideas.",
+      },
+      {
+        title: "Frontend Architecture",
+        description:
+          "Built with Next.js 15 and React, utilizing the App Router for optimal performance. The UI is crafted with Tailwind CSS and shadcn/ui components, ensuring a modern and accessible user experience across all devices.",
+      },
+      {
+        title: "Payment Processing",
+        description:
+          "Integrated with PayPal for secure payment processing, enabling users to access premium features and services. The payment flow is seamless and user-friendly.",
+      },
+      {
+        title: "Developer Experience",
+        description:
+          "Full TypeScript implementation provides type safety and enhanced developer productivity. The codebase follows best practices with proper error handling, loading states, and responsive design patterns.",
+      },
+    ],
   },
 ];
 
 export const metadata = {
-  metadataBase: new URL("https://adityatripathi.up.railway.app"),
+  metadataBase: new URL("https://adityatripathi.dev"),
   title: "About",
   description:
     "Learn about Aditya Tripathi, the developer behind DevEvent. Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB.",

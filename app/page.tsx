@@ -50,14 +50,14 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-	metadataBase: new URL("https://adityatripathi.up.railway.app"),
+	metadataBase: new URL("https://adityatripathi.dev"),
 	alternates: {
 		canonical: "/",
 	},
 	openGraph: {
 		type: "website",
 		locale: "en_US",
-		url: "https://adityatripathi.up.railway.app",
+		url: "https://adityatripathi.dev",
 		title: "Aditya Tripathi | Full-Stack Developer Portfolio",
 		description:
 			"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.",
