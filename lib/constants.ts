@@ -186,6 +186,57 @@ export const PROJECTS = [
       },
     ],
   },
+  {
+    name: "Portfolio",
+    slug: slugify("Portfolio", { lower: true }),
+    image: "/portfolio.png",
+    description:
+      "A modern, responsive portfolio website showcasing my work, experience, and skills. Built with Next.js 16 and featuring dynamic project pages, responsive design, and optimized performance.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "GSAP",
+      "Motion",
+    ],
+    link: "https://adityatripathi.dev",
+    github: "https://github.com/aditya04tripathi/portfolio",
+    featured: true,
+    features: [
+      "Responsive portfolio website with modern UI/UX",
+      "Dynamic project pages with detailed information",
+      "Comprehensive showcase of skills, education, and work experience",
+      "SEO optimized with metadata and Open Graph tags",
+      "Responsive design with Tailwind CSS and shadcn/ui components",
+      "Smooth animations with GSAP and Motion libraries",
+      "Type-safe development with TypeScript",
+      "Optimized performance and accessibility",
+    ],
+    technicalHighlights: [
+      {
+        title: "Next.js 16 App Router",
+        description:
+          "Built with Next.js 16 utilizing the App Router for optimal performance, SEO, and developer experience. Features dynamic routing for project pages and server-side rendering capabilities.",
+      },
+      {
+        title: "Modern UI Components",
+        description:
+          "Leverages shadcn/ui components built on Radix UI primitives, ensuring accessibility and a consistent design system. Components include Avatar, Badge, Button, Card, HoverCard, and Separator.",
+      },
+      {
+        title: "Responsive Design",
+        description:
+          "Fully responsive design that works seamlessly across all device sizes, from mobile to desktop. Uses Tailwind CSS for utility-first styling with a dark theme optimized for readability.",
+      },
+      {
+        title: "Developer Experience",
+        description:
+          "Full TypeScript implementation provides type safety throughout the codebase. The project structure is organized with clear separation of concerns, making it maintainable and scalable.",
+      },
+    ],
+  },
 ];
 
 export const metadata = {
