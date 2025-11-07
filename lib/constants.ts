@@ -5,25 +5,18 @@ export const CREATOR_INFO = {
   title: "Software Engineering Student & Developer",
   email: "me@adityatripathi.dev",
   location: "Victoria, Australia",
-  linkedin: "https://www.linkedin.com/in/aditya-tripathi-887586379",
+  linkedin: "https://www.linkedin.com/in/adityatripathi0404",
   github: "https://github.com/aditya04tripathi",
   bio: "Motivated software engineering student passionate about building web applications and creating solutions that connect people. Currently pursuing Bachelor of Software Engineering (Hons.) at Monash University.",
 };
 
 export const EDUCATION = [
   {
-    degree: "Bachelor of Technology in Computer Science and Engineering",
-    institution: "Amity University, Noida",
-    location: "Noida, Uttar Pradesh, India",
-    period: "September 2022 - July 2024",
-    status: "Graduated",
-  },
-  {
     degree: "Bachelor of Software Engineering (Honours)",
     institution: "Monash University",
     location: "Clayton, Melbourne, Australia",
     period: "February 2025 - Present",
-    status: "Currently Enrolled",
+    status: "Final Year Student",
   },
 ];
 
