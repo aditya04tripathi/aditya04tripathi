@@ -200,6 +200,9 @@
   h6 {
     @apply text-lg! font-bold;
   }
+  a {
+    @apply text-primary hover:text-primary/80 transition-colors underline-offset-2 underline;
+  }
 }
 
 ::view-transition-old(root),

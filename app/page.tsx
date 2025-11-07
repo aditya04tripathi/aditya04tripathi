@@ -399,12 +399,17 @@ export default function AboutPage() {
 						out!
 					</p>
 
-					<Link
-						href={`mailto:${CREATOR_INFO.email}`}
-						className="hover:text-foreground transition-colors"
-					>
-						{CREATOR_INFO.email}
-					</Link>
+					<p className="text-sm">
+						Made with ❤️ for the community by{" "}
+						<Link
+							href="https://github.com/aditya04tripathi/aditya04tripathi"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="hover:text-foreground transition-colors"
+						>
+							Aditya Tripathi
+						</Link>
+					</p>
 				</div>
 			</section>
 		</div>

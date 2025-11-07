@@ -195,7 +195,8 @@ export const PROJECTS = [
       "Motion",
     ],
     link: "https://adityatripathi.dev",
-    github: "https://github.com/aditya04tripathi/portfolio",
+    github:
+      "https://github.com/aditya04tripathi/https://github.com/aditya04tripathi/aditya04tripathi/",
     featured: true,
     features: [
       "Responsive portfolio website with modern UI/UX",
