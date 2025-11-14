@@ -116,8 +116,8 @@ To customize the portfolio with your own information:
 
 **Aditya Tripathi**
 
-- Email: [adityatripathi.at04@gmail.com](mailto:adityatripathi.at04@gmail.com)
-- LinkedIn: [aditya-tripathi-887586379](https://www.linkedin.com/in/aditya-tripathi-887586379)
+- Email: [me@adityatripathi.dev](mailto:me@adityatripathi.dev)
+- LinkedIn: [adityatripathi0404](https://www.linkedin.com/in/adityatripathi0404)
 - GitHub: [@aditya04tripathi](https://github.com/aditya04tripathi)
 
 ## 📄 License
