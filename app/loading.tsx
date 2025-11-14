@@ -1,10 +1,6 @@
+/* eslint-disable */
+
 const funnyLoadingMessages = [
-	"Brewing the digital brew",
-	"Crafting the web with code",
-	"Assembling the digital masterpiece",
-	"Brewing the digital brew",
-	"Crafting the web with code",
-	"Assembling the digital masterpiece",
 	"Brewing the digital brew",
 	"Crafting the web with code",
 	"Assembling the digital masterpiece",
