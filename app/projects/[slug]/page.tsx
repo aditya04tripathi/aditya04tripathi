@@ -152,23 +152,24 @@ export default async function ProjectPage({
 			)}
 
 			{/* Technical Highlights Section */}
-			{project.technicalHighlights && project.technicalHighlights.length > 0 && (
-				<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
-					<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
-						Technical Highlights
-					</h2>
-					<div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
-						{project.technicalHighlights.map((highlight, index) => (
-							<p key={index}>
-								<strong className="text-foreground">
-									{highlight.title}:
-								</strong>{" "}
-								{highlight.description}
-							</p>
-						))}
-					</div>
-				</section>
-			)}
+			{project.technicalHighlights &&
+				project.technicalHighlights.length > 0 && (
+					<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
+						<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
+							Technical Highlights
+						</h2>
+						<div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
+							{project.technicalHighlights.map((highlight, index) => (
+								<p key={index}>
+									<strong className="text-foreground">
+										{highlight.title}:
+									</strong>{" "}
+									{highlight.description}
+								</p>
+							))}
+						</div>
+					</section>
+				)}
 
 			<Separator className="my-8 sm:my-10 md:my-12" />
 
