@@ -92,7 +92,7 @@ To customize the portfolio with your own information:
    - `WORK_EXPERIENCE` - Professional experience
    - `PROJECTS` - Portfolio projects
 
-2. Replace images in the `public/` directory with your own
+2. Replace images in the `public/projects/` directory with your own
 
 3. Customize colors and styling in `tailwind.config.ts` and `app/globals.css`
 

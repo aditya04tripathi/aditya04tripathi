@@ -68,29 +68,29 @@ export const WORK_EXPERIENCE = [
 		description:
 			"Engineered dynamic, user-centric web interfaces for healthcare solutions, transforming complex requirements into intuitive digital experiences. Implemented responsive designs and streamlined workflows to improve accessibility and patient engagement.",
 	},
-	{
-		role: "Warehouse Hand",
-		company: "South East Timber",
-		location: "Pakenham, Victoria, Australia",
-		period: "September 2025",
-		description:
-			"Orchestrated inventory management systems and optimized warehouse operations, ensuring seamless logistics and timely order fulfillment in a fast-paced distribution environment.",
-	},
-	{
-		role: "Car Wash Assistant",
-		company: "Pakenham Car Wash",
-		location: "Pakenham, Victoria",
-		period: "August 2025 - September 2025",
-		description:
-			"Delivered excellence in customer service while maintaining meticulous quality standards, ensuring client satisfaction through attention to detail and efficient service delivery.",
-	},
+	// {
+	// 	role: "Warehouse Hand",
+	// 	company: "South East Timber",
+	// 	location: "Pakenham, Victoria, Australia",
+	// 	period: "September 2025",
+	// 	description:
+	// 		"Orchestrated inventory management systems and optimized warehouse operations, ensuring seamless logistics and timely order fulfillment in a fast-paced distribution environment.",
+	// },
+	// {
+	// 	role: "Car Wash Assistant",
+	// 	company: "Pakenham Car Wash",
+	// 	location: "Pakenham, Victoria",
+	// 	period: "August 2025 - September 2025",
+	// 	description:
+	// 		"Delivered excellence in customer service while maintaining meticulous quality standards, ensuring client satisfaction through attention to detail and efficient service delivery.",
+	// },
 ];
 
 export const PROJECTS = [
 	{
 		name: "Dev Event",
 		slug: slugify("Dev Event", { lower: true }),
-		image: "/dev-event.png",
+		image: "/projects/dev-event.png",
 		description:
 			"A full-stack event management platform for developers. Features include event creation, search, filtering, pagination, and image uploads.",
 		technologies: [
@@ -139,7 +139,7 @@ export const PROJECTS = [
 	{
 		name: "Gnosis",
 		slug: slugify("Gnosis", { lower: true }),
-		image: "/gnosis.png",
+		image: "/projects/gnosis.png",
 		description:
 			"A full-stack AI-powered startup validation platform, which allows users to validate their startup ideas and get feedback from AI. With a detailed analysis of the startup idea, the platform provides a score and a detailed flowchart, and a SCRUM board of the startup idea.",
 		technologies: [
@@ -152,7 +152,7 @@ export const PROJECTS = [
 			"PayPal",
 		],
 		link: "https://gnosis.adityatripathi.dev",
-		github: "https://github.com/aditya04tripathi/gnosis",
+		github: "https://github.com/aditya04tripathi/saas-validator-ai",
 		featured: false,
 		features: [
 			"AI-powered startup idea validation and analysis",
@@ -190,7 +190,7 @@ export const PROJECTS = [
 	{
 		name: "Portfolio",
 		slug: slugify("Portfolio", { lower: true }),
-		image: "/portfolio.png",
+		image: "/projects/portfolio.png",
 		description:
 			"A modern, responsive portfolio website showcasing my work, experience, and skills. Built with Next.js 16 and featuring dynamic project pages, responsive design, and optimized performance.",
 		technologies: [
@@ -203,8 +203,7 @@ export const PROJECTS = [
 			"Motion",
 		],
 		link: "https://adityatripathi.dev",
-		github:
-			"https://github.com/aditya04tripathi/https://github.com/aditya04tripathi/aditya04tripathi/",
+		github: "https://github.com/aditya04tripathi/aditya04tripathi/",
 		features: [
 			"Responsive portfolio website with modern UI/UX",
 			"Dynamic project pages with detailed information",
