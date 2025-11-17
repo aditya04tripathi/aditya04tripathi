@@ -42,8 +42,8 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-	title: `${CREATOR_INFO.name} | Full-Stack Developer & Software Engineer`,
-	description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Software Engineering student at Monash University. View my portfolio and projects.`,
+	title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
+	description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.`,
 	keywords: [
 		CREATOR_INFO.name,
 		"Software Engineer",
@@ -88,8 +88,8 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: `${CREATOR_INFO.name} | Full-Stack Developer`,
-		description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. View my portfolio and projects.`,
+		title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
+		description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.`,
 		images: [`${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`],
 	},
 	robots: {
