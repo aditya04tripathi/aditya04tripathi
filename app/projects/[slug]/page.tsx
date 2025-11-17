@@ -7,7 +7,7 @@ import slugify from "slugify";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { PROJECTS } from "@/lib/constants";
+import { CREATOR_INFO, PROJECTS, SITE_CONFIG } from "@/lib/constants";
 
 export async function generateMetadata({
 	params,
@@ -24,19 +24,24 @@ export async function generateMetadata({
 	}
 
 	return {
-		title: `${project.name} | Aditya Tripathi`,
+		metadataBase: new URL(SITE_CONFIG.url),
+		title: `${project.name} | ${CREATOR_INFO.name}`,
 		description: `${project.description} Built with ${project.technologies.join(", ")}.`,
 		openGraph: {
-			title: `${project.name} | Aditya Tripathi`,
+			title: `${project.name} | ${CREATOR_INFO.name}`,
 			description: project.description,
-			images: project.image ? [project.image] : ["/og-image.png"],
+			images: project.image
+				? [`${SITE_CONFIG.url}${project.image}`]
+				: [`${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`],
 			type: "article",
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: `${project.name} | Aditya Tripathi`,
+			title: `${project.name} | ${CREATOR_INFO.name}`,
 			description: project.description,
-			images: project.image ? [project.image] : ["/og-image.png"],
+			images: project.image
+				? [`${SITE_CONFIG.url}${project.image}`]
+				: [`${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`],
 		},
 	};
 }

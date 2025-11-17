@@ -36,8 +36,8 @@ import {
 	CREATOR_INFO,
 	EDUCATION,
 	PROJECTS,
-	SKILLS,
 	SITE_CONFIG,
+	SKILLS,
 	WORK_EXPERIENCE,
 } from "@/lib/constants";
 
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
 		siteName: SITE_CONFIG.name,
 		images: [
 			{
-				url: CREATOR_INFO.ogImage,
+				url: `${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`,
 				width: 1200,
 				height: 630,
 				alt: `${CREATOR_INFO.name} - Full-Stack Developer`,
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: `${CREATOR_INFO.name} | Full-Stack Developer`,
 		description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. View my portfolio and projects.`,
-		images: [CREATOR_INFO.ogImage],
+		images: [`${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`],
 	},
 	robots: {
 		index: true,
