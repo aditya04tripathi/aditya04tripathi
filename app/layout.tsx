@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
+import { Toaster } from "sonner";
 import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
 import LoadingComponent from "./loading";
 
@@ -49,6 +50,8 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body className={`dark ${nunitoNunito_Sans.variable} antialiased`}>
 				<Suspense fallback={<LoadingComponent />}>{children}</Suspense>
+
+				<Toaster />
 			</body>
 		</html>
 	);

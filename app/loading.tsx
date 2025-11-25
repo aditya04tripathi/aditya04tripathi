@@ -5,6 +5,9 @@ const funnyLoadingMessages = [
 	"Crafting the web with code",
 	"Assembling the digital masterpiece",
 	"Hold on to your hats, we're loading",
+	"Just a sec, we're loading",
+	"We're almost there, just a sec",
+	"Loading the digital masterpiece",
 ];
 
 const LoadingComponent = () => {
