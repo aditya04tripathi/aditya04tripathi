@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
     const stackTrace = stack
       ? `
       <h3>Stack Trace:</h3>
-      <pre style="background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;">${stack}</pre>
+      <pre>${stack}</pre>
     `
       : "";
 
@@ -123,7 +123,7 @@ export async function POST(request: NextRequest) {
              .severity-low { background: #6b7280; color: white; }
             .info-item { margin: 10px 0; }
             .info-label { font-weight: bold; color: #6b7280; }
-            pre { background: #1f2937; color: #f9fafb; padding: 15px; border-radius: 4px; overflow-x: auto; }
+            pre { background: #1f2937; color: #f9fafb; padding: 15px; border-radius: 4px; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word; }
           </style>
         </head>
         <body>
