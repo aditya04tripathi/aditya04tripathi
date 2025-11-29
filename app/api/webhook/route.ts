@@ -182,11 +182,11 @@ ${stack ? `\nStack Trace:\n${stack}\n` : ""}
 
     await transporter.sendMail({
       from: {
-        name: "Portfolio Error Monitor",
+        name: "StorytimeGPT Error Monitor",
         address: process.env.EMAIL_ADDR as string,
       },
       to: recipient,
-      subject: `🚨 ${severity.toUpperCase()} Error: ${error} - Portfolio`,
+      subject: `🚨 ${severity.toUpperCase()} Error: ${error} - StorytimeGPT`,
       text: emailText,
       html: emailHtml,
     });
