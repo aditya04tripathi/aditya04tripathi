@@ -8,10 +8,11 @@ export const CREATOR_INFO = {
 	linkedin: "https://www.linkedin.com/in/adityatripathi0404",
 	github: "https://github.com/aditya04tripathi",
 	githubRepo: "https://github.com/aditya04tripathi/aditya04tripathi",
-	bio: "Software Engineering student at Monash University and results-driven Full Stack Developer. Specialized in building scalable, production-grade applications with Next.js, TypeScript, and Cloud Infrastructure.",
+	bio: "Software Engineering student at Monash University and results-driven Full Stack Developer with hands-on experience designing, developing, and deploying scalable web applications. Specialized in Next.js, TypeScript, and Cloud Infrastructure.",
 	avatar:
 		"https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
 	ogImage: "/og-image.png",
+    phone: "+61 0469 037 678",
 };
 
 export const SITE_CONFIG = {
@@ -41,6 +42,9 @@ export const SKILLS = {
 		"JavaScript (Advanced)",
         "TypeScript",
         "Python",
+        "Java",
+        "C",
+        "C++",
         "React.js",
 		"Next.js 16",
         "Node.js",
@@ -50,7 +54,8 @@ export const SKILLS = {
         "Tailwind CSS",
 		"Docker",
         "FastAPI",
-        "React Native"
+        "React Native",
+        "AWS (Familiar)"
 	],
 	soft: [
 		"Communication",
@@ -86,6 +91,23 @@ export const WORK_EXPERIENCE = [
 		description:
 			"Developed React-based patient portal supporting 1,000+ users with real-time appointment data. Migrated application state to Redux Toolkit, increasing maintainability by 40%.",
 	},
+    {
+        role: "Campus Ambassador",
+        company: "Cisco",
+        location: "Noida, India",
+        period: "Aug 2023 - Jul 2024",
+        description: "Represented Cisco on campus, promoting technical initiatives. Organized technology workshops and acted as a liaison between students and industry professionals."
+    }
+];
+
+export const CERTIFICATIONS = [
+    "Programming with JavaScript",
+    "Introduction to Front End Development"
+];
+
+export const SPOKEN_LANGUAGES = [
+    { language: "English", proficiency: "Bilingual" },
+    { language: "Hindi", proficiency: "Native" }
 ];
 
 export interface Project {
