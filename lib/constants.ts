@@ -2,13 +2,13 @@ import slugify from "slugify";
 
 export const CREATOR_INFO = {
 	name: "Aditya Tripathi",
-	title: "Software Engineering Student & Developer",
+	title: "Software Engineer | Full Stack Developer",
 	email: "me@adityatripathi.dev",
-	location: "Victoria, Australia",
+	location: "Clayton, VIC, Australia",
 	linkedin: "https://www.linkedin.com/in/adityatripathi0404",
 	github: "https://github.com/aditya04tripathi",
 	githubRepo: "https://github.com/aditya04tripathi/aditya04tripathi",
-	bio: "Motivated software engineering student passionate about building web applications and creating solutions that connect people. Currently pursuing Bachelor of Software Engineering (Hons.) at Monash University.",
+	bio: "Software Engineering student at Monash University and results-driven Full Stack Developer. Specialized in building scalable, production-grade applications with Next.js, TypeScript, and Cloud Infrastructure.",
 	avatar:
 		"https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
 	ogImage: "/og-image.png",
@@ -21,249 +21,189 @@ export const SITE_CONFIG = {
 
 export const EDUCATION = [
 	{
-		degree: "Bachelor of Software Engineering (Honours)",
+		degree: "Bachelor of Engineering (Honours) - Software Engineering",
 		institution: "Monash University",
 		location: "Clayton, Melbourne, Australia",
-		period: "February 2025 - Present",
-		status: "Final Year Student",
+		period: "Feb 2025 - Dec 2026 (Expected)",
+		status: "Student",
+	},
+    {
+		degree: "Diploma in Computer Science Engineering",
+		institution: "Amity University",
+		location: "Noida, Uttar Pradesh, India",
+		period: "Sep 2022 - Jul 2024",
+		status: "Completed",
 	},
 ];
 
 export const SKILLS = {
 	technical: [
-		"Next.js",
-		"React",
-		"TypeScript",
-		"Node.js",
-		"MongoDB",
-		"Tailwind CSS",
-		"Git",
-		"REST APIs",
+		"JavaScript (Advanced)",
+        "TypeScript",
+        "Python",
+        "React.js",
+		"Next.js 16",
+        "Node.js",
+		"PostgreSQL",
+        "MongoDB",
+		"Redux Toolkit",
+        "Tailwind CSS",
+		"Docker",
+        "FastAPI",
+        "React Native"
 	],
 	soft: [
-		"Problem Solving",
-		"Teamwork",
 		"Communication",
-		"Adaptability",
-		"Time Management",
-		"Customer Service",
-		"Fast-paced Environment",
+        "Leadership",
+		"Collaboration",
+        "Adaptability",
+        "Time Management"
 	],
 };
 
 export const WORK_EXPERIENCE = [
-	{
+    {
 		role: "Software Engineer Intern",
 		company: "LENS Corporation",
-		location: "Gurugram, Haryana, India · Hybrid",
-		period: "September 2024 - December 2024",
+		location: "Gurugram, India",
+		period: "Sep 2024 - Dec 2024",
 		description:
-			"Architected and deployed responsive web applications, leveraging modern frameworks to enhance user engagement. Collaborated cross-functionally with design and backend teams to deliver pixel-perfect interfaces and optimized performance.",
+			"Designed and developed modular web components, improving maintainability. implemented responsive UI layouts and integrated RESTful APIs to optimize client-server data flow. participated in Agile sprints for feature planning and production deployments.",
+	},
+    {
+		role: "Freelance Web Developer",
+		company: "Amity University",
+		location: "Noida, India",
+		period: "Jun 2024 - Aug 2024",
+		description:
+			"Developed responsive CSE Department website hosting 50+ faculty profiles. Optimized REST APIs and caching, improving load performance by 95%. Achieved 90+ Lighthouse score.",
 	},
 	{
-		role: "Frontend Web Developer",
+		role: "Frontend Engineer Intern",
 		company: "MAI HEALTH",
-		location: "Maryland, United States · Remote",
-		period: "May 2024 - June 2024",
+		location: "Remote, USA",
+		period: "May 2024 - Jun 2024",
 		description:
-			"Engineered dynamic, user-centric web interfaces for healthcare solutions, transforming complex requirements into intuitive digital experiences. Implemented responsive designs and streamlined workflows to improve accessibility and patient engagement.",
+			"Developed React-based patient portal supporting 1,000+ users with real-time appointment data. Migrated application state to Redux Toolkit, increasing maintainability by 40%.",
 	},
-	// {
-	// 	role: "Warehouse Hand",
-	// 	company: "South East Timber",
-	// 	location: "Pakenham, Victoria, Australia",
-	// 	period: "September 2025",
-	// 	description:
-	// 		"Orchestrated inventory management systems and optimized warehouse operations, ensuring seamless logistics and timely order fulfillment in a fast-paced distribution environment.",
-	// },
-	// {
-	// 	role: "Car Wash Assistant",
-	// 	company: "Pakenham Car Wash",
-	// 	location: "Pakenham, Victoria",
-	// 	period: "August 2025 - September 2025",
-	// 	description:
-	// 		"Delivered excellence in customer service while maintaining meticulous quality standards, ensuring client satisfaction through attention to detail and efficient service delivery.",
-	// },
 ];
 
-export const PROJECTS = [
-	{
-		name: "Dev Event",
-		slug: slugify("Dev Event", { lower: true }),
-		image: "/projects/dev-event.png",
-		description:
-			"A full-stack event management platform for developers. Features include event creation, search, filtering, pagination, and image uploads.",
-		technologies: [
-			"Next.js",
-			"TypeScript",
-			"MongoDB",
-			"Cloudinary",
-			"Tailwind CSS",
-			"shadcn/ui",
-		],
-		link: "https://dev-event.adityatripathi.dev",
-		github: "https://github.com/aditya04tripathi/dev-event",
-		features: [
-			"Full-stack event management with CRUD operations",
-			"Real-time search and filtering with pagination",
-			"Image upload and CDN integration with Cloudinary",
-			"Responsive design with Tailwind CSS and shadcn/ui",
-			"Server actions and API routes for data handling",
-			"MongoDB database with Mongoose ODM",
-			"Type-safe development with TypeScript",
-			"Optimized performance and SEO",
-		],
-		technicalHighlights: [
-			{
-				title: "Frontend Architecture",
-				description:
-					"Built with Next.js 15 and React, utilizing the App Router for optimal performance and SEO. The UI is crafted with Tailwind CSS and shadcn/ui components, ensuring a modern and accessible user experience across all devices.",
-			},
-			{
-				title: "Backend & Database",
-				description:
-					"Leverages Next.js Server Actions and API routes for seamless client-server communication. MongoDB serves as the database with Mongoose ODM for robust data modeling and validation.",
-			},
-			{
-				title: "Cloud Integration",
-				description:
-					"Integrated with Cloudinary for efficient image management, including upload, optimization, and CDN delivery. This ensures fast loading times and excellent user experience.",
-			},
-			{
-				title: "Developer Experience",
-				description:
-					"Full TypeScript implementation provides type safety and enhanced developer productivity. The codebase follows best practices with proper error handling, loading states, and responsive design patterns.",
-			},
-		],
-	},
-	{
-		name: "Gnosis",
+export interface Project {
+    name: string;
+    slug: string;
+    image: string;
+    description: string;
+    technologies: string[];
+    link: string;
+    github: string;
+    featured: boolean;
+    problem: string;
+    architecture: string;
+    outcome: string;
+}
+
+export const PROJECTS: Project[] = [
+    {
+		name: "Gnosis AI",
 		slug: slugify("Gnosis", { lower: true }),
 		image: "/projects/gnosis.png",
 		description:
-			"A full-stack AI-powered startup validation platform, which allows users to validate their startup ideas and get feedback from AI. With a detailed analysis of the startup idea, the platform provides a score and a detailed flowchart, and a SCRUM board of the startup idea.",
+			"AI-powered startup validator that generates flowcharts, SCRUM boards, and comprehensive validation reports using Groq's LLM.",
 		technologies: [
-			"Next.js",
-			"TypeScript",
-			"Tailwind CSS",
-			"shadcn/ui",
-			"Groq",
-			"OpenAI",
-			"PayPal",
+			"Next.js 16",
+            "Groq AI",
+			"React Flow",
+            "NextAuth.js",
+			"MongoDB",
+            "Shadcn UI",
+            "Tailark"
 		],
 		link: "https://gnosis.adityatripathi.dev",
-		github: "https://github.com/aditya04tripathi/saas-validator-ai",
-		featured: false,
-		features: [
-			"AI-powered startup idea validation and analysis",
-			"Comprehensive startup scoring system",
-			"Interactive flowchart generation for startup roadmap",
-			"SCRUM board creation for project management",
-			"Payment integration with PayPal",
-			"Responsive design with Tailwind CSS and shadcn/ui",
-			"Type-safe development with TypeScript",
-			"Optimized performance and SEO",
+		github: "https://github.com/aditya04tripathi/saas-help-ai", 
+        featured: true,
+        problem: "Founders often rely on gut feeling. Traditional validation is slow, biased, and lacks actionable execution planning.",
+        architecture: "Leverages Groq's LPU inference engine for near-instant validation analysis. Implements JWT-based auth via NextAuth v5. Uses React Flow for interactive visual roadmaps and Mongoose for flexible document storage.",
+        outcome: "Reduces validation time from weeks to seconds. innovative visual workflow generation. 90+ Lighthouse performance score."
+	},
+    {
+		name: "LexInvo",
+		slug: slugify("LexInvo", { lower: true }),
+		image: "/projects/lexinvo.png",
+		description:
+			"Australian-compliant invoicing platform featuring ABN validation, automated GST calculations, and JWT authentication.",
+		technologies: [
+			"Next.js 16",
+            "PostgreSQL",
+			"Drizzle ORM",
+			"Tailwind CSS v4",
+            "Zod",
+            "Server Actions"
 		],
-		technicalHighlights: [
-			{
-				title: "AI Integration",
-				description:
-					"Leverages Groq and OpenAI APIs to provide intelligent startup validation and analysis. The platform uses advanced AI models to generate comprehensive feedback, scores, and actionable insights for startup ideas.",
-			},
-			{
-				title: "Frontend Architecture",
-				description:
-					"Built with Next.js 15 and React, utilizing the App Router for optimal performance. The UI is crafted with Tailwind CSS and shadcn/ui components, ensuring a modern and accessible user experience across all devices.",
-			},
-			{
-				title: "Payment Processing",
-				description:
-					"Integrated with PayPal for secure payment processing, enabling users to access premium features and services. The payment flow is seamless and user-friendly.",
-			},
-			{
-				title: "Developer Experience",
-				description:
-					"Full TypeScript implementation provides type safety and enhanced developer productivity. The codebase follows best practices with proper error handling, loading states, and responsive design patterns.",
-			},
-		],
+		link: "https://lexinvo.adityatripathi.dev", // inferred
+		github: "https://github.com/aditya04tripathi/lexinvo",
+        featured: true,
+        problem: "Australian freelancers struggle with complex compliance requirements (GST, ABN validation) and generic invoicing tools lack local context.",
+        architecture: "Built on Next.js 16 Server Actions with 'use cache'. Custom JWT implementation for secure, stateless auth. PostgreSQL with Drizzle ORM ensures strict type safety and relational data integrity.",
+        outcome: "100% ATO-compliant invoice generation. Automated ABN lookup reduces entry errors. Zero-runtime CSS overhead with Tailwind v4."
 	},
 	{
-		name: "Portfolio",
-		slug: slugify("Portfolio", { lower: true }),
-		image: "/projects/portfolio.png",
+		name: "DevEvent",
+		slug: slugify("DevEvent", { lower: true }),
+		image: "/projects/dev-event.png",
 		description:
-			"A modern, responsive portfolio website showcasing my work, experience, and skills. Built with Next.js 16 and featuring dynamic project pages, responsive design, and optimized performance.",
+			"A hub for developer events featuring QR code booking, live search, and AI-powered recommendations.",
 		technologies: [
-			"Next.js",
-			"React",
-			"TypeScript",
-			"Tailwind CSS",
-			"shadcn/ui",
+			"Next.js 16",
+			"React 19",
+			"MongoDB",
+			"Cloudinary",
 			"GSAP",
-			"Motion",
+            "Nodemailer"
 		],
-		link: "https://adityatripathi.dev",
-		github: "https://github.com/aditya04tripathi/aditya04tripathi/",
-		features: [
-			"Responsive portfolio website with modern UI/UX",
-			"Dynamic project pages with detailed information",
-			"Comprehensive showcase of skills, education, and work experience",
-			"SEO optimized with metadata and Open Graph tags",
-			"Responsive design with Tailwind CSS and shadcn/ui components",
-			"Smooth animations with GSAP and Motion libraries",
-			"Type-safe development with TypeScript",
-			"Optimized performance and accessibility",
-		],
-		technicalHighlights: [
-			{
-				title: "Next.js 16 App Router",
-				description:
-					"Built with Next.js 16 utilizing the App Router for optimal performance, SEO, and developer experience. Features dynamic routing for project pages and server-side rendering capabilities.",
-			},
-			{
-				title: "Modern UI Components",
-				description:
-					"Leverages shadcn/ui components built on Radix UI primitives, ensuring accessibility and a consistent design system. Components include Avatar, Badge, Button, Card, HoverCard, and Separator.",
-			},
-			{
-				title: "Responsive Design",
-				description:
-					"Fully responsive design that works seamlessly across all device sizes, from mobile to desktop. Uses Tailwind CSS for utility-first styling with a dark theme optimized for readability.",
-			},
-			{
-				title: "Developer Experience",
-				description:
-					"Full TypeScript implementation provides type safety throughout the codebase. The project structure is organized with clear separation of concerns, making it maintainable and scalable.",
-			},
-		],
+		link: "https://dev-event.up.railway.app",
+		github: "https://github.com/aditya04tripathi/dev-event",
+        featured: true,
+        problem: "Developer event discovery is fragmented, and organizers lack efficient tools for asset management and attendee verification.",
+        architecture: "Full-stack Next.js 16 App Router. Cloudinary integration for optimized media delivery. Advanced MongoDB aggregation pipelines for tag-based similarity search. Nodemailer service for QR code delivery.",
+        outcome: "Seamless QR check-in system. 60% faster image loading. 99% uptime on Railway deployment."
 	},
 ];
 
-export const metadata = {
-	metadataBase: new URL("https://adityatripathi.dev"),
-	title: "About",
-	description:
-		"Learn about Aditya Tripathi, the developer behind DevEvent. Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB.",
-	keywords: [
-		"Aditya Tripathi",
-		"developer",
-		"full-stack developer",
-		"Next.js developer",
-		"React developer",
-		"portfolio",
-	],
-	openGraph: {
-		title: "About Aditya Tripathi | DevEvent",
-		description:
-			"Learn about the developer behind DevEvent. Full-stack developer specializing in modern web technologies.",
-		type: "profile",
-		images: [
-			{
-				url: "/og-image.png",
-				width: 1200,
-				height: 630,
-				alt: "About Aditya Tripathi | DevEvent",
-			},
-		],
-	},
-};
+export const ENGINEERING_NOTES = [
+    {
+        title: "Orchestrating Hybrid Inference Pipelines with Groq LPU & GPT-4o",
+        category: "AI Systems Engineering",
+        date: "2025-09-12",
+        summary: "For Gnosis, relying solely on GPT-4 for all inference tasks introduced unacceptable latency (~3s TTFT) for real-time validation scoring. We needed a way to balance reasoning depth with interaction speed.",
+        decision: "architected a 'switch-router' pattern: Groq's LPU handles semantic parsing and initial structural validation (<200ms), while complex market reasoning is asynchronously designated to GPT-4o. This tiered approach decoupled interface responsiveness from reasoning cost.",
+        tradeoffs: [
+            "Increased system complexity due to dual-provider error handling and token normalization.",
+            "Requires stateful tracking of partial streams to maintain context coherence.",
+            "Reduced average user wait time by 85% while maintaining high fidelity output."
+        ]
+    },
+    {
+        title: "Optimizing Asset Delivery at Edge for Dynamic Events",
+        category: "Infrastructure",
+        date: "2025-01-05",
+        summary: "DevEvent's user-generated content led to massive LCP regressions. Serving raw uploads directly from S3 buckets caused bandwidth spikes and mobile latency issues.",
+        decision: "Implemented an 'eager-transformation' layer using Cloudinary. On upload, assets are effectively proxied and transformed into WebP/AVIF variants at the edge. We utilized Next.js Image component 'loader' prop to dynamically request optimized viewports.",
+        tradeoffs: [
+            "Introduced dependency on third-party availability for media serving.",
+            "Slight upload latency increase due to synchronous metadata extraction.",
+            "Improved LCP by 60% and Reduced bandwidth egress costs by 40%."
+        ]
+    },
+    {
+        title: "Eliminating Hydration Mismatches in Theme Systems",
+        category: "Frontend Architecture",
+        date: "2024-12-20",
+        summary: "Implementing persistent dark mode in the Portfolio often leads to the 'flash of incorrect theme' (FOUC) or hydration warnings when server HTML mismatches client local storage state.",
+        decision: "Utilized a script injection strategy in the document head to block painting until the correct theme class is applied to the DOM root. This bypasses React's hydration pass for the critical style token, ensuring consistency.",
+        tradeoffs: [
+            "Technically blocking the main thread for nanoseconds during parsing.",
+            "Requires dangerousSetInnerHTML usage which necessitates strict CSP validation.",
+            "Eliminated FOUC completely, achieving 0.7s Speed Index."
+        ]
+    }
+];

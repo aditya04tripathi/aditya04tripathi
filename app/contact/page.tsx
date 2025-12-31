@@ -20,39 +20,43 @@ export const metadata: Metadata = {
 	},
 };
 
+import { SiteHeader } from "@/components/layout/site-header";
+import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/fade-in";
+
 export default function ContactPage() {
 	return (
-		<div className="container mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-10">
-			<div className="mb-6">
-				<Button variant="ghost" size="sm" asChild className="gap-2">
+		<div className="container mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-10 pt-32 sm:pt-28">
+            <SiteHeader />
+			<FadeIn className="mb-6">
+				<Button variant="ghost" size="sm" asChild className="gap-2 font-mono text-xs text-muted-foreground hover:text-foreground pl-0 hover:pl-2 transition-all">
 					<Link href="/">
-						<ArrowLeftIcon className="size-4" />
-						Back to home
+						<ArrowLeftIcon className="size-3" />
+						../return_home
 					</Link>
 				</Button>
-			</div>
+			</FadeIn>
 
 			<div className="space-y-4 text-center sm:text-left">
-				<p className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs font-medium uppercase tracking-[0.3em] text-muted-foreground">
-					<MailIcon className="size-4" />
-					Contact
-				</p>
-				<h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-					Ready to build your next launch, MVP, or product iteration?
-				</h1>
-				<p className="text-muted-foreground text-sm sm:text-base max-w-3xl leading-relaxed">
-					Share a quick overview of your goals, budget range, and ideal
-					timeline. I’ll review every detail personally and reply with scope
-					suggestions, next steps, and how we can partner together.
-				</p>
+				<FadeIn delay={0.1}>
+    				<p className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">
+    					<MailIcon className="size-3" />
+    					// Contact
+    				</p>
+    				<h1 className="type-h2">
+    					Initialize_Connection
+    				</h1>
+    				<p className="type-body text-muted-foreground max-w-3xl leading-relaxed">
+    					Ready to deploy your next idea? Share your parameters, budget constraints, and timeline. I'll execute a feasibility check and return a detailed response.
+    				</p>
+                </FadeIn>
 			</div>
 
-			<Separator className="my-8 sm:my-10" />
+			<div className="my-8 sm:my-10" />
 
 			<div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-				<ContactForm />
+				<FadeIn><ContactForm /></FadeIn>
 
-				<div className="space-y-4 rounded-xl border border-border bg-card/80 p-4 sm:p-6 shadow-sm">
+				<FadeIn className="space-y-4 rounded-xl border border-border bg-card/80 p-4 sm:p-6 shadow-sm">
 					<div>
 						<p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
 							Direct contact
@@ -133,7 +137,7 @@ export default function ContactPage() {
 							</Link>
 						</div>
 					</div>
-				</div>
+				</FadeIn>
 			</div>
 		</div>
 	);

@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { AboutSection } from "@/components/sections/about-section";
-import { ContactSection } from "@/components/sections/contact-section";
 import { EducationSection } from "@/components/sections/education-section";
-import { FAQSection } from "@/components/sections/faq-section";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
-import { WhyChooseSection } from "@/components/sections/why-choose-section";
 import { WorkExperienceSection } from "@/components/sections/work-experience-section";
-import { Separator } from "@/components/ui/separator";
 import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SectionDivider } from "@/components/ui/section-divider";
 
 export const metadata: Metadata = {
 	title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
@@ -76,38 +73,42 @@ export const metadata: Metadata = {
 	},
 };
 
+import { EngineeringSection } from "@/components/sections/engineering-section";
+
+import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/fade-in";
+
 export default function AboutPage() {
 	return (
 		<div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
+            <SiteHeader />
 			<HeroSection />
+            
+            <FadeIn>
+			    <ProjectsSection limit={1} />
+            </FadeIn>
+            
+            <FadeIn>
+                <EngineeringSection />
+            </FadeIn>
+			
+            <FadeIn>
+			    <SkillsSection />
+            </FadeIn>
 			<SectionDivider />
 
-			<AboutSection />
+            <FadeIn>
+			    <WorkExperienceSection />
+            </FadeIn>
 			<SectionDivider />
 
-			<EducationSection />
+            <FadeIn>
+			    <EducationSection />
+            </FadeIn>
 			<SectionDivider />
 
-			<WorkExperienceSection />
-			<SectionDivider />
-
-			<SkillsSection />
-			<SectionDivider />
-
-			<ProjectsSection />
-			<SectionDivider />
-
-			<WhyChooseSection />
-			<SectionDivider />
-
-			<FAQSection />
-			<SectionDivider />
-
-			<FinalCtaSection />
+            <FadeIn>
+			    <FinalCtaSection />
+            </FadeIn>
 		</div>
 	);
-}
-
-function SectionDivider() {
-	return <Separator className="my-8 sm:my-10 md:my-12" />;
 }

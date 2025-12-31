@@ -5,30 +5,38 @@ import { EDUCATION } from "@/lib/constants";
 
 export function EducationSection() {
 	return (
-		<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
-			<h2 className="font-bold tracking-tight flex items-center gap-2 text-2xl sm:text-3xl md:text-4xl">
-				<GraduationCapIcon className="size-5 sm:size-6" />
-				Education
-			</h2>
+		<section className="space-y-6 mb-12">
+			<div className="flex items-center gap-3 mb-6">
+                <div className="bg-primary/10 p-2 rounded-md">
+				    <GraduationCapIcon className="size-6 text-primary" />
+                </div>
+				<h2 className="font-mono font-bold text-3xl tracking-tight">
+					Education_Path
+				</h2>
+			</div>
 			{EDUCATION.map((edu) => (
-				<article
+				<div
 					key={`${edu.degree}${edu.institution}${edu.location}${edu.period}${edu.status}`}
-					className="space-y-2"
+					className="border border-border/50 rounded-lg p-5 bg-card/50 flex flex-col md:flex-row gap-4 justify-between md:items-center"
 				>
-					<h3 className="font-semibold text-base sm:text-lg">{edu.degree}</h3>
-					<h4 className="text-muted-foreground text-sm sm:text-base">
-						{edu.institution}
-					</h4>
-					<div className="flex flex-wrap gap-2 items-center text-xs sm:text-sm text-muted-foreground">
-						<span>{edu.location}</span>
-						<span>•</span>
-						<span>{edu.period}</span>
-						<span>•</span>
-						<Badge variant="secondary" className="text-xs px-2.5 py-1">
-							{edu.status}
+                    <div>
+					    <h3 className="font-mono font-bold text-xl mb-1">{edu.degree}</h3>
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground font-mono">
+                             <span>{edu.institution}</span>
+                             <span>//</span>
+                             <span>{edu.location}</span>
+                        </div>
+                    </div>
+					
+					<div className="flex flex-col md:items-end gap-1">
+						<Badge variant="secondary" className="font-mono text-xs w-fit">
+							{edu.period}
 						</Badge>
+                        <span className="text-xs text-muted-foreground font-mono">
+                            Status: {edu.status}
+                        </span>
 					</div>
-				</article>
+				</div>
 			))}
 		</section>
 	);

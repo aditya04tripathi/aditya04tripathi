@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { Toaster } from "sonner";
 import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
 import LoadingComponent from "./loading";
 
-const nunitoNunito_Sans = Nunito_Sans({
-	variable: "--font-nunito-sans",
-	subsets: ["latin"],
-	weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+
+const spaceMono = Space_Mono({
+	variable: "--font-space-mono",
+	weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={`dark ${nunitoNunito_Sans.variable} antialiased`}>
+			<body className={`dark ${spaceMono.variable} antialiased`}>
 				<Suspense fallback={<LoadingComponent />}>{children}</Suspense>
 
 				<Toaster />

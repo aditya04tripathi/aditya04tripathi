@@ -1,8 +1,8 @@
 "use client";
 
 import { SendIcon } from "lucide-react";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useId, useMemo, useRef, useState , useActionState} from "react";
+import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
 import { sendContactEmail } from "@/app/actions/contact";
 import { Button } from "@/components/ui/button";
@@ -43,7 +43,7 @@ const timelineOptions = [
 ];
 
 export function ContactForm() {
-	const [state, formAction] = useFormState<ContactFormState, FormData>(
+	const [state, formAction] = useActionState<ContactFormState, FormData>(
 		sendContactEmail,
 		initialContactFormState,
 	);

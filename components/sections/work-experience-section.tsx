@@ -4,46 +4,42 @@ import { WORK_EXPERIENCE } from "@/lib/constants";
 
 export function WorkExperienceSection() {
 	return (
-		<section className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12">
-			<h2 className="font-bold tracking-tight flex items-center gap-2 text-2xl sm:text-3xl md:text-4xl">
-				<BriefcaseIcon className="size-5 sm:size-6" />
-				Work Experience
-			</h2>
-			<div className="space-y-5 sm:space-y-6">
-				{[...WORK_EXPERIENCE]
-					.sort((a, b) => {
-						const getEndDate = (period: string) => {
-							const parts = period.split(" - ");
-							const endPart = parts.length > 1 ? parts[1] : parts[0];
+		<section className="space-y-6 mb-12">
+			<div className="flex items-center gap-3 mb-6">
+                <div className="bg-primary/10 p-2 rounded-md">
+				    <BriefcaseIcon className="size-6 text-primary" />
+                </div>
+				<h2 className="font-mono font-bold text-3xl tracking-tight">
+					Experience_Log
+				</h2>
+			</div>
 
-							if (endPart.toLowerCase().includes("present")) {
-								return new Date();
-							}
-
-							return new Date(endPart);
-						};
-
-						return getEndDate(b.period).getTime() - getEndDate(a.period).getTime();
-					})
-					.map((job) => (
-						<article
-							key={`${job.role}-${job.company}-${job.location}-${job.period}`}
-							className="space-y-2"
-						>
-							<h3 className="font-semibold text-base sm:text-lg">{job.role}</h3>
-							<h4 className="text-muted-foreground text-sm sm:text-base">
-								{job.company}
-							</h4>
-							<div className="flex flex-wrap gap-2 items-center text-xs sm:text-sm text-muted-foreground">
-								<span>{job.location}</span>
-								<span>•</span>
-								<span>{job.period}</span>
-							</div>
-							<p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-								{job.description}
-							</p>
-						</article>
-					))}
+			<div className="relative border-l border-border/50 ml-3 space-y-8 pb-4">
+				{[...WORK_EXPERIENCE].map((job, index) => (
+                    <div key={index} className="pl-8 relative">
+                         <div className="absolute -left-[5px] top-2 size-2.5 rounded-full bg-primary ring-4 ring-background" />
+                         
+                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                             <h3 className="font-mono font-bold text-xl">{job.role}</h3>
+                             <span className="font-mono text-xs text-muted-foreground bg-secondary px-2 py-1 rounded">
+                                 {job.period}
+                             </span>
+                         </div>
+                         
+                         <div className="mb-3">
+                             <div className="text-sm font-mono text-primary mb-1">
+                                 @ {job.company}
+                             </div>
+                             <div className="text-xs text-muted-foreground font-mono">
+                                 {job.location}
+                             </div>
+                         </div>
+                         
+                         <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
+                             {job.description}
+                         </p>
+                    </div>
+                ))}
 			</div>
 		</section>
 	);
