@@ -7,4 +7,3 @@ export const initialContactFormState: ContactFormState = {
 	status: "idle",
 	message: "",
 };
-

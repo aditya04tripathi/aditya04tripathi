@@ -8,9 +8,7 @@ export function AboutSection() {
 				id="projects"
 				className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12"
 			>
-				<h2 className="font-bold tracking-tight text-2xl sm:text-3xl md:text-4xl">
-					About Me
-				</h2>
+				<h2 className="type-h2">About Me</h2>
 				<div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
 					<p>{CREATOR_INFO.bio}</p>
 					<p>
@@ -26,4 +24,3 @@ export function AboutSection() {
 		</>
 	);
 }
-

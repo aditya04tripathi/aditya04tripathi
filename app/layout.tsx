@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Space_Mono } from "next/font/google";
+import { Google_Sans, Google_Sans_Code } from "next/font/google";
 import "./globals.css";
 import { Suspense } from "react";
 import { Toaster } from "sonner";
 import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
 import LoadingComponent from "./loading";
 
+const googleSansCode = Google_Sans_Code({
+	variable: "--font-google-sans-code",
+	weight: ["300", "400", "500", "600", "700", "800"],
+});
 
-const spaceMono = Space_Mono({
-	variable: "--font-space-mono",
-	weight: ["400", "700"],
+const googleSans = Google_Sans({
+	variable: "--font-google-sans",
+	weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -48,9 +52,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={`dark ${spaceMono.variable} antialiased`}>
+			<body
+				className={`dark ${googleSans.variable} ${googleSansCode.variable} antialiased`}
+			>
 				<Suspense fallback={<LoadingComponent />}>{children}</Suspense>
-
 				<Toaster />
 			</body>
 		</html>

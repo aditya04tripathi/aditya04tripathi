@@ -6,7 +6,8 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "eslint"
+		"lint": "biome lint",
+		"format": "biome format"
 	},
 	"dependencies": {
 		"@radix-ui/react-accordion": "^1.2.12",
@@ -37,6 +38,7 @@
 		"@types/nodemailer": "^7.0.4",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"biome": "^0.3.3",
 		"eslint": "^9",
 		"eslint-config-next": "^16.0.10",
 		"tailwindcss": "^4",

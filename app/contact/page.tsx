@@ -1,10 +1,9 @@
 import { ArrowLeftIcon, ClockIcon, MailIcon, MapPinIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
-
 import { ContactForm } from "@/components/contact-form";
+import Title from "@/components/title";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -21,14 +20,19 @@ export const metadata: Metadata = {
 };
 
 import { SiteHeader } from "@/components/layout/site-header";
-import { FadeIn, FadeInStagger, FadeInItem } from "@/components/ui/fade-in";
+import { FadeIn } from "@/components/ui/fade-in";
 
 export default function ContactPage() {
 	return (
 		<div className="container mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-10 pt-32 sm:pt-28">
-            <SiteHeader />
+			<SiteHeader />
 			<FadeIn className="mb-6">
-				<Button variant="ghost" size="sm" asChild className="gap-2 font-mono text-xs text-muted-foreground hover:text-foreground pl-0 hover:pl-2 transition-all">
+				<Button
+					variant="ghost"
+					size="sm"
+					asChild
+					className="gap-2 pl-0 hover:pl-2 transition-all"
+				>
 					<Link href="/">
 						<ArrowLeftIcon className="size-3" />
 						../return_home
@@ -38,44 +42,39 @@ export default function ContactPage() {
 
 			<div className="space-y-4 text-center sm:text-left">
 				<FadeIn delay={0.1}>
-    				<p className="inline-flex items-center justify-center sm:justify-start gap-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">
-    					<MailIcon className="size-3" />
-    					// Contact
-    				</p>
-    				<h1 className="type-h2">
-    					Initialize_Connection
-    				</h1>
-    				<p className="type-body text-muted-foreground max-w-3xl leading-relaxed">
-    					Ready to deploy your next idea? Share your parameters, budget constraints, and timeline. I'll execute a feasibility check and return a detailed response.
-    				</p>
-                </FadeIn>
+					<Title
+						title="Initialize_Connection"
+						icon={<MailIcon className="size-6 text-primary" />}
+					/>
+					<p className="type-body text-muted-foreground max-w-3xl leading-relaxed">
+						Ready to deploy your next idea? Share your parameters, budget
+						constraints, and timeline. I'll execute a feasibility check and
+						return a detailed response.
+					</p>
+				</FadeIn>
 			</div>
 
 			<div className="my-8 sm:my-10" />
 
 			<div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-				<FadeIn><ContactForm /></FadeIn>
+				<FadeIn>
+					<ContactForm />
+				</FadeIn>
 
-				<FadeIn className="space-y-4 rounded-xl border border-border bg-card/80 p-4 sm:p-6 shadow-sm">
+				<FadeIn className="space-y-4 border border-border bg-card/80 p-4 sm:p-6 shadow-sm">
 					<div>
-						<p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-							Direct contact
-						</p>
-						<p className="mt-2 text-lg font-semibold">{CREATOR_INFO.name}</p>
-						<p className="text-sm text-muted-foreground">
-							{CREATOR_INFO.title}
-						</p>
+						<p className="text-muted-foreground">Direct contact</p>
+						<p className="mt-2 type-h5">{CREATOR_INFO.name}</p>
+						<p className="text-muted-foreground">{CREATOR_INFO.title}</p>
 					</div>
 
 					<div className="space-y-3 text-sm">
-						<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/60 p-3">
-							<div className="rounded-md bg-primary/10 p-2">
+						<div className="flex items-start gap-3 border border-border/70 bg-background/60 p-3">
+							<div className="bg-primary/10 p-2">
 								<MailIcon className="size-4 text-primary" />
 							</div>
 							<div>
-								<p className="text-xs uppercase tracking-wide text-muted-foreground">
-									Email
-								</p>
+								<p className="text-muted-foreground">Email</p>
 								<Link
 									href={`mailto:${CREATOR_INFO.email}`}
 									className="font-medium hover:text-foreground"
@@ -85,31 +84,27 @@ export default function ContactPage() {
 							</div>
 						</div>
 
-						<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/60 p-3">
-							<div className="rounded-md bg-primary/10 p-2">
+						<div className="flex items-start gap-3 border border-border/70 bg-background/60 p-3">
+							<div className="bg-primary/10 p-2">
 								<MapPinIcon className="size-4 text-primary" />
 							</div>
 							<div>
-								<p className="text-xs uppercase tracking-wide text-muted-foreground">
-									Location
-								</p>
+								<p className="text-muted-foreground">Location</p>
 								<p className="font-medium">{CREATOR_INFO.location}</p>
-								<p className="text-xs text-muted-foreground">
+								<p className="text-muted-foreground">
 									Remote-friendly across AU/EU/US time zones.
 								</p>
 							</div>
 						</div>
 
-						<div className="flex items-start gap-3 rounded-lg border border-border/70 bg-background/60 p-3">
-							<div className="rounded-md bg-primary/10 p-2">
+						<div className="flex items-start gap-3 border border-border/70 bg-background/60 p-3">
+							<div className="bg-primary/10 p-2">
 								<ClockIcon className="size-4 text-primary" />
 							</div>
 							<div>
-								<p className="text-xs uppercase tracking-wide text-muted-foreground">
-									Response time
-								</p>
+								<p className="text-muted-foreground">Response time</p>
 								<p className="font-medium">Within 24–48 hours</p>
-								<p className="text-xs text-muted-foreground">
+								<p className="text-muted-foreground">
 									Includes follow-up questions and proposed next steps.
 								</p>
 							</div>

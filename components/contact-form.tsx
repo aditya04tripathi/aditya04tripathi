@@ -1,7 +1,14 @@
 "use client";
 
 import { SendIcon } from "lucide-react";
-import { useEffect, useId, useMemo, useRef, useState , useActionState} from "react";
+import {
+	useActionState,
+	useEffect,
+	useId,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 import { useFormStatus } from "react-dom";
 import { toast } from "sonner";
 import { sendContactEmail } from "@/app/actions/contact";
@@ -88,7 +95,7 @@ export function ContactForm() {
 		<form
 			ref={formRef}
 			action={formAction}
-			className="space-y-8 rounded-2xl border border-border bg-card/80 p-5 shadow-sm sm:p-6"
+			className="space-y-8 border border-border bg-card/80 p-5 shadow-sm sm:p-6"
 		>
 			<div className="grid gap-5 sm:grid-cols-2">
 				<Field label="Name *" htmlFor={fieldIds.name}>
