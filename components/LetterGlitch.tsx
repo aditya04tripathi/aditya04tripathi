@@ -54,10 +54,10 @@ const LetterGlitch = ({
 		const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 		return result
 			? {
-					r: parseInt(result[1], 16),
-					g: parseInt(result[2], 16),
-					b: parseInt(result[3], 16),
-				}
+				r: parseInt(result[1], 16),
+				g: parseInt(result[2], 16),
+				b: parseInt(result[3], 16),
+			}
 			: null;
 	};
 
@@ -224,7 +224,7 @@ const LetterGlitch = ({
 		<div className="opacity-15 fixed -z-1 top-0 left-0 right-0 bottom-0 w-full h-full bg-background overflow-hidden">
 			<canvas ref={canvasRef} className="block w-full h-full" />
 			{outerVignette && (
-				<div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,0)_60%,_rgba(0,0,0,1)_100%)]"></div>
+				<div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,rgba(0,0,0,0)_60%,rgba(0,0,0,1)_100%)]"></div>
 			)}
 			{centerVignette && (
 				<div className="absolute top-0 left-0 w-full h-full pointer-events-none bg-[radial-gradient(circle,_rgba(0,0,0,0.8)_0%,_rgba(0,0,0,0)_60%)]"></div>

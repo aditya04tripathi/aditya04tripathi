@@ -11,9 +11,8 @@ import { CREATOR_INFO } from "@/lib/constants";
 
 export function HeroSection() {
 	return (
-		<section className="pt-24 pb-24">
+		<section className="py-6 sm:py-8">
 			<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-				{/* Main Content */}
 				<div className="lg:col-span-8 flex flex-col gap-6">
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
@@ -22,8 +21,8 @@ export function HeroSection() {
 					>
 						<div className="flex items-center gap-3 mb-4">
 							<span className="relative flex h-3 w-3">
-								<span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-								<span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+								<span className="animate-ping absolute inline-flex h-full w-full rounded-none bg-green-400 opacity-75"></span>
+								<span className="relative inline-flex rounded-none h-3 w-3 bg-green-500"></span>
 							</span>
 							<span className="font-mono text-xs text-muted-foreground uppercase tracking-widest">
 								System Online
@@ -66,7 +65,6 @@ export function HeroSection() {
 					</motion.div>
 				</div>
 
-				{/* Data Column (The "Dashboard" feel) */}
 				<div className="lg:col-span-4 space-y-8 pt-2 lg:pt-14">
 					<motion.div
 						initial={{ opacity: 0, x: 20 }}

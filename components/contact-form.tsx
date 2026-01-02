@@ -198,8 +198,7 @@ export function ContactForm() {
 			<div className="space-y-3">
 				<SubmitButton />
 				<p className="text-xs text-muted-foreground">
-					I usually reply within 24–48 hours. Your details are kept private and
-					secure.
+					I usually reply within 24–48 hours. Your details are not stored.
 				</p>
 			</div>
 		</form>
@@ -219,7 +218,7 @@ function SubmitButton() {
 		>
 			{pending ? (
 				<span className="flex items-center gap-2">
-					<span className="size-3 rounded-full border-2 border-t-transparent border-white animate-spin" />
+					<span className="size-3 rounded-none border-2 border-t-transparent border-white animate-spin" />
 					Sending…
 				</span>
 			) : (

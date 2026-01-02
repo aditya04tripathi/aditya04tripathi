@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import slugify from "slugify";
 
 export const CREATOR_INFO = {
@@ -25,14 +26,14 @@ export const EDUCATION = [
 		degree: "Bachelor of Engineering (Honours) - Software Engineering",
 		institution: "Monash University",
 		location: "Clayton, Melbourne, Australia",
-		period: "February 2025 - December 2026 (Expected)",
+		period: `${format(new Date("2025-02-01"), "LLLL yyyy")} - ${format(new Date("2026-12-01"), "LLLL yyyy")} (Expected)`,
 		status: "Student",
 	},
 	{
 		degree: "Diploma in Computer Science Engineering",
 		institution: "Amity University",
 		location: "Noida, Uttar Pradesh, India",
-		period: "September 2022 - July 2024",
+		period: `${format(new Date("2022-09-01"), "LLLL yyyy")} - ${format(new Date("2024-07-01"), "LLLL yyyy")}`,
 		status: "Completed",
 	},
 ];
@@ -71,7 +72,7 @@ export const WORK_EXPERIENCE = [
 		role: "Software Engineer Intern",
 		company: "LENS Corporation",
 		location: "Gurugram, India",
-		period: "September 2024 - December 2024",
+		period: `${format(new Date("2024-09-01"), "LLLL yyyy")} - ${format(new Date("2024-12-01"), "LLLL yyyy")}`,
 		description:
 			"Designed and developed modular web components, improving maintainability. implemented responsive UI layouts and integrated RESTful APIs to optimize client-server data flow. participated in Agile sprints for feature planning and production deployments.",
 	},
@@ -79,7 +80,7 @@ export const WORK_EXPERIENCE = [
 		role: "Freelance Web Developer",
 		company: "Amity University",
 		location: "Noida, India",
-		period: "June 2024 - August 2024",
+		period: `${format(new Date("2024-06-01"), "LLLL yyyy")} - ${format(new Date("2024-08-01"), "LLLL yyyy")}`,
 		description:
 			"Developed responsive CSE Department website hosting 50+ faculty profiles. Optimized REST APIs and caching, improving load performance by 95%. Achieved 90+ Lighthouse score.",
 	},
@@ -87,7 +88,7 @@ export const WORK_EXPERIENCE = [
 		role: "Frontend Engineer Intern",
 		company: "MAI HEALTH",
 		location: "Remote, USA",
-		period: "May 2024 - June 2024",
+		period: `${format(new Date("2024-05-01"), "LLLL yyyy")} - ${format(new Date("2024-06-01"), "LLLL yyyy")}`,
 		description:
 			"Developed React-based patient portal supporting 1,000+ users with real-time appointment data. Migrated application state to Redux Toolkit, increasing maintainability by 40%.",
 	},
@@ -95,7 +96,7 @@ export const WORK_EXPERIENCE = [
 		role: "Campus Ambassador",
 		company: "Cisco",
 		location: "Noida, India",
-		period: "August 2023 - July 2024",
+		period: `${format(new Date("2023-08-01"), "LLLL yyyy")} - ${format(new Date("2024-07-01"), "LLLL yyyy")}`,
 		description:
 			"Represented Cisco on campus, promoting technical initiatives. Organized technology workshops and acted as a liaison between students and industry professionals.",
 	},
@@ -156,7 +157,7 @@ export const PROJECTS: Project[] = [
 		slug: slugify("LexInvo", { lower: true }),
 		image: "/projects/lexinvo.png",
 		description:
-			"Australian-compliant invoicing platform featuring ABN validation, automated GST calculations, and JWT authentication.",
+			"Australian & Indian compliant invoicing platform featuring ABN/GSTIN validation, automated tax calculations, and JWT authentication.",
 		technologies: [
 			"Next.js 16",
 			"PostgreSQL",
@@ -169,11 +170,11 @@ export const PROJECTS: Project[] = [
 		github: "https://github.com/aditya04tripathi/lexinvo",
 		featured: true,
 		problem:
-			"Australian freelancers struggle with complex compliance requirements (GST, ABN validation) and generic invoicing tools lack local context.",
+			"Australian and Indian freelancers struggle with complex compliance requirements (GST, ABN/GSTIN validation) and generic invoicing tools lack local context.",
 		architecture:
 			"Built on Next.js 16 Server Actions with 'use cache'. Custom JWT implementation for secure, stateless auth. PostgreSQL with Drizzle ORM ensures strict type safety and relational data integrity.",
 		outcome:
-			"100% ATO-compliant invoice generation. Automated ABN lookup reduces entry errors. Zero-runtime CSS overhead with Tailwind v4.",
+			"100% ATO-compliant and GST-compliant invoice generation. Automated ABN/GSTIN lookup reduces entry errors. Zero-runtime CSS overhead with Tailwind v4.",
 	},
 	{
 		name: "DevEvent",
@@ -203,31 +204,31 @@ export const PROJECTS: Project[] = [
 
 export const ENGINEERING_NOTES = [
 	{
-		title: "Orchestrating Hybrid Inference Pipelines with Groq LPU & GPT-4o",
-		category: "AI Systems Engineering",
-		date: "2025-09-12",
+		title: "Enforcing Strict Compliance with Type-Safe Server Actions",
+		category: "System Architecture",
+		date: "2025-08-15",
 		summary:
-			"For Gnosis, relying solely on GPT-4 for all inference tasks introduced unacceptable latency (~3s TTFT) for real-time validation scoring. We needed a way to balance reasoning depth with interaction speed.",
+			"Australian and Indian freelancers struggle with complex compliance requirements (GST, ABN/GSTIN validation) and generic invoicing tools lack local context.",
 		decision:
-			"architected a 'switch-router' pattern: Groq's LPU handles semantic parsing and initial structural validation (<200ms), while complex market reasoning is asynchronously designated to GPT-4o. This tiered approach decoupled interface responsiveness from reasoning cost.",
+			"Built on Next.js 16 Server Actions with 'use cache'. Custom JWT implementation for secure, stateless auth. PostgreSQL with Drizzle ORM ensures strict type safety and relational data integrity.",
 		tradeoffs: [
-			"Increased system complexity due to dual-provider error handling and token normalization.",
-			"Requires stateful tracking of partial streams to maintain context coherence.",
-			"Reduced average user wait time by 85% while maintaining high fidelity output.",
+			"Server-side ABN validation ensures 100% ATO compliance.",
+			"Zero-runtime CSS overhead with Tailwind v4 improves performance.",
+			"Strict type safety requires maintaining Drizzle schemas alongside Zod types.",
 		],
 	},
 	{
-		title: "Optimizing Asset Delivery at Edge for Dynamic Events",
+		title: "Optimizing Media Persistence: Migrating from Base64 to Cloudinary",
 		category: "Infrastructure",
 		date: "2025-01-05",
 		summary:
-			"DevEvent's user-generated content led to massive LCP regressions. Serving raw uploads directly from S3 buckets caused bandwidth spikes and mobile latency issues.",
+			"Storing event banners as Base64 strings in MongoDB caused massive document bloat and slow API responses. It also made CDN caching and responsive image optimization impossible.",
 		decision:
-			"Implemented an 'eager-transformation' layer using Cloudinary. On upload, assets are effectively proxied and transformed into WebP/AVIF variants at the edge. We utilized Next.js Image component 'loader' prop to dynamically request optimized viewports.",
+			"Migrated to a Cloudinary-native storage pipeline. Assets are now uploaded to Cloudinary buckets and served via their edge network, allowing for dynamic WebP/AVIF transformations and global caching.",
 		tradeoffs: [
-			"Introduced dependency on third-party availability for media serving.",
-			"Slight upload latency increase due to synchronous metadata extraction.",
-			"Improved LCP by 60% and Reduced bandwidth egress costs by 40%.",
+			"Increased architectural complexity with multi-step upload flows.",
+			"Introduced dependency on third-party media providers.",
+			"Reduced database storage by 95% and improved LCP by 60% through edge delivery.",
 		],
 	},
 	{
@@ -235,13 +236,13 @@ export const ENGINEERING_NOTES = [
 		category: "Frontend Architecture",
 		date: "2024-12-20",
 		summary:
-			"Implementing persistent dark mode in the Portfolio often leads to the 'flash of incorrect theme' (FOUC) or hydration warnings when server HTML mismatches client local storage state.",
+			"Implementing persistent dark mode often leads to the 'flash of incorrect theme' or hydration warnings when server HTML mismatches client local storage state.",
 		decision:
-			"Utilized a script injection strategy in the document head to block painting until the correct theme class is applied to the DOM root. This bypasses React's hydration pass for the critical style token, ensuring consistency.",
+			"Integrated `next-themes` to manage theme persistence and synchronization. It leverages a blocking script in the document head to apply the correct CSS class before the first paint, effectively bypassing hydration mismatches between server-rendered HTML and client-side storage.",
 		tradeoffs: [
-			"Technically blocking the main thread for nanoseconds during parsing.",
-			"Requires dangerousSetInnerHTML usage which necessitates strict CSP validation.",
-			"Eliminated FOUC completely, achieving 0.7s Speed Index.",
+			"Introduces a small third-party dependency to the client bundle.",
+			"Requires careful ThemeProvider placement to avoid unnecessary component re-renders.",
+			"Eliminated FOUC completely, achieving a consistent 0.7s Speed Index.",
 		],
 	},
 ];

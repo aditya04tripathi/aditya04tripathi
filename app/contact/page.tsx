@@ -19,13 +19,11 @@ export const metadata: Metadata = {
 	},
 };
 
-import { SiteHeader } from "@/components/layout/site-header";
 import { FadeIn } from "@/components/ui/fade-in";
 
 export default function ContactPage() {
 	return (
-		<div className="container mx-auto max-w-5xl px-4 sm:px-6 py-8 sm:py-10 pt-32 sm:pt-28">
-			<SiteHeader />
+		<div className="container mx-auto px-4 sm:px-6 max-w-4xl">
 			<FadeIn className="mb-6">
 				<Button
 					variant="ghost"

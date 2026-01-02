@@ -13,7 +13,7 @@ export function SkillsSection() {
 			/>
 
 			<div className="grid gap-6 md:grid-cols-2">
-				<div className="border border-border/50 rounded-lg p-5 bg-card/50 transition-all duration-300 hover:border-primary/40 hover:shadow-md group">
+				<div className="border border-border/50 rounded-none p-5 bg-card/50 transition-all duration-300 hover:border-primary/40 hover:shadow-md group">
 					<h3 className="type-h5 mb-4 text-primary border-b border-border/50 pb-2">
 						// Languages & Frameworks
 					</h3>
@@ -26,7 +26,7 @@ export function SkillsSection() {
 					</div>
 				</div>
 
-				<div className="border border-border/50 rounded-lg p-5 bg-card/50 transition-all duration-300 hover:border-primary/40 hover:shadow-md group">
+				<div className="border border-border/50 rounded-none p-5 bg-card/50 transition-all duration-300 hover:border-primary/40 hover:shadow-md group">
 					<h3 className="type-h5 mb-4 text-primary border-b border-border/50 pb-2">
 						// Capabilities
 					</h3>

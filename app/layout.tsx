@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Google_Sans, Google_Sans_Code } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Suspense } from "react";
-import { Toaster } from "sonner";
 import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
-import LoadingComponent from "./loading";
+import { Providers } from "@/components/providers";
 
-const googleSansCode = Google_Sans_Code({
+const googleSansCode = JetBrains_Mono({
 	variable: "--font-google-sans-code",
 	weight: ["300", "400", "500", "600", "700", "800"],
+	subsets: ["latin"],
 });
 
-const googleSans = Google_Sans({
+const googleSans = Inter({
 	variable: "--font-google-sans",
 	weight: ["400", "500", "600", "700"],
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -53,10 +53,11 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`dark ${googleSans.variable} ${googleSansCode.variable} antialiased`}
+				className={`${googleSans.variable} ${googleSansCode.variable} antialiased`}
 			>
-				<Suspense fallback={<LoadingComponent />}>{children}</Suspense>
-				<Toaster />
+				<Providers>
+					{children}
+				</Providers>
 			</body>
 		</html>
 	);

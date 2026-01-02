@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { SiteHeader } from "@/components/layout/site-header";
 import { EducationSection } from "@/components/sections/education-section";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -79,8 +78,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 
 export default function AboutPage() {
 	return (
-		<div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl">
-			<SiteHeader />
+		<div className="container mx-auto px-4 sm:px-6 max-w-4xl">
 			<HeroSection />
 
 			<FadeIn>

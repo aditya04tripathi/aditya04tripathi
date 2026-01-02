@@ -24,7 +24,7 @@ export function ContactSection() {
 			<div className="grid gap-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
 				<ContactForm />
 
-				<div className="space-y-4 rounded-xl border border-border bg-card/60 p-4 sm:p-6 shadow-sm">
+				<div className="space-y-4 rounded-none border border-border bg-card/60 p-4 sm:p-6 shadow-sm">
 					<div>
 						<p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
 							Direct contact
@@ -36,8 +36,8 @@ export function ContactSection() {
 					</div>
 
 					<div className="space-y-3 text-sm">
-						<div className="flex items-start gap-3 rounded-lg border border-border/60 bg-background/60 p-3">
-							<div className="rounded-md bg-primary/10 p-2">
+						<div className="flex items-start gap-3 rounded-none border border-border/60 bg-background/60 p-3">
+							<div className="rounded-none bg-primary/10 p-2">
 								<MailIcon className="size-4 text-primary" />
 							</div>
 							<div>
@@ -53,8 +53,8 @@ export function ContactSection() {
 							</div>
 						</div>
 
-						<div className="flex items-start gap-3 rounded-lg border border-border/60 bg-background/60 p-3">
-							<div className="rounded-md bg-primary/10 p-2">
+						<div className="flex items-start gap-3 rounded-none border border-border/60 bg-background/60 p-3">
+							<div className="rounded-none bg-primary/10 p-2">
 								<MapPinIcon className="size-4 text-primary" />
 							</div>
 							<div>
@@ -68,8 +68,8 @@ export function ContactSection() {
 							</div>
 						</div>
 
-						<div className="flex items-start gap-3 rounded-lg border border-border/60 bg-background/60 p-3">
-							<div className="rounded-md bg-primary/10 p-2">
+						<div className="flex items-start gap-3 rounded-none border border-border/60 bg-background/60 p-3">
+							<div className="rounded-none bg-primary/10 p-2">
 								<ClockIcon className="size-4 text-primary" />
 							</div>
 							<div>

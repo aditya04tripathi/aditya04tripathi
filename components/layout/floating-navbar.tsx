@@ -19,7 +19,6 @@ export function FloatingNavbar() {
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
 		const previous = scrollY.getPrevious() ?? 0;
-		// Hysteresis calculation
 		if (latest > 250) {
 			setIsVisible(true);
 		} else if (latest < 200) {
@@ -37,11 +36,11 @@ export function FloatingNavbar() {
 					transition={{ duration: 0.3, ease: "easeInOut" }}
 					className="fixed top-4 left-0 right-0 z-50 hidden md:flex justify-center px-4 pointer-events-none"
 				>
-					<div className="bg-background/80 backdrop-blur-md border border-border shadow-lg rounded-full px-4 py-2 flex items-center gap-4 pointer-events-auto max-w-2xl w-full justify-between">
+					<div className="bg-background/80 backdrop-blur-md border border-border shadow-lg rounded-none px-4 py-2 flex items-center gap-4 pointer-events-auto max-w-2xl w-full justify-between">
 						<div className="flex items-center gap-3">
 							<motion.div
 								layoutId="hero-avatar"
-								className="relative h-10 w-10 overflow-hidden rounded-full"
+								className="relative h-10 w-10 overflow-hidden rounded-none"
 							>
 								<Avatar className="h-full w-auto aspect-square">
 									<AvatarImage src={CREATOR_INFO.avatar} />
@@ -67,7 +66,7 @@ export function FloatingNavbar() {
 								<Button
 									variant="ghost"
 									size="icon"
-									className="h-8 w-8 rounded-full"
+									className="h-8 w-8 rounded-none"
 								>
 									<GithubIcon className="size-4" />
 								</Button>
@@ -80,7 +79,7 @@ export function FloatingNavbar() {
 								<Button
 									variant="ghost"
 									size="icon"
-									className="h-8 w-8 rounded-full"
+									className="h-8 w-8 rounded-none"
 								>
 									<LinkedinIcon className="size-4" />
 								</Button>
@@ -88,7 +87,7 @@ export function FloatingNavbar() {
 							<Link href="/contact">
 								<Button
 									size="sm"
-									className="rounded-full h-8 px-4 text-xs font-mono font-bold"
+									className="rounded-none h-8 px-4 text-xs font-mono font-bold"
 								>
 									Contact
 								</Button>

@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FadeIn } from "@/components/ui/fade-in";
 import { PROJECTS } from "@/lib/constants";
 
-// Add props interface
 interface ProjectsSectionProps {
 	limit?: number;
 	className?: string;

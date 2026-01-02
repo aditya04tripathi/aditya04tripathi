@@ -14,7 +14,7 @@ export function EducationSection() {
 			{EDUCATION.map((edu) => (
 				<div
 					key={`${edu.degree}${edu.institution}${edu.location}${edu.period}${edu.status}`}
-					className="border border-border/50 rounded-lg p-5 bg-card/50 flex flex-col md:flex-row gap-4 justify-between md:items-center"
+					className="border border-border/50 rounded-none p-5 bg-card/50 flex flex-col md:flex-row gap-4 justify-between md:items-center"
 				>
 					<div>
 						<h3 className="type-h5 mb-1">{edu.degree}</h3>

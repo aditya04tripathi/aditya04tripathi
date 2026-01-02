@@ -7,11 +7,11 @@ import { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { CREATOR_INFO } from "@/lib/constants";
+import { SettingsWidget } from "@/components/settings-widget";
 
 export function SiteHeader() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-	// Prevent scrolling when mobile menu is open
 	useEffect(() => {
 		if (isMobileMenuOpen) {
 			document.body.style.overflow = "hidden";
@@ -24,41 +24,39 @@ export function SiteHeader() {
 	}, [isMobileMenuOpen]);
 
 	return (
-		<header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-6 py-6 pointer-events-none">
-			<div className="w-full max-w-5xl flex items-center justify-between">
-				<motion.div
-					initial={{ y: -100, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.4, ease: "easeOut" }}
-					className="pointer-events-auto bg-background/80 backdrop-blur-md border border-border/40 px-4 py-2 shadow-sm flex items-center gap-3 hover:scale-105 transition-transform duration-300 relative z-50"
+		<header className="fixed top-0 left-0 right-0 w-full z-50 flex justify-center px-6 py-6 pointer-events-none">
+			<motion.div
+				initial={{ y: -100, opacity: 0 }}
+				animate={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.4, ease: "easeOut" }}
+				className="w-full max-w-5xl flex items-center justify-between pointer-events-auto bg-background/10 backdrop-blur-sm border border-border/40 px-2 py-2 shadow-sm relative z-50"
+			>
+				<Link
+					href="/"
+					className="flex items-center gap-3 group px-2"
+					onClick={() => setIsMobileMenuOpen(false)}
 				>
-					<Link
-						href="/"
-						className="flex items-center gap-3 group"
-						onClick={() => setIsMobileMenuOpen(false)}
-					>
-						<Avatar className="h-9 w-9 border border-border/50">
-							<AvatarImage src={CREATOR_INFO.avatar} className="object-cover" />
-							<AvatarFallback>{CREATOR_INFO.name.charAt(0)}</AvatarFallback>
-						</Avatar>
-						<div className="flex flex-col pr-2">
-							<span className="font-mono font-bold text-sm leading-none tracking-tight">
-								{CREATOR_INFO.name}
-							</span>
-							<span className="text-[10px] text-muted-foreground font-mono leading-none mt-0.5 group-hover:text-primary transition-colors">
-								Software Engineer
-							</span>
-						</div>
-					</Link>
-				</motion.div>
+					<Avatar className="h-9 w-9 rounded-none border border-border/50">
+						<AvatarImage src={CREATOR_INFO.avatar} className="object-cover" />
+						<AvatarFallback>{CREATOR_INFO.name.charAt(0)}</AvatarFallback>
+					</Avatar>
+					<div className="flex flex-col pr-2">
+						<span className="font-mono font-bold text-sm leading-none tracking-tight">
+							{CREATOR_INFO.name}
+						</span>
+						<span className="text-[10px] text-muted-foreground font-mono leading-none mt-0.5 group-hover:text-primary transition-colors">
+							Software Engineer
+						</span>
+					</div>
+				</Link>
 
 				{/* Mobile Menu Toggle */}
-				<div className="pointer-events-auto md:hidden relative z-50">
+				<div className="md:hidden">
 					<Button
-						variant="outline"
+						variant="ghost"
 						size="icon"
 						onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-						className="bg-background/80 backdrop-blur-md border-border/40"
+						className="rounded-none hover:bg-secondary/50"
 					>
 						{isMobileMenuOpen ? (
 							<X className="size-5" />
@@ -68,13 +66,8 @@ export function SiteHeader() {
 					</Button>
 				</div>
 
-				{/* Desktop Navigation Pill */}
-				<motion.div
-					initial={{ y: -100, opacity: 0 }}
-					animate={{ y: 0, opacity: 1 }}
-					transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-					className="hidden md:flex pointer-events-auto bg-background/80 backdrop-blur-md border border-border/40 px-2 py-1.5 shadow-sm items-center gap-1"
-				>
+				{/* Desktop Navigation */}
+				<div className="hidden md:flex items-center gap-1">
 					<Link href="/projects">
 						<Button
 							variant="ghost"
@@ -114,6 +107,11 @@ export function SiteHeader() {
 							<LinkedinIcon className="size-4" />
 						</Button>
 					</Link>
+
+					<div className="ml-1 mr-1">
+						<SettingsWidget />
+					</div>
+
 					<Link href="/contact">
 						<Button
 							size="sm"
@@ -122,10 +120,9 @@ export function SiteHeader() {
 							Contact
 						</Button>
 					</Link>
-				</motion.div>
-			</div>
+				</div>
+			</motion.div>
 
-			{/* Mobile Menu Overlay */}
 			<AnimatePresence>
 				{isMobileMenuOpen && (
 					<motion.div
@@ -133,7 +130,7 @@ export function SiteHeader() {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: -20 }}
 						transition={{ duration: 0.2 }}
-						className="absolute inset-0 top-0 left-0 w-full h-screen bg-background/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center pointer-events-auto md:hidden"
+						className="fixed inset-0 top-0 left-0 w-full h-screen bg-background/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center pointer-events-auto md:hidden"
 					>
 						<nav className="flex flex-col items-center gap-6 p-6">
 							<Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
@@ -164,6 +161,10 @@ export function SiteHeader() {
 								<Link href={CREATOR_INFO.linkedin} target="_blank">
 									<LinkedinIcon className="size-6 text-muted-foreground hover:text-foreground transition-colors" />
 								</Link>
+							</div>
+
+							<div className="mt-4">
+								<SettingsWidget />
 							</div>
 						</nav>
 					</motion.div>

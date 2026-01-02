@@ -14,7 +14,7 @@ export function WorkExperienceSection() {
 			<div className="relative border-l border-border/50 ml-3 space-y-8 pb-4">
 				{[...WORK_EXPERIENCE].map((job, index) => (
 					<div key={index} className="pl-8 relative">
-						<div className="absolute -left-[5px] top-2 size-2.5 rounded-full bg-primary ring-4 ring-background" />
+						<div className="absolute -left-[5px] top-2 size-2.5 rounded-none bg-primary ring-4 ring-background" />
 
 						<div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
 							<h3 className="type-h5">{job.role}</h3>

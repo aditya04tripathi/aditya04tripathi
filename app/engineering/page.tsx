@@ -1,6 +1,6 @@
 import { ArrowLeft, GitCommit } from "lucide-react";
+import { format } from "date-fns";
 import Link from "next/link";
-import { SiteHeader } from "@/components/layout/site-header";
 import Title from "@/components/title";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,8 +17,7 @@ import { FadeIn } from "@/components/ui/fade-in";
 
 export default function EngineeringPage() {
 	return (
-		<div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 max-w-4xl min-h-screen sm:pt-28">
-			<SiteHeader />
+		<div className="container mx-auto px-4 sm:px-6 max-w-4xl">
 			<FadeIn className="mb-12 border-b border-border/40 pb-6">
 				<Button
 					variant="ghost"
@@ -43,7 +42,7 @@ export default function EngineeringPage() {
 			<div className="space-y-8">
 				{ENGINEERING_NOTES.map((note) => (
 					<FadeIn key={note.title}>
-						<Card className="border-border/60 bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-colors duration-300">
+						<Card className="border-border/60 bg-card/50 backdrop-blur-sm hover:border-primary/30 transition-colors duration-300 rounded-none">
 							<CardHeader>
 								<div className="flex justify-between items-start mb-2">
 									<Badge
@@ -52,7 +51,9 @@ export default function EngineeringPage() {
 									>
 										{note.category}
 									</Badge>
-									<span className="text-muted-foreground">{note.date}</span>
+									<span className="text-muted-foreground">
+										{format(new Date(note.date), "LLLL yyyy")}
+									</span>
 								</div>
 								<CardTitle className="type-h4">{note.title}</CardTitle>
 							</CardHeader>
@@ -61,7 +62,7 @@ export default function EngineeringPage() {
 									<p className="leading-relaxed">{note.summary}</p>
 								</div>
 
-								<div className="rounded-md bg-secondary/30 p-4 border border-border/50">
+								<div className="rounded-none bg-secondary/30 p-4 border border-border/50">
 									<h4 className="flex items-center gap-2 font-bold text-foreground mb-2">
 										<GitCommit className="size-4 text-primary" />
 										The_Decision
@@ -69,7 +70,7 @@ export default function EngineeringPage() {
 									<p className="text-sm">{note.decision}</p>
 								</div>
 
-								<div className="rounded-md bg-blue-500/5 p-4 border border-blue-500/20">
+								<div className="rounded-none bg-blue-500/5 p-4 border border-blue-500/20">
 									<h4 className="flex items-center gap-2 font-bold text-blue-400 mb-2">
 										Tradeoffs_Considered
 									</h4>
