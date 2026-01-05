@@ -40,7 +40,7 @@ export function ProjectsSection({
 				{projectsToShow.map((project) => (
 					<FadeIn key={project.name}>
 						<Card className="border-border/60 bg-card/50 backdrop-blur-sm overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-							<CardHeader className="pb-3 border-b border-border/50 bg-secondary/20">
+							<CardHeader className="pb-3 border-b border-border/50">
 								<div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 									<div>
 										<CardTitle className="type-h4 flex items-center gap-2">
