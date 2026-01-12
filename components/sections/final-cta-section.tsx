@@ -28,7 +28,7 @@ export function FinalCtaSection() {
 							className="h-12 px-8 text-base font-mono font-bold"
 							asChild
 						>
-							<Link href="/contact">
+							<Link href="mailto:me@adityatripathi.dev">
 								<MailIcon className="mr-2 size-5" />
 								Get_In_Touch
 							</Link>

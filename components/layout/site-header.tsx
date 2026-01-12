@@ -112,7 +112,7 @@ export function SiteHeader() {
 						<SettingsWidget />
 					</div>
 
-					<Link href="/contact">
+					<Link href="mailto:me@adityatripathi.dev">
 						<Button
 							size="sm"
 							className="h-8 px-4 text-xs font-mono font-bold ml-1 transition-all duration-300 hover:scale-105 hover:shadow-md"
@@ -146,7 +146,7 @@ export function SiteHeader() {
 									Engineering
 								</span>
 							</Link>
-							<Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+							<Link href="mailto:me@adityatripathi.dev" onClick={() => setIsMobileMenuOpen(false)}>
 								<span className="text-2xl font-mono font-bold hover:text-primary transition-colors">
 									Contact
 								</span>

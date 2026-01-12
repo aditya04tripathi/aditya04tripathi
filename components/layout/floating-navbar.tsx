@@ -84,7 +84,7 @@ export function FloatingNavbar() {
 									<LinkedinIcon className="size-4" />
 								</Button>
 							</Link>
-							<Link href="/contact">
+							<Link href="mailto:me@adityatripathi.dev">
 								<Button
 									size="sm"
 									className="rounded-none h-8 px-4 text-xs font-mono font-bold"

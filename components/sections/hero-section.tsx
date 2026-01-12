@@ -53,7 +53,7 @@ export function HeroSection() {
 								View Projects
 							</Button>
 						</Link>
-						<Link href="/contact">
+						<Link href="mailto:me@adityatripathi.dev">
 							<Button
 								variant="outline"
 								size="lg"
