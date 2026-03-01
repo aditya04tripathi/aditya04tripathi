@@ -246,6 +246,30 @@ export const PROJECTS: Project[] = [
       "Delivered a production-ready ephemeral file infrastructure capable of secure uploads, time-bound access, and automated deletion. Achieved sub-200ms metadata response times, eliminated account friction entirely, and established a privacy-first file lifecycle suitable for temporary sharing use cases.",
   },
   {
+    name: "PennyWise",
+    slug: slugify("PennyWise", { lower: true }),
+    image: "/projects/pennywise.png",
+    description:
+      "Local-first personal finance tracker with budgets, receipt capture, recurring transactions, and full offline privacy.",
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "SQLite",
+      "Biometric Auth",
+      "CSV Import/Export",
+    ],
+    link: "https://play.google.com/store/apps/details?id=com.adityatripathi.penny_wise",
+    github: "",
+    featured: false,
+    problem:
+      "Most budgeting apps rely on cloud storage and tracking, creating privacy concerns. Users need a fast, offline, local-first finance tracker that keeps data on-device while offering modern budgeting features.",
+    architecture:
+      "Local-first architecture with on-device persistence (SQLite) and zero cloud dependencies. Implements PIN and biometric unlock, recurring transaction scheduling, receipt photo attachments, and a high-contrast UI for quick entry. Data portability is ensured via CSV import/export. Works fully offline while maintaining instant transaction updates.",
+    outcome:
+      "Delivers privacy-first budgeting with snappy performance, clear dashboards, budget alerts, and complete data ownership. Users stay on budget without sacrificing privacy or speed.",
+  },
+  {
     name: "DevEvent",
     slug: slugify("DevEvent", { lower: true }),
     image: "/projects/dev-event.png",
