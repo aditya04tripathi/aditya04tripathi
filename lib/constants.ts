@@ -91,6 +91,14 @@ export const SKILLS = {
  */
 export const WORK_EXPERIENCE = [
   {
+    role: "Projects Team Member",
+    company: "WIRED Monash",
+    location: "Clayton, Victoria, Australia",
+    period: `${format(new Date("2026-03-01"), "LLLL yyyy")} - Present`,
+    description:
+      "As a member of the Projects Team at WIRED Monash, the official IT student society at Monash University, I contribute to the design and development of technology-driven initiatives that enhance the student experience within the Faculty of Information Technology. Working under the leadership of the Projects Director, Shahmeer Khan, the team focuses on building practical tools and technical resources that support academic success and community engagement.",
+  },
+  {
     role: "Software Engineer Intern",
     company: "LENS Corporation",
     location: "Gurugram, India",
@@ -214,7 +222,7 @@ export const PROJECTS: Project[] = [
   {
     name: "Vapor Vault",
     slug: "vapor-vault",
-    image: "/projects/gnosis.png",
+    image: "/projects/vapour-vault.png",
     description:
       "Anonymous, self-destructing file sharing infrastructure built for secure, frictionless digital transfers.",
     technologies: [
