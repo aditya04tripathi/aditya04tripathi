@@ -17,15 +17,11 @@ export default defineConfig({
         "@": path.resolve(rootDir, "src"),
       },
     },
+    server: {
+      allowedHosts: true,
+    },
     preview: {
-      allowedHosts: [
-        "adityatripathi.up.railway.app",
-        ".up.railway.app",
-        ".railway.app",
-        "adityatripathi.dev",
-        "localhost",
-        "127.0.0.1",
-      ],
+      allowedHosts: true,
     },
   },
 });
