@@ -8,14 +8,24 @@ import tailwindcss from "@tailwindcss/vite";
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-	site: "https://adityatripathi.dev",
-	integrations: [svelte(), mdx()],
-	vite: {
-		plugins: [tailwindcss()],
-		resolve: {
-			alias: {
-				"@": path.resolve(rootDir, "src"),
-			},
-		},
-	},
+  site: "https://adityatripathi.dev",
+  integrations: [svelte(), mdx()],
+  vite: {
+    plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        "@": path.resolve(rootDir, "src"),
+      },
+    },
+    preview: {
+      allowedHosts: [
+        "adityatripathi.up.railway.app",
+        ".up.railway.app",
+        ".railway.app",
+        "adityatripathi.dev",
+        "localhost",
+        "127.0.0.1",
+      ],
+    },
+  },
 });
