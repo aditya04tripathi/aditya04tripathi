@@ -1,0 +1,92 @@
+---
+title: "Server Actions and HTTP Routes: Drawing a Clean Boundary"
+description: "When Server Actions shine, when a route handler is still the right tool, and how to keep security and caching legible as a codebase grows."
+date: 2026-02-04
+category: "Web Platform"
+---
+
+Server Actions lowered the friction for writing server code next to UI. That convenience can quietly erode boundaries: authentication scattered across forms, caching headers forgotten, and “just one more mutation” living inside a leaf component.
+
+This post is a decision framework, not a manifesto for one side.
+
+## Mental model
+
+**Server Actions** are RPC-style calls from the client runtime to server functions, optimized for mutations triggered by UI events.
+
+**Route handlers** (`GET`/`POST` under `/api` or `app/route.ts`) are HTTP resources. They excel when something that is not your React tree needs to talk to you: webhooks, mobile clients, curl scripts, and browser caching semantics.
+
+If your consumer is primarily `<form>` and `fetch` from your own app, Actions are competitive. If your consumer is “the open web” or a long-lived integration, HTTP should probably win.
+
+## Security: the shared baseline
+
+Both paths need:
+
+- **Authentication** verified on the server, every time.
+- **Authorization** scoped to the resource, not merely “logged in”.
+- **Input validation** with a schema that matches your persistence layer.
+- **Rate limiting** keyed by user and IP for abuse-prone endpoints.
+
+Server Actions do not remove those requirements; they sometimes hide them behind compiler magic. Make validation functions shared modules imported by both Actions and routes.
+
+## Caching and HTTP semantics
+
+Route handlers give you explicit control over:
+
+- `Cache-Control` and `ETag` on `GET`
+- conditional requests
+- content negotiation
+
+Server Actions are `POST`-shaped interactions by default. That is a poor fit for publicly cacheable reads. If you need CDN-friendly `GET`, expose a route, even if the implementation calls the same service layer as your Action.
+
+## Webhooks and third parties
+
+Stripe, GitHub, and Slack do not understand Server Actions. They understand URLs and signatures. Implement webhooks as route handlers with:
+
+- raw body access for signature verification
+- idempotent processing keyed by provider event id
+- fast `200` after persistence to a queue, if work is heavy
+
+## Progressive enhancement
+
+Server Actions pair naturally with forms that should work before hydration. If accessibility and resilience matter, keep a meaningful `action` attribute and degrade gracefully when JavaScript fails.
+
+For APIs consumed outside the browser, progressive enhancement is irrelevant, use HTTP.
+
+## Observability
+
+Uniformity helps. Wrap both Actions and handlers with:
+
+- request correlation ids
+- structured logs on validation failure vs application error
+- tracing around database transactions
+
+If Actions bypass your usual HTTP middleware, recreate the essentials deliberately.
+
+## Folder structure that scales
+
+A pattern that stays readable:
+
+- `src/server/services/*` , business logic, no framework imports.
+- `src/server/validation/*` , zod schemas or equivalent.
+- `app/actions/*.ts` , thin wrappers calling services.
+- `app/api/*/route.ts` , same services, HTTP-specific concerns only.
+
+When a junior engineer asks “where does this go?”, the answer should be boring.
+
+## When to pick which
+
+**Prefer Server Actions** when:
+
+- the caller is your app UI
+- you want colocated mutations and small payloads
+- you are not relying on HTTP caching
+
+**Prefer route handlers** when:
+
+- you need idiomatic `GET` caching
+- you integrate external systems or mobile apps
+- you stream SSE or large downloads
+
+## Takeaway
+
+The best codebases I have worked in treat Actions and routes as **transport layers** over the same services. Pick the transport that matches the consumer; keep the domain logic identical underneath.

@@ -1,0 +1,100 @@
+---
+title: "Offline-First Expense Sync: A Practical Architecture"
+description: "How to keep a personal finance surface fast and trustworthy when networks fail, users switch devices, and conflicts are inevitable."
+date: 2026-01-18
+category: "Mobile & Distributed Systems"
+---
+
+Personal finance apps live in the worst possible environment for distributed systems: flaky LTE, subway tunnels, international roaming, and users who expect every tap to feel instant. If the UI blocks on the network, trust erodes fast. If you hide conflicts until tax season, trust evaporates entirely.
+
+This post walks through an architecture that treats offline as the default, sync as a background concern, and conflict resolution as a product decision, not an afterthought.
+
+## The constraints
+
+You are not building a CRDT research project. You are building software people use while walking to the train. That implies:
+
+- **Reads** should succeed from local storage in milliseconds.
+- **Writes** should commit locally first, then replicate.
+- **The server** remains the source of truth for fraud, backups, and cross-device consistency, but not for perceived latency.
+
+## Data model: outbox + entity snapshots
+
+At minimum, keep two parallel ideas in your client:
+
+1. **Entity tables** (or documents) representing expenses, categories, merchants, and attachments as the user sees them.
+2. **An outbox** of operations waiting for upload: create, update, delete, each with a stable client-generated id, a monotonic sequence per device, and a payload.
+
+The outbox is append-only until acknowledged. Never mutate a row in place while it is `pending` without leaving an audit trail; debugging sync without one is painful.
+
+```ts
+type OutboxStatus = "pending" | "inflight" | "failed" | "applied";
+type OutboxOp = "create" | "update" | "delete";
+
+interface OutboxEntry {
+	id: string;
+	entityType: string;
+	entityId: string;
+	op: OutboxOp;
+	payloadJson: unknown;
+	createdAtDevice: string;
+	status: OutboxStatus;
+	lastError: string | null;
+}
+```
+
+## Idempotency on the server
+
+Retries will happen. The same outbox entry will be posted twice. Your API must accept an idempotency key, typically the outbox entry id, and return the same result without duplicating rows.
+
+On apply:
+
+- If the key exists in an `applied_ops` table, return `200` with the prior result.
+- Otherwise, run the transaction, record the key, and return the canonical entity version.
+
+## Version vectors and “last writer wins”
+
+For many expense fields, **last-write-wins** with server adjudication is enough: amount, note, category. Encode each mutation with:
+
+- `updated_at` (server clock after apply)
+- `device_id`
+- `mutation_id` (client)
+
+When two devices edit the same expense offline, the server picks a winner deterministically, highest `mutation_id` lexicographic tie-breaker, or explicit user merge in rare cases.
+
+For fields where LWW is dangerous, **recurring rules**, **tax tags**, **currency**, surface a merge UI. The sync layer should flag `conflict: true` on the entity so the app can badge the row.
+
+## Attachments and large blobs
+
+Never block the outbox on photo uploads. Flow:
+
+1. Write a local file URI and a `pending_upload` flag on the expense.
+2. Enqueue a background upload task with resumable chunks if needed.
+3. Replace the local URI with the CDN URL only after the server confirms.
+
+If the user deletes the expense before upload completes, send a tombstone that cancels the upload job server-side.
+
+## Background sync policy
+
+Use exponential backoff with jitter, cap maximum delay, and pause when on metered data if the OS exposes it. Wake the sync worker on:
+
+- app foreground
+- network regain
+- periodic tasks (where the platform allows)
+
+Log sync health in aggregate: time-to-drain-outbox, failure rate by error class. Those metrics tell you when your API or auth layer is silently killing trust.
+
+## Testing offline paths
+
+- **Airplane mode suites** on real devices, not only simulators.
+- **Chaos**: drop 10% of requests in staging with a proxy.
+- **Property tests** for idempotency: replay the same batch twice, assert identical DB state.
+
+## What I would decide up front
+
+- Which fields are safe for LWW vs require merge.
+- Maximum outbox size before you force the user online (rare, but prevents unbounded storage abuse).
+- Whether attachments are optional for sync or gate “fully synced” status.
+
+## Closing thought
+
+Offline-first is less about clever algorithms and more about **boring discipline**: outbox, idempotency, explicit conflicts, and metrics. Get those four right and the product feels inevitable instead of fragile.

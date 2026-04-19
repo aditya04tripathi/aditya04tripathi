@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import BlogList from "@/components/sections/BlogList.svelte";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("blog");
+const sorted = [...all].sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const posts = sorted.map((e) => ({
+	slug: e.id,
+	title: e.data.title,
+	description: e.data.description,
+	category: e.data.category,
+	date: e.data.date.toISOString(),
+}));
+---
+
+<Layout
+	title="Blog | Aditya Tripathi"
+	description="Technical posts on architecture, infrastructure, and frontend engineering."
+	canonicalPath="/blog"
+>
+	<BlogList client:load posts={posts} />
+</Layout>

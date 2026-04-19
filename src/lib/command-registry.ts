@@ -31,11 +31,11 @@ export function getCommandDefinitions(): CommandDefinition[] {
 			href: "/projects",
 		},
 		{
-			id: "engineering",
-			label: "Engineering notes",
-			keywords: "blog posts architecture writing",
+			id: "blog",
+			label: "Blog",
+			keywords: "blog posts architecture writing engineering",
 			kind: "nav",
-			href: "/engineering",
+			href: "/blog",
 		},
 		{
 			id: "privacy",

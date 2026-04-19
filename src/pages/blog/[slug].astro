@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+import { format } from "date-fns";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("blog");
+	return posts.map((post) => ({
+		params: { slug: post.id },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const title = `${post.data.title} | Aditya Tripathi`;
+const description = post.data.description;
+const canonicalPath = `/blog/${post.id}`;
+const dateLabel = format(post.data.date, "LLLL d, yyyy");
+---
+
+<Layout {title} {description} {canonicalPath}>
+	<article
+		class="blog-mdx container mx-auto px-4 sm:px-6 max-w-3xl [&_p]:type-body-muted [&_p]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-4 [&_li]:type-body-muted [&_li]:my-1"
+	>
+		<header class="mb-10 border-b border-border/40 pb-8">
+			<p class="type-small mb-3">
+				{post.data.category ? `${post.data.category} · ` : ""}{dateLabel}
+			</p>
+			<h1 class="type-h1">{post.data.title}</h1>
+			<p class="type-body-muted mt-4">{post.data.description}</p>
+		</header>
+		<Content />
+		<footer class="mt-14 pt-8 border-t border-border/40">
+			<a href="/blog" class="font-mono text-sm text-primary hover:underline">← All posts</a>
+		</footer>
+	</article>
+</Layout>

@@ -1,0 +1,75 @@
+---
+title: "Gating Releases on Core Web Vitals (Without Torturing Developers)"
+description: "How to collect stable Web Vitals in CI, separate noise from regressions, and tie budgets to components your team actually owns."
+date: 2026-03-11
+category: "Performance"
+---
+
+Core Web Vitals moved performance from a lighthouse score into a product constraint. The hard part is not measuring once, it is measuring **repeatedly** with enough signal that you can fail a pull request fairly.
+
+## Separate lab and field
+
+- **Field (RUM)** tells you what real users experience; it is noisy and lagging.
+- **Lab (synthetic)** is reproducible; it can lie about your p75 if your test geography and cache state are unrealistic.
+
+CI should lean on lab for **regression detection**, and RUM for **calibration** of thresholds.
+
+## Stabilize synthetic runs
+
+Variance kills trust. Before comparing `main` to a branch:
+
+- Pin CPU throttling and network profiles; document them in the repo.
+- Warm caches deterministically: hit the page twice, discard the first navigation if you are isolating TTFB vs render.
+- Use a fixed viewport and disable unrelated extensions in the runner.
+
+If numbers swing ±20% run-to-run, tighten the environment, not the people.
+
+## What to assert
+
+Practical gates for a content + app hybrid site:
+
+- **LCP** element URL and timing relative to a baseline artifact
+- **CLS** below a ceiling on a scripted interaction path
+- **INP** or legacy **FID** proxy via scripted clicks if your runner supports it
+
+Avoid duplicating Google’s entire ranking formula in CI. Assert **component-level budgets**: hero image weight, font subset size, JavaScript for the critical route.
+
+## Artifact strategy
+
+Store `main` baselines as committed JSON or blob artifacts in your CI provider. On PR:
+
+1. Run the same suite.
+2. Diff metrics with a tolerance band (for example, LCP +200 ms or +5%, whichever is larger).
+3. Fail with a table: metric, baseline, PR, delta.
+
+## Ownership mapping
+
+When a regression fires, the report should name:
+
+- the route
+- the largest layout shift source or LCP candidate
+- the owning package or feature folder
+
+Otherwise performance CI becomes a broadcast blame machine.
+
+## Local preflight
+
+Developers should reproduce slow tests locally in one command. If only CI can run the suite, flaky failures will be ignored.
+
+## False positives: human process
+
+Budget overrides should require:
+
+- a ticket link
+- an expiration date
+- a note on remediation
+
+Permanent overrides are how gates die.
+
+## When not to gate
+
+Early prototypes, marketing one-offs, and authenticated app shells with heavy third-party scripts may need **exempt routes**, but exempt lists must be short and reviewed quarterly.
+
+## Closing
+
+Performance CI is a contract: **predictable measurement, compassionate thresholds, actionable diffs.** Nail those and the vitals stop being abstract scores and become engineering constraints people respect.

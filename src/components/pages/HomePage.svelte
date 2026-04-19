@@ -2,7 +2,7 @@
 	import HeroSection from "@/components/sections/HeroSection.svelte";
 	import ProductsSection from "@/components/sections/ProductsSection.svelte";
 	import ProjectsSection from "@/components/sections/ProjectsSection.svelte";
-	import EngineeringSection from "@/components/sections/EngineeringSection.svelte";
+	import BlogSection from "@/components/sections/BlogSection.svelte";
 	import SkillsSection from "@/components/sections/SkillsSection.svelte";
 	import WorkExperienceSection from "@/components/sections/WorkExperienceSection.svelte";
 	import EducationSection from "@/components/sections/EducationSection.svelte";
@@ -21,7 +21,7 @@
 		description={ENGINEERING_PROJECTS_INTRO}
 	/>
 
-	<EngineeringSection />
+	<BlogSection />
 
 	<SkillsSection />
 	<SectionDivider />

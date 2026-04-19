@@ -1,0 +1,92 @@
+---
+title: "PostgreSQL Migrations Without Downtime: Expand, Migrate, Contract"
+description: "A field guide to backward-compatible schema changes, dual writes, and the patience required to delete old columns safely."
+date: 2026-02-22
+category: "Databases"
+---
+
+Zero-downtime migrations are less about tools and more about **temporarily carrying two truths** in production. The expand-contract pattern (also called parallel change) is the workhorse: make the schema more permissive, deploy code that writes both shapes, backfill, switch reads, then tighten the schema.
+
+## Phase 0: inventory coupling
+
+Before touching DDL, list:
+
+- application read paths that `SELECT *` or assume column order
+- ORMs with aggressive schema caching
+- reporting jobs and replicas lagging behind primary
+
+Surprises here become Friday-night rollbacks.
+
+## Expand: add the new shape
+
+Examples:
+
+- Add `email_normalized text generated always as (lower(trim(email))) stored` before dropping a legacy index on `email`.
+- Add `status_v2` nullable alongside `status` while a new state machine rolls out.
+- Add a child table for one-to-many before removing a JSON blob column.
+
+**Rule:** new columns must be nullable or have safe defaults. Never introduce a non-null column without a default unless you are certain the table is small and locked, which you are not.
+
+## Migrate: dual-write and backfill
+
+Deploy application code that:
+
+1. Writes to **both** old and new representations.
+2. Reads from the **old** path initially, unless you have strong confidence in parity.
+
+Backfill in batches:
+
+```sql
+-- example: backfill in chunks to avoid long locks
+update accounts a
+set status_v2 = map_legacy_status(a.status)
+where a.id in (
+  select id from accounts
+  where status_v2 is null
+  order by id
+  limit 5000
+);
+```
+
+Run the batcher on a schedule until empty. Track rows remaining; alert if the queue grows.
+
+## Verify: compare in shadow mode
+
+For critical fields, compute checksums or counts between old and new:
+
+- nightly job: `count(*) filter (where legacy <> migrated)` should be `0`
+- sample random ids and diff in staging with production-like volume
+
+## Switch reads
+
+Flip feature flags to read from `status_v2` for a slice of users, then everyone. Watch p95 latency and error budgets.
+
+## Contract: delete the old world
+
+Only after:
+
+- no code path writes the legacy column
+- no read path depends on it
+- backups and legal retention allow deletion
+
+Then drop constraints, indexes, and columns in a migration that is safe to roll forward only.
+
+## Lock and access pitfalls
+
+- Adding a **foreign key** can lock both tables; use `not valid` then `validate constraint` in Postgres to reduce impact.
+- **Heavy index builds** should use `concurrently` where supported.
+- Long transactions holding `ACCESS EXCLUSIVE` are the enemy, monitor `pg_locks`.
+
+## Rollbacks
+
+Expand steps roll back easily: unused columns are harmless. Once you contract, rollback requires redeploying old code **and** restoring schema, treat contract migrations as **one-way** and plan accordingly.
+
+## Team habits that help
+
+- Migration review checklist in CI
+- Forbidden patterns: `select *` in services, silent enum string assumptions
+- A single “schema champion” on rotation for risky releases
+
+## Bottom line
+
+Expand-contract feels slow. It is slower than a reckless `alter table`, and faster than explaining data loss to your users.

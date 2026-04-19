@@ -131,10 +131,10 @@
 			<Button
 				variant="ghost"
 				size="sm"
-				href="/engineering"
+				href="/blog"
 				class="font-mono text-xs hover:bg-secondary/80 transition-colors duration-200"
 			>
-				Engineering
+				Blog
 			</Button>
 
 			<div class="w-px h-4 bg-border/50 mx-1"></div>
@@ -192,8 +192,8 @@
 				<a href="/projects" onclick={() => (isMobileMenuOpen = false)}>
 					<span class="text-2xl font-mono font-bold hover:text-primary transition-colors">Projects</span>
 				</a>
-				<a href="/engineering" onclick={() => (isMobileMenuOpen = false)}>
-					<span class="text-2xl font-mono font-bold hover:text-primary transition-colors">Engineering</span>
+				<a href="/blog" onclick={() => (isMobileMenuOpen = false)}>
+					<span class="text-2xl font-mono font-bold hover:text-primary transition-colors">Blog</span>
 				</a>
 				<a href="mailto:me@adityatripathi.dev" onclick={() => (isMobileMenuOpen = false)}>
 					<span class="text-2xl font-mono font-bold hover:text-primary transition-colors">Contact</span>

@@ -1,0 +1,90 @@
+---
+title: "STRIDE for Small Teams Building Consumer Fintech"
+description: "A stripped-down threat modeling workflow that fits a weekly release cadence, without pretending you work at a bank’s security department."
+date: 2026-03-28
+category: "Security"
+---
+
+Formal threat modeling can collapse under its own weight: whiteboards full of arrows, six stakeholders, and a Confluence page nobody updates. Small teams still need structured thinking, especially around money, PII, and OAuth tokens.
+
+STRIDE categories give you a checklist without requiring enterprise tooling.
+
+## STRIDE in one sentence each
+
+- **Spoofing:** Is someone pretending to be another user or service?
+- **Tampering:** Can data be altered in transit, at rest, or in the UI?
+- **Repudiation:** Can a user deny an action you cannot audit?
+- **Information disclosure:** Who can see secrets, balances, or support notes?
+- **Denial of service:** Can an attacker exhaust your wallet, API, or database?
+- **Elevation of privilege:** Can a normal user become an admin or access another tenant?
+
+## Scope the first session to one journey
+
+Pick **one** critical flow: sign-in, link bank account, transfer funds, export statements. Draw four boxes:
+
+1. Client app
+2. Your API
+3. Data stores
+4. Third parties (OAuth, push, email)
+
+For each arrow, ask STRIDE questions. Timebox to ninety minutes.
+
+## Spoofing and session theft
+
+Consumer apps lose sessions to phishing, malware, and device theft. Mitigations stack:
+
+- short-lived access tokens with refresh rotation
+- device binding signals where legal
+- step-up for high-risk actions
+
+Document what you **do not** solve (rooted devices) so support scripts stay honest.
+
+## Tampering: client is hostile
+
+Never trust the client for balances or entitlements. Signed payloads from the client are still suggestions. All enforcement happens server-side with idempotent commands.
+
+## Repudiation: immutable intent logs
+
+For money movement, store:
+
+- who initiated
+- from which session/device fingerprint bucket
+- timestamp with server authority
+- idempotency key
+
+If disputes arise, you need a narrative, not just a final balance row.
+
+## Information disclosure: minimize blast radius
+
+Separate **authentication identifiers** from **support identifiers**. Mask account numbers in logs. Redact search indexes that do not need raw PAN fragments, better, never store what you do not need.
+
+## Denial of service: economics
+
+An attacker can bleed you via:
+
+- expensive PDF generation
+- unbounded export endpoints
+- password reset email floods
+
+Per-user quotas, CAPTCHA on abuse-prone routes, and queue-backed heavy work are boring, and effective.
+
+## Elevation of privilege: IDOR hunting
+
+The classic bug: `GET /transactions/123` works when `123` belongs to someone else. Automated tests should include **cross-tenant negatives**. Admin routes need explicit role checks, not “security by URL obscurity”.
+
+## Outputs that survive the meeting
+
+End each session with:
+
+1. A ranked backlog of mitigations (P0–P2).
+2. Explicit **accepted risks** with owners and review dates.
+3. One diagram committed to the repo under `docs/threat-models/`.
+
+## Cadence
+
+- **Quarterly** full pass on new surface area.
+- **Per epic** mini STRIDE when touching auth, payments, or PII schemas.
+
+## Final word
+
+STRIDE is not about perfect safety; it is about **making assumptions visible**. Small teams win by shipping fast **and** writing down what could burn them, then fixing the top of the list relentlessly.
