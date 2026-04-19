@@ -2,7 +2,7 @@ import { GithubIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/ui/fade-in";
-import { CREATOR_INFO } from "@/lib/constants";
+import { CREATOR_INFO, PENNYWISE_PRIVACY_PATH } from "@/lib/constants";
 
 export function FinalCtaSection() {
 	return (
@@ -46,7 +46,15 @@ export function FinalCtaSection() {
 						</Button>
 					</div>
 
-					<div className="pt-12 text-sm text-muted-foreground font-mono">
+					<div className="pt-12 text-sm text-muted-foreground font-mono space-y-2">
+						<p>
+							<Link
+								href={PENNYWISE_PRIVACY_PATH}
+								className="text-foreground hover:text-primary transition-colors underline underline-offset-4 decoration-border hover:decoration-primary"
+							>
+								Privacy Policy (PennyWise)
+							</Link>
+						</p>
 						<p>
 							Designed & Built by{" "}
 							<Link
@@ -58,7 +66,7 @@ export function FinalCtaSection() {
 								{CREATOR_INFO.name}
 							</Link>
 						</p>
-						<p className="mt-2 text-xs opacity-60">
+						<p className="text-xs opacity-60">
 							© {new Date().getFullYear()} • MIT License
 						</p>
 					</div>

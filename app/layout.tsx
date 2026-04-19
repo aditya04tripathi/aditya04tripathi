@@ -18,29 +18,29 @@ const googleSans = Inter({
 
 export const metadata: Metadata = {
 	metadataBase: new URL(SITE_CONFIG.url),
-	title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
+	title: `${CREATOR_INFO.name} | Software Engineer`,
 	description:
-		"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.",
+		"Software engineer building scalable systems and privacy-first applications. Creator of PennyWise.",
 	openGraph: {
 		url: SITE_CONFIG.url,
 		type: "website",
-		title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
+		title: `${CREATOR_INFO.name} | Software Engineer`,
 		description:
-			"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.",
+			"Software engineer building scalable systems and privacy-first applications. Creator of PennyWise.",
 		images: [
 			{
 				url: `${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`,
 				width: 1200,
 				height: 630,
-				alt: `${CREATOR_INFO.name} - Full-Stack Developer`,
+				alt: `${CREATOR_INFO.name} — Software Engineer`,
 			},
 		],
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
+		title: `${CREATOR_INFO.name} | Software Engineer`,
 		description:
-			"Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.",
+			"Software engineer building scalable systems and privacy-first applications. Creator of PennyWise.",
 		images: [`${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`],
 	},
 };

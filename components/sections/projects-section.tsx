@@ -12,20 +12,33 @@ interface ProjectsSectionProps {
   className?: string;
   noTitle?: boolean;
   noLink?: boolean;
+  title?: string;
+  description?: string | null;
+  sectionId?: string;
 }
 
 export function ProjectsSection({
   projects,
   noTitle = false,
   noLink = false,
+  title = "Engineering_Projects",
+  description = null,
+  sectionId = "engineering-projects",
 }: ProjectsSectionProps) {
   return (
-    <section className="space-y-6 mb-12" id="projects">
+    <section className="space-y-6 mb-12" id={sectionId}>
       {!noTitle && (
-        <Title
-          title="Featured_Systems"
-          icon={<FolderIcon className="size-6 text-primary" />}
-        />
+        <div className="space-y-3 mb-2">
+          <Title
+            title={title}
+            icon={<FolderIcon className="size-6 text-primary" />}
+          />
+          {description ? (
+            <p className="text-muted-foreground max-w-2xl text-sm md:text-base leading-relaxed">
+              {description}
+            </p>
+          ) : null}
+        </div>
       )}
 
       <div className="space-y-8">
@@ -51,17 +64,19 @@ export function ProjectsSection({
                     >
                       <Link href={`/projects/${project.slug}`}>Details</Link>
                     </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="h-8 font-mono text-xs"
-                    >
-                      <Link href={project.github} target="_blank">
-                        <GitBranch className="size-3.5 mr-2" />
-                        Source
-                      </Link>
-                    </Button>
+                    {project.github ? (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        asChild
+                        className="h-8 font-mono text-xs"
+                      >
+                        <Link href={project.github} target="_blank">
+                          <GitBranch className="size-3.5 mr-2" />
+                          Source
+                        </Link>
+                      </Button>
+                    ) : null}
                     {project.link && (
                       <Button
                         variant="default"

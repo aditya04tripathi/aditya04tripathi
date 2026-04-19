@@ -68,6 +68,15 @@ export function SiteHeader() {
 
 				{/* Desktop Navigation */}
 				<div className="hidden md:flex items-center gap-1">
+					<Link href="/pennywise">
+						<Button
+							variant="ghost"
+							size="sm"
+							className="font-mono text-xs hover:bg-secondary/80 transition-all duration-300 hover:scale-105"
+						>
+							PennyWise
+						</Button>
+					</Link>
 					<Link href="/projects">
 						<Button
 							variant="ghost"
@@ -133,6 +142,11 @@ export function SiteHeader() {
 						className="fixed inset-0 top-0 left-0 w-full h-screen bg-background/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center pointer-events-auto md:hidden"
 					>
 						<nav className="flex flex-col items-center gap-6 p-6">
+							<Link href="/pennywise" onClick={() => setIsMobileMenuOpen(false)}>
+								<span className="text-2xl font-mono font-bold hover:text-primary transition-colors">
+									PennyWise
+								</span>
+							</Link>
 							<Link href="/projects" onClick={() => setIsMobileMenuOpen(false)}>
 								<span className="text-2xl font-mono font-bold hover:text-primary transition-colors">
 									Projects

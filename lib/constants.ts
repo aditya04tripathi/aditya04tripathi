@@ -6,13 +6,13 @@ import slugify from "slugify";
  */
 export const CREATOR_INFO = {
   name: "Aditya Tripathi",
-  title: "Software Engineer | Full Stack Developer",
+  title: "Software Engineer",
   email: "me@adityatripathi.dev",
   location: "Clayton, VIC, Australia",
   linkedin: "https://www.linkedin.com/in/adityatripathi0404",
   github: "https://github.com/aditya04tripathi",
   githubRepo: "https://github.com/aditya04tripathi/aditya04tripathi",
-  bio: "Software Engineering student at Monash University and results-driven Full Stack Developer with hands-on experience designing, developing, and deploying scalable web applications. Specialized in Next.js, TypeScript, and Cloud Infrastructure.",
+  bio: "I build real-world applications that prioritize performance, usability, and privacy. My work spans production-ready apps and scalable backend systems. Software Engineering student at Monash University; hands-on experience designing, deploying, and operating systems with Next.js, TypeScript, and cloud infrastructure.",
   avatar:
     "https://res.cloudinary.com/dpaqsdcky/image/upload/v1761473970/pfp_cw1znb.jpg",
   ogImage: "/og-image.png",
@@ -24,8 +24,22 @@ export const CREATOR_INFO = {
  */
 export const SITE_CONFIG = {
   url: "https://adityatripathi.dev",
-  name: "Aditya Tripathi Portfolio",
+  name: "Aditya Tripathi",
 };
+
+export const HERO_HEADLINE =
+  "Software Engineer building scalable systems and privacy-first applications";
+
+export const HERO_PRODUCT_LINE =
+  "Creator of PennyWise — a private offline expense tracker";
+
+export const PENNYWISE_PRIVACY_PATH = "/privacy-policy/pennywise";
+
+export const PENNYWISE_LOGO_URL =
+  "https://play-lh.googleusercontent.com/gc7W_hr33cVOl4Rz3atvgQGje--SbA8o1XWPAcbhR7lexhd2UO-z127gAUPD4HtVL_oQiX6YDE_Q8n3CFUT6sA=w480-h960-rw";
+
+export const ENGINEERING_PROJECTS_INTRO =
+  "Systems, tools, and infrastructure I've built.";
 
 /**
  * Academic background entries shown in the Education section.
@@ -319,6 +333,10 @@ export const PROJECTS: Project[] = [
       "Reduces validation time from weeks to seconds. innovative visual workflow generation. 90+ Lighthouse performance score.",
   },
 ];
+
+export function engineeringProjectsList(projects: Project[] = PROJECTS): Project[] {
+  return projects.filter((p) => p.name !== "PennyWise");
+}
 
 /**
  * Short engineering notes and decisions; useful for an "Engineering" section

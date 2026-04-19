@@ -7,7 +7,11 @@ import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CREATOR_INFO } from "@/lib/constants";
+import {
+	CREATOR_INFO,
+	HERO_HEADLINE,
+	HERO_PRODUCT_LINE,
+} from "@/lib/constants";
 
 export function HeroSection() {
 	return (
@@ -29,13 +33,20 @@ export function HeroSection() {
 							</span>
 						</div>
 
-						<h1 className="type-h1 mb-4">Aditya Tripathi</h1>
-						<h2 className="type-h3 text-muted-foreground mb-6">
-							Software Developer
+						<h1 className="type-h1 mb-4">{CREATOR_INFO.name}</h1>
+						<h2 className="type-h3 text-muted-foreground mb-4">
+							{HERO_HEADLINE}
 						</h2>
 
-						<p className="type-body max-w-2xl text-foreground/80 leading-relaxed">
-							{CREATOR_INFO.bio}
+						<p className="type-body max-w-2xl text-foreground/90 leading-relaxed font-medium">
+							{HERO_PRODUCT_LINE}
+						</p>
+						<p className="type-body max-w-2xl text-foreground/80 leading-relaxed mt-4">
+							I build real-world applications that prioritize performance,
+							usability, and privacy.
+						</p>
+						<p className="type-body max-w-2xl text-foreground/80 leading-relaxed mt-2">
+							My work spans production-ready apps and scalable backend systems.
 						</p>
 					</motion.div>
 
@@ -45,12 +56,21 @@ export function HeroSection() {
 						transition={{ delay: 0.2, duration: 0.5 }}
 						className="flex flex-wrap gap-4 mt-2"
 					>
-						<Link href="/projects">
+						<Link href="/pennywise">
 							<Button
 								size="lg"
 								className="rounded-none font-mono font-bold text-sm h-12 px-8 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
 							>
-								View Projects
+								PennyWise
+							</Button>
+						</Link>
+						<Link href="/projects">
+							<Button
+								variant="secondary"
+								size="lg"
+								className="rounded-none font-mono font-bold text-sm h-12 px-8 transition-all duration-300 hover:scale-105"
+							>
+								Projects
 							</Button>
 						</Link>
 						<Link href="mailto:me@adityatripathi.dev">

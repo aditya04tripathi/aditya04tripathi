@@ -2,17 +2,24 @@ import type { Metadata } from "next";
 import { EducationSection } from "@/components/sections/education-section";
 import { FinalCtaSection } from "@/components/sections/final-cta-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { ProductsSection } from "@/components/sections/products-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { SkillsSection } from "@/components/sections/skills-section";
 import { WorkExperienceSection } from "@/components/sections/work-experience-section";
 import { SectionDivider } from "@/components/ui/section-divider";
-import { CREATOR_INFO, PROJECTS, SITE_CONFIG } from "@/lib/constants";
+import {
+  CREATOR_INFO,
+  ENGINEERING_PROJECTS_INTRO,
+  engineeringProjectsList,
+  SITE_CONFIG,
+} from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
-  description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.`,
+  title: `${CREATOR_INFO.name} | Software Engineer`,
+  description: `${CREATOR_INFO.name} — software engineer building scalable systems and privacy-first apps. Creator of PennyWise. Next.js, TypeScript, and production systems.`,
   keywords: [
     CREATOR_INFO.name,
+    "PennyWise",
     "Software Engineer",
     "Full-Stack Developer",
     "Next.js Developer",
@@ -41,22 +48,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: SITE_CONFIG.url,
-    title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
-    description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.`,
+    title: `${CREATOR_INFO.name} | Software Engineer`,
+    description: `Software engineer building scalable systems and privacy-first applications. Creator of PennyWise.`,
     siteName: SITE_CONFIG.name,
     images: [
       {
         url: `${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`,
         width: 1200,
         height: 630,
-        alt: `${CREATOR_INFO.name} - Full-Stack Developer`,
+        alt: `${CREATOR_INFO.name} — Software Engineer`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${CREATOR_INFO.name} | Full-Stack Developer Portfolio`,
-    description: `Full-stack developer specializing in Next.js, React, TypeScript, and MongoDB. Explore my projects and experience.`,
+    title: `${CREATOR_INFO.name} | Software Engineer`,
+    description: `Software engineer building scalable systems and privacy-first applications. Creator of PennyWise.`,
     images: [`${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`],
   },
   robots: {
@@ -82,7 +89,14 @@ export default function AboutPage() {
       <HeroSection />
 
       <FadeIn>
-        <ProjectsSection projects={PROJECTS.filter((p) => p.featured)} />
+        <ProductsSection />
+      </FadeIn>
+
+      <FadeIn>
+        <ProjectsSection
+          projects={engineeringProjectsList()}
+          description={ENGINEERING_PROJECTS_INTRO}
+        />
       </FadeIn>
 
       <FadeIn>

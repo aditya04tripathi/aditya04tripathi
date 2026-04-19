@@ -5,7 +5,7 @@ export function AboutSection() {
 		<>
 			{/** biome-ignore lint/correctness/useUniqueElementIds: Used for scroll to anchor */}
 			<section
-				id="projects"
+				id="about"
 				className="space-y-5 sm:space-y-6 mb-8 sm:mb-10 md:mb-12"
 			>
 				<h2 className="type-h2">About Me</h2>
