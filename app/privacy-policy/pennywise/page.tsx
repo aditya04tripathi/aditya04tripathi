@@ -30,10 +30,16 @@ const sections: Section[] = [
     title: "2. Information We Collect",
     content: (
       <div className="space-y-8">
+        <p>
+          The following categories of information may be processed and stored{" "}
+          <strong className="text-foreground">only on your device</strong> to
+          provide app features. PennyWise does not upload this information to
+          our servers for storage.
+        </p>
         <div className="bg-muted/30 border-border/50 rounded-xl border p-6">
           <h3 className="text-foreground mb-4 flex items-center gap-2 text-lg font-bold tracking-wider uppercase opacity-80">
             <ShieldCheck className="text-primary size-5" />
-            2.1 Personal Data
+            2.1 User-Provided Information (Stored Locally)
           </h3>
           <ul className="space-y-4">
             <li className="flex gap-3 text-base">
@@ -107,14 +113,45 @@ const sections: Section[] = [
     ),
   },
   {
+    id: "collection-use",
+    title: "3. Information Collection and Use",
+    content: (
+      <div className="space-y-4">
+        <p>
+          PennyWise itself does not collect, store, or transmit any personal
+          financial data to external servers or to the developer. Financial
+          information you enter is stored only on your device.
+        </p>
+        <p>
+          However, third-party services integrated into the app (such as Google
+          AdMob) may collect certain information automatically for advertising
+          purposes.
+        </p>
+        <p>
+          PennyWise does not require user registration or account creation. We
+          do not collect personally identifiable information such as email
+          addresses or phone numbers.
+        </p>
+      </div>
+    ),
+  },
+  {
     id: "storage",
-    title: "3. Data Storage and Processing",
+    title: "4. Data Storage and Processing",
     content: (
       <div className="space-y-6">
         <p>PennyWise is an offline-first application.</p>
         <p>
-          User financial data is stored locally and never shared. However,
-          third-party services like AdMob may collect limited device-level data.
+          PennyWise does not collect or store your financial data on external
+          servers.
+        </p>
+        <p>
+          However, the app may use third-party services (such as Google AdMob)
+          which may collect limited device-level data.
+        </p>
+        <p>
+          While PennyWise does not track your financial activity, advertising
+          partners may collect limited technical data required to serve ads.
         </p>
         <div className="border-primary bg-primary/5 rounded-r-lg border-l-4 py-4 pl-6">
           <ul className="space-y-4">
@@ -127,8 +164,9 @@ const sections: Section[] = [
             <li>
               <strong className="text-foreground block">No Cloud Sync:</strong>
               By default, PennyWise does not transmit your personal or financial
-              data to any external servers or cloud services. Your data remains
-              on your device unless you choose to manually export or share it.
+              data to any external servers or cloud services operated by us. Your
+              data remains on your device unless you choose to manually export
+              or share it.
             </li>
           </ul>
         </div>
@@ -137,30 +175,31 @@ const sections: Section[] = [
   },
   {
     id: "advertising",
-    title: "4. Advertising",
+    title: "5. Advertising",
     content: (
       <div className="space-y-6">
         <div className="flex items-start gap-4">
           <Megaphone className="text-primary mt-1 size-6 shrink-0" />
           <div className="space-y-4">
             <p>
-              This app uses Google AdMob, a third-party advertising service
-              provided by Google.
+              This app uses Google AdMob, a mobile advertising service provided
+              by Google.
             </p>
             <p>
-              AdMob may collect and use certain data, including but not limited
-              to:
+              AdMob may collect certain information automatically, including:
             </p>
             <ul className="list-disc space-y-2 pl-6">
-              <li>Device identifiers</li>
+              <li>Device identifiers (such as advertising ID)</li>
               <li>IP address</li>
-              <li>App usage data</li>
+              <li>Device information</li>
+              <li>Interaction data with ads</li>
             </ul>
             <p>
-              This data is used to provide and improve advertising experiences.
+              This information is used to provide and improve advertising
+              services.
             </p>
             <p>
-              For more information, please refer to:{" "}
+              You can learn more about how Google uses data here:{" "}
               <a
                 href="https://policies.google.com/privacy"
                 className="text-primary font-medium hover:underline"
@@ -177,7 +216,7 @@ const sections: Section[] = [
   },
   {
     id: "third-party",
-    title: "5. Third-Party Services",
+    title: "6. Third-Party Services",
     content: (
       <div className="space-y-4">
         <p>
@@ -196,7 +235,7 @@ const sections: Section[] = [
   },
   {
     id: "consent",
-    title: "6. User Consent",
+    title: "7. User Consent",
     content: (
       <p>
         By using the app, you agree to the use of third-party services as
@@ -206,7 +245,7 @@ const sections: Section[] = [
   },
   {
     id: "use",
-    title: "7. Use of Information",
+    title: "8. Use of Information",
     content: (
       <ul className="space-y-4">
         <li className="flex gap-3 text-base">
@@ -230,7 +269,7 @@ const sections: Section[] = [
   },
   {
     id: "security",
-    title: "8. Security",
+    title: "9. Security",
     content: (
       <div className="flex items-start gap-4">
         <Lock className="text-primary mt-1 size-6 shrink-0" />
@@ -260,7 +299,7 @@ const sections: Section[] = [
   },
   {
     id: "rights",
-    title: "9. Your Data Rights",
+    title: "10. Your Data Rights",
     content: (
       <div className="space-y-4">
         <p>
@@ -275,16 +314,26 @@ const sections: Section[] = [
           <li>
             <strong className="text-foreground">Deletion:</strong> You can
             delete specific transactions, cards, or your entire data store from
-            the settings menu within the app. Uninstalling the app will also
-            typically delete all locally stored data.
+            the settings menu within the app. All data can be permanently
+            deleted by clearing app data or uninstalling the app.
           </li>
         </ul>
       </div>
     ),
   },
   {
+    id: "children",
+    title: "11. Children's Privacy",
+    content: (
+      <p>
+        This app is not directed to children under the age of 13. We do not
+        knowingly collect personal information from children.
+      </p>
+    ),
+  },
+  {
     id: "changes",
-    title: "10. Changes to This Policy",
+    title: "12. Changes to This Policy",
     content: (
       <p>
         We may update our Privacy Policy from time to time. We will notify you
@@ -295,23 +344,26 @@ const sections: Section[] = [
   },
   {
     id: "contact",
-    title: "11. Contact Us",
+    title: "13. Contact Us",
     content: (
       <p>
-        If you have any questions about this Privacy Policy, please contact the
-        developer at{" "}
+        If you have any questions about this Privacy Policy, you can contact us
+        at:{" "}
         <a
           href="mailto:contact@adityatripathi.dev"
           className="text-primary font-medium hover:underline"
         >
           contact@adityatripathi.dev
         </a>
-        .
       </p>
     ),
   },
 ];
 
+const LAST_UPDATED = "April 19, 2026";
+
 export default function PrivacyPolicyPage() {
-  return <PrivacyPolicyClient sections={sections} />;
+  return (
+    <PrivacyPolicyClient sections={sections} lastUpdated={LAST_UPDATED} />
+  );
 }

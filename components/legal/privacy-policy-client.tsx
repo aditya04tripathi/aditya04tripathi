@@ -10,7 +10,13 @@ export interface Section {
   content: React.ReactNode;
 }
 
-export function PrivacyPolicyClient({ sections }: { sections: Section[] }) {
+export function PrivacyPolicyClient({
+  sections,
+  lastUpdated,
+}: {
+  sections: Section[];
+  lastUpdated: string;
+}) {
   const [activeSection, setActiveSection] = useState(sections[0].id);
 
   useEffect(() => {
@@ -50,7 +56,7 @@ export function PrivacyPolicyClient({ sections }: { sections: Section[] }) {
           <div className="text-muted-foreground mt-8 flex items-center justify-center gap-3">
             <span className="bg-border h-px w-12"></span>
             <p className="text-xs font-semibold tracking-widest uppercase">
-              Effective Date: January 9, 2026
+              Last Updated: {lastUpdated}
             </p>
             <span className="bg-border h-px w-12"></span>
           </div>
