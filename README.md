@@ -49,7 +49,9 @@ Content and copy for the portfolio (projects, bio links) live mainly in `src/lib
 
 ## Railway / Docker
 
-Use **build** `pnpm run build` (or `npm run build`), then **start** `pnpm start` (or `npm run start`). Railway injects `PORT`; the default `astro preview` only listens on `127.0.0.1`, so the edge cannot reach the container until you bind **`0.0.0.0`** as in the `start` script.
+See Railway’s [Deploy an Astro app](https://docs.railway.com/guides/astro) guide. That doc focuses on **SSR** with `@astrojs/node` and a **`start`** script like `node ./dist/server/entry.mjs`. This repo is **static (SSG)** only: **`pnpm run build`** outputs `dist/`, and **`pnpm start`** runs **`astro preview`** with **`0.0.0.0`** and Railway’s **`PORT`** so the proxy can reach the container.
+
+`astro.config.mjs` sets **`server.host`** to **`0.0.0.0`** (as Railway recommends) and configures Vite **`server` / `preview`** with the same host plus **`allowedHosts: true`** so custom domains (e.g. `adityatripathi.dev`) are not blocked by Vite’s host check.
 
 ## Git hooks
 

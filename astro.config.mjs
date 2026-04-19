@@ -9,6 +9,9 @@ const rootDir = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   site: "https://adityatripathi.dev",
+  server: {
+    host: "0.0.0.0",
+  },
   integrations: [svelte(), mdx()],
   vite: {
     plugins: [tailwindcss()],
@@ -18,9 +21,11 @@ export default defineConfig({
       },
     },
     server: {
+      host: "0.0.0.0",
       allowedHosts: true,
     },
     preview: {
+      host: "0.0.0.0",
       allowedHosts: true,
     },
   },
