@@ -105,6 +105,14 @@ export const SKILLS = {
  */
 export const WORK_EXPERIENCE = [
   {
+    role: "Full-Stack Engineering Intern",
+    company: "PlasmIT Vector",
+    location: "Docklands, Victoria, Australia",
+    period: `${format(new Date("2026-03-01"), "LLLL yyyy")} - Present`,
+    description:
+      "Contributing to PlasmIT's mission to revolutionize healthcare delivery through innovative technology solutions. As a Full-Stack Engineering Intern at this healthcare-focused tech startup, I design and develop scalable applications that improve stakeholder experiences across the healthcare ecosystem. Working in a collaborative 11-50 person team in Docklands, I gain hands-on experience building modern web and backend systems that directly impact healthcare service quality and accessibility.",
+  },
+  {
     role: "Projects Team Member",
     company: "WIRED Monash",
     location: "Clayton, Victoria, Australia",
@@ -334,6 +342,8 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export function engineeringProjectsList(projects: Project[] = PROJECTS): Project[] {
+export function engineeringProjectsList(
+  projects: Project[] = PROJECTS,
+): Project[] {
   return projects.filter((p) => p.name !== "PennyWise");
 }
