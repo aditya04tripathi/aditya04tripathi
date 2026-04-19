@@ -1,0 +1,31 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProjectDetailPage from "@/components/projects/ProjectDetailPage.svelte";
+import { CREATOR_INFO, PROJECTS, SITE_CONFIG } from "@/lib/constants";
+
+export function getStaticPaths() {
+	return PROJECTS.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const project = PROJECTS.find((p) => p.slug === slug);
+
+if (!project) {
+	return Astro.redirect("/404");
+}
+
+const title = `${project.name} | ${CREATOR_INFO.name}`;
+const description = `${project.description} Built with ${project.technologies.join(", ")}.`;
+const ogImage = project.image
+	? `${SITE_CONFIG.url}${project.image}`
+	: `${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`;
+---
+
+<Layout
+	{title}
+	{description}
+	canonicalPath={`/projects/${slug}`}
+	{ogImage}
+>
+	<ProjectDetailPage client:load project={project} />
+</Layout>

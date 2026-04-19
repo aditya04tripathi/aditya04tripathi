@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PennywiseProductPage from "@/components/pennywise/PennywiseProductPage.svelte";
+import { CREATOR_INFO, PROJECTS, SITE_CONFIG } from "@/lib/constants";
+
+const pennyWise = PROJECTS.find((p) => p.name === "PennyWise");
+
+if (!pennyWise?.link) {
+	return Astro.redirect("/404");
+}
+
+const ogImage = `${SITE_CONFIG.url}${pennyWise.image}`;
+---
+
+<Layout
+	title={`PennyWise | ${CREATOR_INFO.name}`}
+	description="Private offline expense tracker. Local-first finance on your device — no account, no cloud storage of your transactions."
+	canonicalPath="/pennywise"
+	{ogImage}
+>
+	<PennywiseProductPage client:load pennyWise={pennyWise} />
+</Layout>

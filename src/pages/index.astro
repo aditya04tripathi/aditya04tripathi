@@ -1,0 +1,13 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import HomePage from "@/components/pages/HomePage.svelte";
+import { CREATOR_INFO } from "@/lib/constants";
+---
+
+<Layout
+	title={`${CREATOR_INFO.name} | Software Engineer`}
+	description={`${CREATOR_INFO.name} — software engineer building scalable systems and privacy-first apps. Creator of PennyWise. Next.js, TypeScript, and production systems.`}
+	canonicalPath="/"
+>
+	<HomePage client:load />
+</Layout>

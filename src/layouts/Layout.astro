@@ -1,0 +1,67 @@
+---
+import "@/styles/global.css";
+import { ViewTransitions } from "astro:transitions";
+import SiteHeader from "@/components/layout/SiteHeader.svelte";
+import ToasterHost from "@/components/ToasterHost.svelte";
+import CommandPalette from "@/components/CommandPalette.svelte";
+import { CREATOR_INFO, SITE_CONFIG } from "@/lib/constants";
+
+interface Props {
+	title?: string;
+	description?: string;
+	canonicalPath?: string;
+	ogImage?: string;
+}
+
+const {
+	title = `${CREATOR_INFO.name} | Software Engineer`,
+	description = `Software engineer building scalable systems and privacy-first applications. Creator of PennyWise.`,
+	canonicalPath = Astro.url.pathname,
+	ogImage = `${SITE_CONFIG.url}${CREATOR_INFO.ogImage}`,
+} = Astro.props;
+
+const canonicalUrl = new URL(canonicalPath, SITE_CONFIG.url).toString();
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<ViewTransitions />
+	</head>
+	<body class="antialiased font-sans">
+		<a
+			href="#main-content"
+			class="pointer-events-auto fixed left-4 top-4 z-[60] -translate-y-24 rounded-none border border-border bg-background px-4 py-2 text-sm font-medium text-foreground opacity-0 shadow-sm transition-[transform,opacity] duration-200 [transition-timing-function:cubic-bezier(0.25,1,0.5,1)] focus-visible:translate-y-0 focus-visible:opacity-100 focus-visible:ring-[3px] focus-visible:ring-ring/50"
+		>
+			Skip to content
+		</a>
+		<SiteHeader client:load transition:persist="site-header" />
+		<main id="main-content" class="pt-24 pb-10 min-h-screen" tabindex="-1">
+			<slot />
+		</main>
+		<ToasterHost client:load transition:persist="toaster" />
+		<CommandPalette client:load transition:persist="command-palette" />
+	</body>
+</html>

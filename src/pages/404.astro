@@ -1,0 +1,22 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+	title="Page not found | Aditya Tripathi"
+	description="The page you requested is not available."
+	canonicalPath="/404"
+>
+	<div class="container mx-auto px-4 sm:px-6 max-w-4xl pt-12 text-center">
+		<h1 class="type-h1 mb-4">404</h1>
+		<p class="type-body mx-auto mb-8 text-muted-foreground">
+			This URL does not match any page. If you followed a link, it may be outdated.
+		</p>
+		<a
+			href="/"
+			class="inline-flex text-primary font-mono text-sm font-semibold underline underline-offset-4 transition-colors hover:text-primary/90"
+		>
+			Back to home
+		</a>
+	</div>
+</Layout>

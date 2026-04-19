@@ -1,0 +1,26 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import EngineeringNotesList from "@/components/sections/EngineeringNotesList.svelte";
+import { getCollection } from "astro:content";
+
+const all = await getCollection("engineering");
+const sorted = [...all].sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const notes = sorted.map((e) => ({
+	title: e.data.title,
+	category: e.data.category,
+	date: e.data.date.toISOString(),
+	summary: e.data.summary,
+	decision: e.data.decision,
+	tradeoffs: e.data.tradeoffs,
+}));
+---
+
+<Layout
+	title="Engineering Notes | Aditya Tripathi"
+	description="Deep dives into architectural decisions, tradeoffs, and system design choices."
+	canonicalPath="/engineering"
+>
+	<EngineeringNotesList client:load notes={notes} />
+</Layout>

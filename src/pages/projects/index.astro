@@ -1,0 +1,12 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import ProjectsArchivePage from "@/components/pages/ProjectsArchivePage.svelte";
+---
+
+<Layout
+	title="Engineering Projects | Aditya Tripathi"
+	description="Systems, tools, and infrastructure — scalable backends, web apps, and experiments."
+	canonicalPath="/projects"
+>
+	<ProjectsArchivePage client:load />
+</Layout>

@@ -1,0 +1,49 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import PrivacyPolicyToc from "@/components/legal/PrivacyPolicyToc.svelte";
+import PennywisePrivacyContent from "@/components/legal/PennywisePrivacyContent.astro";
+
+const lastUpdated = "April 19, 2026";
+---
+
+<Layout
+	title="Privacy Policy | PennyWise"
+	description="Learn how PennyWise protects your data. Offline-first financial tracking with enterprise-grade security and biometrics."
+	canonicalPath="/privacy-policy/pennywise"
+>
+	<section class="min-h-screen w-full bg-transparent py-16 md:py-32">
+		<div class="mx-auto max-w-7xl px-6 lg:px-8">
+			<header class="mx-auto mb-24 max-w-4xl text-center">
+				<h2 class="text-primary text-base leading-7 font-semibold tracking-wide uppercase">
+					Legal
+				</h2>
+				<h1
+					class="text-foreground mt-2 text-4xl font-bold tracking-tight text-balance sm:text-5xl lg:text-6xl"
+				>
+					Privacy Policy
+				</h1>
+				<p class="text-muted-foreground mt-6 text-lg leading-8 text-balance">
+					Detailed information on how we collect, protect, and use your personal
+					data.
+				</p>
+				<div class="text-muted-foreground mt-8 flex items-center justify-center gap-3">
+					<span class="bg-border h-px w-12"></span>
+					<p class="text-xs font-semibold tracking-widest uppercase">
+						Last Updated: {lastUpdated}
+					</p>
+					<span class="bg-border h-px w-12"></span>
+				</div>
+			</header>
+
+			<div class="relative flex flex-col gap-12 lg:flex-row lg:gap-24">
+				<PrivacyPolicyToc client:load />
+				<div
+					id="privacy-policy-sections"
+					class="mx-auto max-w-3xl flex-1 space-y-24 lg:mx-0"
+				>
+					<PennywisePrivacyContent />
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
