@@ -3,8 +3,6 @@
 	import { Search } from "lucide-svelte";
 	import { getCommandDefinitions, type CommandDefinition } from "@/lib/command-registry";
 	import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
-	import { toggleTheme } from "@/lib/theme.svelte";
-
 	let open = $state(false);
 	let query = $state("");
 	let selected = $state(0);
@@ -58,8 +56,6 @@
 				window.open(c.href, "_blank", "noopener,noreferrer");
 			} else if (c.kind === "mailto") {
 				window.location.href = c.href;
-			} else if (c.kind === "theme") {
-				toggleTheme();
 			}
 		} finally {
 			close();

@@ -9,14 +9,12 @@
 	import IconLinkedin from "@/components/icons/IconLinkedin.svelte";
 	import { CREATOR_INFO } from "@/lib/constants";
 	import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
-	import { initTheme } from "@/lib/theme.svelte";
 	import { initTextSize } from "@/lib/text-size.svelte";
 	import { flyInParams, prefersReducedMotion } from "@/lib/motion";
 
 	let isMobileMenuOpen = $state(false);
 
 	onMount(() => {
-		initTheme();
 		initTextSize();
 	});
 

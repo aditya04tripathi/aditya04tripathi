@@ -3,8 +3,7 @@ import { CREATOR_INFO, PENNYWISE_PRIVACY_PATH, PROJECTS } from "@/lib/constants"
 export type CommandDefinition =
 	| { id: string; label: string; keywords: string; kind: "nav"; href: string }
 	| { id: string; label: string; keywords: string; kind: "external"; href: string }
-	| { id: string; label: string; keywords: string; kind: "mailto"; href: string }
-	| { id: string; label: string; keywords: string; kind: "theme" };
+	| { id: string; label: string; keywords: string; kind: "mailto"; href: string };
 
 export function getCommandDefinitions(): CommandDefinition[] {
 	const projects: CommandDefinition[] = PROJECTS.map((p) => ({
@@ -66,12 +65,6 @@ export function getCommandDefinitions(): CommandDefinition[] {
 			keywords: "contact mail message",
 			kind: "mailto",
 			href: `mailto:${CREATOR_INFO.email}`,
-		},
-		{
-			id: "theme",
-			label: "Switch light or dark theme",
-			keywords: "appearance color mode contrast",
-			kind: "theme",
 		},
 	];
 }

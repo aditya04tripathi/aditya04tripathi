@@ -42,7 +42,7 @@ pnpm install
 - `src/pages/` — Astro routes (`*.astro`)
 - `src/components/` — Svelte sections, layout, UI
 - `src/content/` — MDX collections (e.g. engineering notes)
-- `src/lib/` — Data (`constants.ts`), theme, command palette registry
+- `src/lib/` — Data (`constants.ts`), text-size prefs, command palette registry
 - `src/styles/global.css` — Tailwind import, design tokens, global utilities
 
 Content and copy for the portfolio (projects, bio links) live mainly in `src/lib/constants.ts`. Replace assets under `public/` as needed.

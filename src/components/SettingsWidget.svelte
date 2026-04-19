@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	import { Moon, Sun } from "lucide-svelte";
 	import Button from "@/components/ui/Button.svelte";
-	import { themeState, toggleTheme } from "@/lib/theme.svelte";
 	import { textSizeState, setTextSize, type TextSize } from "@/lib/text-size.svelte";
 
 	let mounted = $state(false);
@@ -53,23 +51,6 @@
 			onclick={() => pickSize("large")}
 		>
 			<span class="text-lg font-bold">A</span>
-		</Button>
-
-		<div class="w-px h-4 bg-border/50 mx-1" aria-hidden="true"></div>
-
-		<Button
-			variant="ghost"
-			size="icon"
-			type="button"
-			class="min-h-11 min-w-11 h-11 w-11"
-			aria-label={themeState.mode === "dark" ? "Switch to light theme" : "Switch to dark theme"}
-			onclick={toggleTheme}
-		>
-			{#if themeState.mode === "dark"}
-				<Sun class="size-4" aria-hidden="true" />
-			{:else}
-				<Moon class="size-4" aria-hidden="true" />
-			{/if}
 		</Button>
 	</div>
 {/if}
