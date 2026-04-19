@@ -28,14 +28,14 @@ pnpm install
 
 ## Scripts
 
-| Command        | Description              |
-| -------------- | ------------------------ |
-| `pnpm dev`     | Dev server (default port 4321) |
-| `pnpm build`   | Production build to `dist/` |
-| `pnpm preview` | Serve `dist/` locally (localhost only) |
+| Command        | Description                                              |
+| -------------- | -------------------------------------------------------- |
+| `pnpm dev`     | Dev server (default port 4321)                           |
+| `pnpm build`   | Production build to `dist/`                              |
+| `pnpm preview` | Serve `dist/` locally (localhost only)                   |
 | `pnpm start`   | Serve `dist/` for hosting (binds `0.0.0.0`, uses `PORT`) |
-| `pnpm lint`    | `biome lint`             |
-| `pnpm format`  | `biome format`           |
+| `pnpm lint`    | `biome lint`                                             |
+| `pnpm format`  | `biome format`                                           |
 
 ## Project layout
 
