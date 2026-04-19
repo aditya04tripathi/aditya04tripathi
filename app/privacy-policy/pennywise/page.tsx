@@ -3,7 +3,7 @@ import {
   type Section,
 } from "@/components/legal/privacy-policy-client";
 import type { Metadata } from "next";
-import { ShieldCheck, Share2, Lock } from "lucide-react";
+import { ShieldCheck, Share2, Lock, Megaphone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | PennyWise",
@@ -112,6 +112,10 @@ const sections: Section[] = [
     content: (
       <div className="space-y-6">
         <p>PennyWise is an offline-first application.</p>
+        <p>
+          User financial data is stored locally and never shared. However,
+          third-party services like AdMob may collect limited device-level data.
+        </p>
         <div className="border-primary bg-primary/5 rounded-r-lg border-l-4 py-4 pl-6">
           <ul className="space-y-4">
             <li>
@@ -132,8 +136,77 @@ const sections: Section[] = [
     ),
   },
   {
+    id: "advertising",
+    title: "4. Advertising",
+    content: (
+      <div className="space-y-6">
+        <div className="flex items-start gap-4">
+          <Megaphone className="text-primary mt-1 size-6 shrink-0" />
+          <div className="space-y-4">
+            <p>
+              This app uses Google AdMob, a third-party advertising service
+              provided by Google.
+            </p>
+            <p>
+              AdMob may collect and use certain data, including but not limited
+              to:
+            </p>
+            <ul className="list-disc space-y-2 pl-6">
+              <li>Device identifiers</li>
+              <li>IP address</li>
+              <li>App usage data</li>
+            </ul>
+            <p>
+              This data is used to provide and improve advertising experiences.
+            </p>
+            <p>
+              For more information, please refer to:{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                className="text-primary font-medium hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                https://policies.google.com/privacy
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: "third-party",
+    title: "5. Third-Party Services",
+    content: (
+      <div className="space-y-4">
+        <p>
+          The app may use third-party services that collect information used to
+          identify you.
+        </p>
+        <p>These include:</p>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Google AdMob</li>
+        </ul>
+        <p>
+          These services operate under their own privacy policies.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: "consent",
+    title: "6. User Consent",
+    content: (
+      <p>
+        By using the app, you agree to the use of third-party services as
+        described in this policy.
+      </p>
+    ),
+  },
+  {
     id: "use",
-    title: "4. Use of Information",
+    title: "7. Use of Information",
     content: (
       <ul className="space-y-4">
         <li className="flex gap-3 text-base">
@@ -157,7 +230,7 @@ const sections: Section[] = [
   },
   {
     id: "security",
-    title: "5. Security",
+    title: "8. Security",
     content: (
       <div className="flex items-start gap-4">
         <Lock className="text-primary mt-1 size-6 shrink-0" />
@@ -186,20 +259,8 @@ const sections: Section[] = [
     ),
   },
   {
-    id: "third-party",
-    title: "6. Third-Party Services",
-    content: (
-      <p>
-        PennyWise does not sell, trade, or otherwise transfer your personal
-        information to third parties. We do not use third-party analytics or
-        tracking SDKs that collect identifiable information about your usage
-        habits.
-      </p>
-    ),
-  },
-  {
     id: "rights",
-    title: "7. Your Data Rights",
+    title: "9. Your Data Rights",
     content: (
       <div className="space-y-4">
         <p>
@@ -223,7 +284,7 @@ const sections: Section[] = [
   },
   {
     id: "changes",
-    title: "8. Changes to This Policy",
+    title: "10. Changes to This Policy",
     content: (
       <p>
         We may update our Privacy Policy from time to time. We will notify you
@@ -234,7 +295,7 @@ const sections: Section[] = [
   },
   {
     id: "contact",
-    title: "9. Contact Us",
+    title: "11. Contact Us",
     content: (
       <p>
         If you have any questions about this Privacy Policy, please contact the
