@@ -32,7 +32,8 @@ pnpm install
 | -------------- | ------------------------ |
 | `pnpm dev`     | Dev server (default port 4321) |
 | `pnpm build`   | Production build to `dist/` |
-| `pnpm preview` | Serve `dist/` locally    |
+| `pnpm preview` | Serve `dist/` locally (localhost only) |
+| `pnpm start`   | Serve `dist/` for hosting (binds `0.0.0.0`, uses `PORT`) |
 | `pnpm lint`    | `biome lint`             |
 | `pnpm format`  | `biome format`           |
 
@@ -45,6 +46,10 @@ pnpm install
 - `src/styles/global.css` — Tailwind import, design tokens, global utilities
 
 Content and copy for the portfolio (projects, bio links) live mainly in `src/lib/constants.ts`. Replace assets under `public/` as needed.
+
+## Railway / Docker
+
+Use **build** `pnpm run build` (or `npm run build`), then **start** `pnpm start` (or `npm run start`). Railway injects `PORT`; the default `astro preview` only listens on `127.0.0.1`, so the edge cannot reach the container until you bind **`0.0.0.0`** as in the `start` script.
 
 ## Git hooks
 
