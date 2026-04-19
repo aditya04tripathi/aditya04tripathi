@@ -4,12 +4,14 @@ import { defineConfig } from "astro/config";
 import node from "@astrojs/node";
 import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url));
+const site = "https://adityatripathi.dev";
 
 export default defineConfig({
-  site: "https://adityatripathi.dev",
+  site,
   output: "static",
   adapter: node({
     mode: "standalone",
@@ -18,7 +20,20 @@ export default defineConfig({
     host: "0.0.0.0",
     port: Number(process.env.PORT) || 4321,
   },
-  integrations: [svelte(), mdx()],
+  integrations: [
+    svelte(),
+    mdx(),
+    sitemap({
+      filter: (page) => {
+        try {
+          const pathname = new URL(page).pathname;
+          return pathname !== "/404" && !pathname.startsWith("/404/");
+        } catch {
+          return true;
+        }
+      },
+    }),
+  ],
   vite: {
     plugins: [tailwindcss()],
     resolve: {
