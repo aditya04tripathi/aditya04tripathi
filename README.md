@@ -1,135 +1,55 @@
-# Portfolio Website
+# aditya04tripathi
 
-A modern, responsive portfolio website built with Next.js 15, showcasing my projects, skills, experience, and education as a Software Engineering student.
+Personal site and portfolio for **Aditya Tripathi** — projects (including [PennyWise](https://play.google.com/store/apps/details?id=com.pennywise.app)), engineering notes, and contact. Built as a static Astro app with Svelte islands.
 
-## 🚀 Live Demo
+**Live:** [adityatripathi.dev](https://adityatripathi.dev)
 
-Visit the live site: [adityatripathi.dev](https://adityatripathi.dev)
+## Stack
 
-## ✨ Features
+- [Astro](https://astro.build/) 5 (MDX, [View Transitions](https://docs.astro.build/en/guides/view-transitions/))
+- [Svelte](https://svelte.dev/) 5 (`@astrojs/svelte`)
+- [Tailwind CSS](https://tailwindcss.com/) 4 (`@tailwindcss/vite`)
+- [Biome](https://biomejs.dev/) for lint/format
+- [Lucide](https://lucide.dev/) icons (`lucide-svelte`)
+- UI primitives: custom Svelte components (buttons, cards, etc.) with [class-variance-authority](https://cva.style/) and [tailwind-merge](https://github.com/dcastil/tailwind-merge)
 
-- **Responsive Design** - Fully optimized for mobile, tablet, and desktop devices
-- **Modern UI** - Built with Tailwind CSS and shadcn/ui components
-- **Dynamic Project Pages** - Individual pages for each project with detailed information
-- **Type-Safe** - Full TypeScript implementation for enhanced developer experience
-- **Dark Mode Support** - Theme toggle for user preference
-- **Optimized Performance** - Fast loading times with Next.js App Router
-- **SEO Optimized** - Meta tags and structured data for better search visibility
+## Prerequisites
 
-## 🛠️ Technologies Used
+- Node.js 20+
+- [pnpm](https://pnpm.io/)
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Railway](https://railway.app/)
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── app/
-│   ├── page.tsx              # Main portfolio page
-│   ├── layout.tsx            # Root layout
-│   ├── globals.css           # Global styles
-│   └── projects/
-│       └── [slug]/
-│           └── page.tsx      # Dynamic project pages
-├── components/
-│   └── ui/                   # shadcn/ui components
-├── context/
-│   └── theme-context.tsx     # Theme provider
-├── lib/
-│   ├── constants.ts          # Portfolio data
-│   └── utils.ts              # Utility functions
-└── public/                   # Static assets
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- pnpm (recommended) or npm
-
-### Installation
-
-1. Clone the repository:
+## Setup
 
 ```bash
-git clone https://github.com/aditya04tripathi/portfolio.git
-cd portfolio
-```
-
-2. Install dependencies:
-
-```bash
+git clone https://github.com/aditya04tripathi/aditya04tripathi.git
+cd aditya04tripathi
 pnpm install
-# or
-npm install
 ```
 
-3. Run the development server:
+## Scripts
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+| Command        | Description              |
+| -------------- | ------------------------ |
+| `pnpm dev`     | Dev server (default port 4321) |
+| `pnpm build`   | Production build to `dist/` |
+| `pnpm preview` | Serve `dist/` locally    |
+| `pnpm lint`    | `biome lint`             |
+| `pnpm format`  | `biome format`           |
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+## Project layout
 
-## 🎨 Customization
+- `src/pages/` — Astro routes (`*.astro`)
+- `src/components/` — Svelte sections, layout, UI
+- `src/content/` — MDX collections (e.g. engineering notes)
+- `src/lib/` — Data (`constants.ts`), theme, command palette registry
+- `src/styles/global.css` — Tailwind import, design tokens, global utilities
 
-To customize the portfolio with your own information:
+Content and copy for the portfolio (projects, bio links) live mainly in `src/lib/constants.ts`. Replace assets under `public/` as needed.
 
-1. Update personal information in `lib/constants.ts`:
+## Git hooks
 
-   - `CREATOR_INFO` - Name, title, email, location, and social links
-   - `EDUCATION` - Educational background
-   - `SKILLS` - Technical and soft skills
-   - `WORK_EXPERIENCE` - Professional experience
-   - `PROJECTS` - Portfolio projects
+[Husky](https://typicode.github.io/husky/) runs **`pnpm run build`** before each commit. [Commitlint](https://commitlint.js.org/) enforces [Conventional Commits](https://www.conventionalcommits.org/) on the commit message (`feat:`, `fix:`, `chore:`, etc.).
 
-2. Replace images in the `public/projects/` directory with your own
+## License
 
-3. Customize colors and styling in `tailwind.config.ts` and `app/globals.css`
-
-## 📝 Available Scripts
-
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-
-## 🌟 Key Sections
-
-- **About** - Introduction and bio
-- **Education** - Academic background
-- **Technical Skills** - Programming languages, frameworks, and tools
-- **Projects** - Featured projects with detailed pages
-- **Work Experience** - Professional experience timeline
-- **Contact** - Social links and contact information
-
-## 📫 Contact
-
-**Aditya Tripathi**
-
-- Email: [me@adityatripathi.dev](mailto:me@adityatripathi.dev)
-- LinkedIn: [adityatripathi0404](https://www.linkedin.com/in/adityatripathi0404)
-- GitHub: [@aditya04tripathi](https://github.com/aditya04tripathi)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Built with [Next.js](https://nextjs.org/)
-- UI components from [shadcn/ui](https://ui.shadcn.com/)
-- Icons by [Lucide](https://lucide.dev/)
-
----
-
-Made with ❤️ by Aditya Tripathi
+MIT.
