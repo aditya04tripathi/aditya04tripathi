@@ -6,7 +6,7 @@
 </script>
 
 <section class="space-y-6 mb-12">
-	<Title title="Experience_Log">
+	<Title title="Experience log">
 		{#snippet icon()}
 			<Briefcase class="size-6 text-primary" />
 		{/snippet}

@@ -23,7 +23,7 @@
 
 	<div class="mb-8 sm:mb-10 md:mb-12">
 		<h1 class="type-h1 mb-4 break-words">{project.name}</h1>
-		<p class="type-body break-words text-muted-foreground">{project.description}</p>
+		<p class="type-body-muted break-words">{project.description}</p>
 	</div>
 
 	{#if project.image}
@@ -80,21 +80,21 @@
 	<Separator class="my-8 sm:my-10 md:my-12" />
 
 	<div class="space-y-4 mb-8 sm:mb-10 md:mb-12">
-		<h2 class="type-h3 text-primary">// Problem_Statement</h2>
+		<h2 class="type-h3 text-primary">// Problem statement</h2>
 		<p class="text-muted-foreground leading-relaxed border-l-2 border-primary/20 pl-4">{project.problem}</p>
 	</div>
 
 	<Separator class="my-8 sm:my-10 md:my-12" />
 
 	<div class="space-y-4 mb-8 sm:mb-10 md:mb-12">
-		<h2 class="type-h3 text-primary">// System_Architecture</h2>
+		<h2 class="type-h3 text-primary">// System architecture</h2>
 		<p class="text-muted-foreground leading-relaxed border-l-2 border-primary/20 pl-4">{project.architecture}</p>
 	</div>
 
 	<Separator class="my-8 sm:my-10 md:my-12" />
 
 	<div class="space-y-4 mb-8 sm:mb-10 md:mb-12">
-		<h2 class="type-h3 text-primary">// Outcome_&_Impact</h2>
+		<h2 class="type-h3 text-primary">// Outcome & impact</h2>
 		<div class="bg-secondary/10 p-6 rounded-none border border-primary/10">
 			<p class="text-foreground font-medium leading-relaxed">
 				{">"}

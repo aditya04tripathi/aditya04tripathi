@@ -40,7 +40,7 @@
 				>
 					<img
 						src={PENNYWISE_LOGO_URL}
-						alt=""
+						alt="PennyWise app icon"
 						width="384"
 						height="768"
 						class="absolute inset-0 size-full object-contain p-1.5"
@@ -52,7 +52,7 @@
 					<p class="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-4">Product</p>
 					<h1 class="type-h1 mb-4">PennyWise</h1>
 					<p class="type-h3 text-muted-foreground mb-6">Private Offline Expense Tracker</p>
-					<p class="type-body max-w-2xl text-foreground/80 leading-relaxed">
+					<p class="type-body max-w-2xl leading-relaxed text-foreground/90">
 						Track your finances with full privacy. No cloud. No account. No data leaving your device.
 					</p>
 					<div class="flex flex-wrap gap-3 mt-8">

@@ -6,7 +6,7 @@
 </script>
 
 <section class="space-y-6 mb-12">
-	<Title title="Education_Path">
+	<Title title="Education path">
 		{#snippet icon()}
 			<GraduationCap class="size-6 text-primary" />
 		{/snippet}

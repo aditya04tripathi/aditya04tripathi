@@ -9,7 +9,7 @@
 	<div class="flex flex-col items-center text-center space-y-8">
 			<div class="space-y-4 max-w-3xl">
 				<h2 class="type-h2">
-					Let's_Build_Something
+					Let's build something
 					<span class="block text-primary mt-2">Extraordinary</span>
 				</h2>
 				<p class="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
@@ -21,7 +21,7 @@
 			<div class="flex flex-wrap items-center justify-center gap-4">
 				<Button size="lg" href="mailto:me@adityatripathi.dev" class="h-12 px-8 text-base font-mono font-bold">
 					<Mail class="mr-2 size-5" />
-					Get_In_Touch
+					Get in touch
 				</Button>
 				<Button
 					variant="outline"

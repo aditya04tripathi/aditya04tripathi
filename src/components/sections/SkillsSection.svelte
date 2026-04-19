@@ -6,7 +6,7 @@
 </script>
 
 <section class="space-y-6 mb-12">
-	<Title title="Tech_Stack">
+	<Title title="Tech stack">
 		{#snippet icon()}
 			<Code class="size-6 text-primary" />
 		{/snippet}

@@ -13,7 +13,7 @@
 		projects,
 		noTitle = false,
 		noLink = false,
-		title = "Engineering_Projects",
+		title = "Engineering projects",
 		description = null as string | null,
 		sectionId = "engineering-projects",
 	}: {
@@ -41,9 +41,11 @@
 	{/if}
 
 	<div class="space-y-8">
-		{#each projects as project (project.slug)}
+		{#each projects as project, index (project.slug)}
 			<Card
-				class="border-border/60 bg-card/80 overflow-hidden group hover:border-primary/40 transition-[transform,box-shadow,border-color] duration-300 rounded-none hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0"
+				class="border-border/60 overflow-hidden group hover:border-primary/40 transition-[transform,box-shadow,border-color] duration-300 rounded-none hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0 {index % 2 === 0
+					? 'bg-card/90'
+					: 'bg-card/70 border-l-2 border-l-primary/25 pl-px'}"
 			>
 				<CardHeader class="pb-3 border-b border-border/50">
 						<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4">
@@ -54,7 +56,7 @@
 								>
 									<img
 										src={project.image}
-										alt=""
+										alt="Project preview: {project.name}"
 										width="800"
 										height="450"
 										class="absolute inset-0 size-full object-cover"
@@ -109,7 +111,7 @@
 						<div>
 							<h4 class="type-h6 mb-2 flex items-center gap-2">
 								<Cpu class="size-4 text-primary" />
-								Problem_Statement
+								Problem statement
 							</h4>
 							<p class="text-sm text-muted-foreground border-l-2 border-primary/20 pl-3">
 								{project.problem}
@@ -128,7 +130,7 @@
 
 					<div class="space-y-4 flex flex-col justify-between">
 						<div>
-							<h4 class="type-h6 mb-2">Key_Metrics</h4>
+							<h4 class="type-h6 mb-2">Key metrics</h4>
 							<div class="bg-secondary/50 p-3 rounded text-sm font-mono text-primary border border-border">
 								{">"}
 								{project.outcome}
@@ -136,7 +138,7 @@
 						</div>
 
 						<div>
-							<h4 class="type-h6 mb-2">Tech_Stack</h4>
+							<h4 class="type-h6 mb-2">Tech stack</h4>
 							<div class="flex flex-wrap gap-1.5">
 								{#each project.technologies as tech (tech)}
 									<TechBadge variant="outline" class="uppercase border-primary/20 bg-primary/5 text-primary">

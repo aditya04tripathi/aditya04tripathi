@@ -22,7 +22,7 @@
 
 <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
 	<div class="mb-12 border-b border-border/40 pb-6">
-		<Title title="Engineering_Logs">
+		<Title title="Engineering logs">
 			{#snippet icon()}
 				<GitCommitVertical class="size-8 text-primary" />
 			{/snippet}
@@ -33,9 +33,11 @@
 	</div>
 
 	<div class="space-y-8">
-		{#each notes as note (note.title)}
+		{#each notes as note, index (note.title)}
 			<Card
-				class="border-border/60 bg-card/50 backdrop-blur-sm group hover:border-primary/40 transition-all duration-300 rounded-none hover:-translate-y-1 hover:shadow-lg"
+				class="border-border/60 backdrop-blur-sm group hover:border-primary/40 transition-all duration-300 rounded-none hover:-translate-y-1 hover:shadow-lg {index % 2 === 0
+					? 'bg-card/50'
+					: 'bg-card/40 border-t-2 border-t-primary/20'}"
 			>
 				<CardHeader class="pb-3 border-b border-border/50">
 					<div class="flex justify-between items-start mb-2">
@@ -53,7 +55,7 @@
 					<div class="space-y-2">
 						<h4 class="type-h6 flex items-center gap-2">
 							<Terminal class="size-4 text-primary" />
-							Context_Summary
+							Context summary
 						</h4>
 						<p class="text-sm text-muted-foreground border-l-2 border-primary/20 pl-3 leading-relaxed">
 							{note.summary}
@@ -63,7 +65,7 @@
 					<div class="rounded-none bg-secondary/30 p-4 border border-border/50">
 						<h4 class="type-h6 flex items-center gap-2 mb-2">
 							<GitCommitVertical class="size-4 text-primary" />
-							The_Decision
+							The decision
 						</h4>
 						<p class="text-sm">{note.decision}</p>
 					</div>
@@ -71,7 +73,7 @@
 					<div class="rounded-none bg-blue-500/5 p-4 border border-blue-500/20">
 						<h4 class="type-h6 flex items-center gap-2 text-blue-400 mb-2">
 							<GitBranch class="size-4" />
-							Tradeoffs_Considered
+							Tradeoffs considered
 						</h4>
 						<ul class="list-disc list-inside space-y-1 text-sm text-muted-foreground">
 							{#each note.tradeoffs as t (t)}

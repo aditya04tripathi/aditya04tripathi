@@ -19,7 +19,7 @@
 			{/snippet}
 		</Title>
 		<Card
-			class="border-border/60 bg-card/80 overflow-hidden gap-0 py-0 shadow-sm group hover:border-primary/40 transition-[transform,box-shadow,border-color] duration-300 rounded-none hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0"
+			class="border-border/60 bg-card/80 overflow-hidden gap-0 py-0 shadow-sm group hover:border-primary/40 transition-[transform,box-shadow,border-color] duration-300 rounded-none hover:-translate-y-1 hover:shadow-lg motion-reduce:hover:translate-y-0 border-t-2 border-t-primary/35"
 		>
 			<CardHeader class="border-b-0 py-5 sm:py-6">
 					<div class="flex flex-row gap-4 sm:gap-6 items-start">

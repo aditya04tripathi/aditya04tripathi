@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { Menu, X } from "lucide-svelte";
 	import { fly, fade } from "svelte/transition";
-	import { onDestroy, onMount } from "svelte";
+	import { onMount } from "svelte";
 	import Avatar from "@/components/ui/Avatar.svelte";
 	import Button from "@/components/ui/Button.svelte";
 	import SettingsWidget from "@/components/SettingsWidget.svelte";
 	import IconGithub from "@/components/icons/IconGithub.svelte";
 	import IconLinkedin from "@/components/icons/IconLinkedin.svelte";
 	import { CREATOR_INFO } from "@/lib/constants";
+	import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
 	import { initTheme } from "@/lib/theme.svelte";
 	import { initTextSize } from "@/lib/text-size.svelte";
 	import { flyInParams, prefersReducedMotion } from "@/lib/motion";
@@ -20,12 +21,9 @@
 	});
 
 	$effect(() => {
-		if (typeof document === "undefined") return;
-		if (isMobileMenuOpen) {
-			document.body.style.overflow = "hidden";
-		} else {
-			document.body.style.overflow = "unset";
-		}
+		if (!isMobileMenuOpen) return;
+		lockBodyScroll();
+		return () => unlockBodyScroll();
 	});
 
 	$effect(() => {
@@ -61,12 +59,6 @@
 
 		document.addEventListener("keydown", onKeydown);
 		return () => document.removeEventListener("keydown", onKeydown);
-	});
-
-	onDestroy(() => {
-		if (typeof document !== "undefined") {
-			document.body.style.overflow = "unset";
-		}
 	});
 
 	const menuFade = $derived(prefersReducedMotion() ? { duration: 0 } : { duration: 200 });

@@ -27,13 +27,13 @@
 				<h1 class="type-h1 mb-4">{CREATOR_INFO.name}</h1>
 				<h2 class="type-h3 text-muted-foreground mb-4">{HERO_HEADLINE}</h2>
 
-				<p class="type-body max-w-2xl text-foreground/90 leading-relaxed font-medium">
+				<p class="type-body max-w-2xl leading-relaxed font-medium">
 					{HERO_PRODUCT_LINE}
 				</p>
-				<p class="type-body max-w-2xl text-foreground/80 leading-relaxed mt-4">
+				<p class="type-body-muted max-w-2xl leading-relaxed mt-4">
 					I build real-world applications that prioritize performance, usability, and privacy.
 				</p>
-				<p class="type-body max-w-2xl text-foreground/80 leading-relaxed mt-2">
+				<p class="type-body-muted max-w-2xl leading-relaxed mt-2">
 					My work spans production-ready apps and scalable backend systems.
 				</p>
 			</div>

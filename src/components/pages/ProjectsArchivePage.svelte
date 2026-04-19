@@ -9,7 +9,7 @@
 <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
 	<ProductsSection />
 	<div class="mb-12 border-b border-border/40 pb-6">
-		<Title title="Engineering_Projects">
+		<Title title="Engineering projects">
 			{#snippet icon()}
 				<Folder class="size-8 text-primary" />
 			{/snippet}

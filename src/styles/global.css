@@ -199,13 +199,13 @@ body {
   }
 
   .type-h1 {
-    @apply text-5xl sm:text-6xl md:text-7xl font-mono uppercase font-bold tracking-tight text-foreground text-balance;
+    @apply text-5xl sm:text-6xl md:text-7xl font-sans font-bold tracking-tight text-foreground text-balance;
   }
   .type-h2 {
-    @apply text-3xl sm:text-4xl md:text-5xl font-mono uppercase font-bold tracking-tight text-foreground text-balance;
+    @apply text-3xl sm:text-4xl md:text-5xl font-sans font-bold tracking-tight text-foreground text-balance;
   }
   .type-h3 {
-    @apply text-2xl sm:text-3xl font-mono uppercase font-bold tracking-tight text-foreground text-balance;
+    @apply text-2xl sm:text-3xl font-sans font-bold tracking-tight text-foreground text-balance;
   }
   .type-h4 {
     @apply text-xl sm:text-2xl font-mono uppercase font-bold text-foreground text-balance;
@@ -218,6 +218,10 @@ body {
   }
 
   .type-body {
+    @apply max-w-[65ch] text-base leading-[1.65] text-foreground;
+  }
+
+  .type-body-muted {
     @apply max-w-[65ch] text-base leading-[1.65] text-muted-foreground;
   }
 
