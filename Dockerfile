@@ -1,17 +1,20 @@
-FROM caddy:alpine
+# syntax=docker/dockerfile:1
 
-RUN apk update && apk add --no-cache nodejs npm
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm ci --ignore-scripts
 
 COPY . .
-
 RUN npm run build
 
-RUN cp -r dist/* /srv/
+FROM caddy:2-alpine AS runner
 
-COPY ./Caddyfile /etc/caddy/Caddyfile
+ENV PORT=49228
+
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /app/dist /srv
+
+EXPOSE 49228

@@ -1,4 +1,5 @@
-:{$PORT}
+:{$PORT:49228}
 
 root * /srv
+encode zstd gzip
 file_server
