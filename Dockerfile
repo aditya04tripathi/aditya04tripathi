@@ -15,6 +15,6 @@ FROM caddy:2-alpine AS runner
 ENV PORT=49228
 
 COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=builder /app/dist /srv
+COPY --from=builder /app/dist/client /srv
 
 EXPOSE 49228
