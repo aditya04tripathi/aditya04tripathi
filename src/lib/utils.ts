@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 /**
  * Merge and normalize Tailwind CSS class names.
@@ -11,5 +11,5 @@ import { twMerge } from "tailwind-merge";
  * @returns A single, merged className string safe to pass to `className`.
  */
 export function cn(...inputs: ClassValue[]): string {
-  return twMerge(clsx(inputs));
+    return twMerge(clsx(inputs));
 }

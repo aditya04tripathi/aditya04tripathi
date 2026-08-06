@@ -1,8 +1,8 @@
 ---
-title: "PostgreSQL Migrations Without Downtime: Expand, Migrate, Contract"
-description: "A field guide to backward-compatible schema changes, dual writes, and the patience required to delete old columns safely."
+title: 'PostgreSQL Migrations Without Downtime: Expand, Migrate, Contract'
+description: 'A field guide to backward-compatible schema changes, dual writes, and the patience required to delete old columns safely.'
 date: 2026-02-22
-category: "Databases"
+category: 'Databases'
 ---
 
 Zero-downtime migrations are less about tools and more about **temporarily carrying two truths** in production. The expand-contract pattern (also called parallel change) is the workhorse: make the schema more permissive, deploy code that writes both shapes, backfill, switch reads, then tighten the schema.

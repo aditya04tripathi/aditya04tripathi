@@ -1,8 +1,8 @@
 ---
-title: "Offline-First Expense Sync: A Practical Architecture"
-description: "How to keep a personal finance surface fast and trustworthy when networks fail, users switch devices, and conflicts are inevitable."
+title: 'Offline-First Expense Sync: A Practical Architecture'
+description: 'How to keep a personal finance surface fast and trustworthy when networks fail, users switch devices, and conflicts are inevitable.'
 date: 2026-01-18
-category: "Mobile & Distributed Systems"
+category: 'Mobile & Distributed Systems'
 ---
 
 Personal finance apps live in the worst possible environment for distributed systems: flaky LTE, subway tunnels, international roaming, and users who expect every tap to feel instant. If the UI blocks on the network, trust erodes fast. If you hide conflicts until tax season, trust evaporates entirely.
@@ -27,18 +27,18 @@ At minimum, keep two parallel ideas in your client:
 The outbox is append-only until acknowledged. Never mutate a row in place while it is `pending` without leaving an audit trail; debugging sync without one is painful.
 
 ```ts
-type OutboxStatus = "pending" | "inflight" | "failed" | "applied";
-type OutboxOp = "create" | "update" | "delete";
+type OutboxStatus = 'pending' | 'inflight' | 'failed' | 'applied';
+type OutboxOp = 'create' | 'update' | 'delete';
 
 interface OutboxEntry {
-	id: string;
-	entityType: string;
-	entityId: string;
-	op: OutboxOp;
-	payloadJson: unknown;
-	createdAtDevice: string;
-	status: OutboxStatus;
-	lastError: string | null;
+    id: string;
+    entityType: string;
+    entityId: string;
+    op: OutboxOp;
+    payloadJson: unknown;
+    createdAtDevice: string;
+    status: OutboxStatus;
+    lastError: string | null;
 }
 ```
 

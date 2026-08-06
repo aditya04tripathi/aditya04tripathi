@@ -1,9 +1,9 @@
 export type ContactFormState = {
-	status: "idle" | "success" | "error";
-	message: string;
+    status: 'idle' | 'success' | 'error';
+    message: string;
 };
 
 export const initialContactFormState: ContactFormState = {
-	status: "idle",
-	message: "",
+    status: 'idle',
+    message: '',
 };
