@@ -3,4 +3,3 @@ dist
 .astro
 *.local
 .DS_Store
-package-lock.json
