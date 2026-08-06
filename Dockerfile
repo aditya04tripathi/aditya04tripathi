@@ -4,6 +4,7 @@ FROM node:24-alpine AS builder
 WORKDIR /app
 
 RUN corepack enable
+RUN printf 'minimum-release-age=0\n' > .npmrc
 
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile --ignore-scripts
