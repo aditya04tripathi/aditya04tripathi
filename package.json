@@ -10,12 +10,6 @@
         "generate:agent-markdown": "pnpm exec tsx scripts/generate-agent-markdown.ts",
         "preview": "astro preview",
         "start": "node ./dist/server/entry.mjs",
-        "docker:build": "docker build -t aditya04tripathi .",
-        "docker:up": "docker compose up --build -d && echo http://localhost:49228",
-        "docker:down": "docker compose down",
-        "docker:prod:pull": "docker compose -f docker-compose.prod.yml pull",
-        "docker:prod:up": "docker compose -f docker-compose.prod.yml up -d && echo http://localhost:49228",
-        "docker:prod:down": "docker compose -f docker-compose.prod.yml down",
         "lint": "eslint .",
         "format": "prettier --write .",
         "prepare": "husky"

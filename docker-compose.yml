@@ -1,9 +1,0 @@
-services:
-    web:
-        build:
-            context: .
-        ports:
-            - '${PORT:-49228}:${PORT:-49228}'
-        environment:
-            PORT: ${PORT:-49228}
-        restart: unless-stopped
