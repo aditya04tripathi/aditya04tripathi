@@ -47,9 +47,9 @@ pnpm install
 
 Content and copy for the portfolio (projects, bio links) live mainly in `src/lib/constants.ts`. Replace assets under `public/` as needed.
 
-## Railway / Docker
+## Railway
 
-See Railway’s [Deploy an Astro app](https://docs.railway.com/guides/astro) guide. That doc focuses on **SSR** with `@astrojs/node` and a **`start`** script like `node ./dist/server/entry.mjs`. This repo is **static (SSG)** only: **`pnpm run build`** outputs `dist/`, and **`pnpm start`** runs **`astro preview`** with **`0.0.0.0`** and Railway’s **`PORT`** so the proxy can reach the container.
+See Railway’s [Deploy an Astro app](https://docs.railway.com/guides/astro) guide. That doc covers **SSR** with `@astrojs/node` and a **`start`** script. This repo uses **`pnpm run build`** to output `dist/`, and **`pnpm start`** runs **`node ./dist/server/entry.mjs`** with Railway’s **`PORT`** so the proxy can reach the app.
 
 `astro.config.mjs` sets **`server.host`** to **`0.0.0.0`** (as Railway recommends) and configures Vite **`server` / `preview`** with the same host plus **`allowedHosts: true`** so custom domains (e.g. `adityatripathi.dev`) are not blocked by Vite’s host check.
 
