@@ -16,6 +16,7 @@ FROM caddy:2-alpine AS runner
 ENV PORT=49228
 
 COPY Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /app/dist/caddy/markdown-tokens.caddy /etc/caddy/markdown-tokens.caddy
 COPY --from=builder /app/dist/client /srv
 
 EXPOSE 49228
