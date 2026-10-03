@@ -1,0 +1,703 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<<
+/Producer (ReportLab PDF Library \055 \050opensource\051)
+/Author (Aditya Tripathi)
+/CreationDate (D\07220261003025652\05310\04700\047)
+/Creator (\050unspecified\051)
+/Keywords ()
+/ModDate (D\07220261003025652\05310\04700\047)
+/Subject (Software engineering experience and selected projects)
+/Title (Aditya Tripathi \205 Software Engineer)
+/Trapped (\057False)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 2
+/Kids [ 4 0 R 13 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Annots [ 5 0 R 6 0 R 7 0 R 8 0 R ]
+/Contents 9 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 10 0 R
+/F1-0 11 0 R
+/F2 12 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (mailto\072me\100adityatripathi\056dev)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 133.0328 725.0498 214.7294 734.8898 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+6 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057adityatripathi\056dev)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 221.5682 725.0498 283.552 734.8898 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+7 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057aditya04tripathi)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 51 709.0498 148.99 718.8898 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+8 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057www\056linkedin\056com\057in\057adityatripathi0404)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 155.8288 709.0498 277.0576 718.8898 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+9 0 obj
+<<
+/Length 6135
+>>
+stream
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+0 0 595.2756 841.8898 re
+f*
+Q
+
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+.862745 .882353 .921569 RG
+.5 w
+n 45 37 m 550.2756 37 l S
+BT /F1 7.5 Tf 9 TL ET
+.333333 .376471 .443137 rg
+BT 1 0 0 1 45 24 Tm (Aditya Tripathi \267 Software Engineer) Tj T* ET
+BT 1 0 0 1 546.1056 24 Tm (1) Tj T* ET
+q
+1 0 0 1 51 763.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 4 Tm /F2 25 Tf 29 TL (Aditya Tripathi) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 742.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 4 Tm /F1 12 Tf 16 TL (Software Engineer) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 723.8898 cm
+q
+BT 1 0 0 1 0 2.8 Tm 11 TL /F1 8.2 Tf .333333 .376471 .443137 rg (Melbourne, Australia \267 ) Tj .352941 .282353 .909804 rg (me@adityatripathi.dev) Tj .333333 .376471 .443137 rg ( \267 ) Tj .352941 .282353 .909804 rg (adityatripathi.dev) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 707.8898 cm
+q
+BT 1 0 0 1 0 2.8 Tm 11 TL /F1 8.2 Tf .352941 .282353 .909804 rg (github.com/aditya04tripathi) Tj .333333 .376471 .443137 rg ( \267 ) Tj .352941 .282353 .909804 rg (linkedin.com/in/adityatripathi0404) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 679.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (PROFILE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 633.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 29.75 Tm /F1 9.25 Tf 13 TL (Software engineer in Melbourne building full-stack applications, distributed file infrastructure and AI workflows. Studying) Tj T* (software engineering at Monash University, with experience across healthcare products, enterprise platforms and) Tj T* (student technology.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 605.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (TECHNICAL SKILLS) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 559.8898 cm
+q
+BT 1 0 0 1 0 29.75 Tm 13 TL /F2 9.25 Tf .066667 .090196 .145098 rg (Application:) Tj /F1 9.25 Tf ( TypeScript, JavaScript, React, Next.js, React Native, Tailwind CSS, Redux Toolkit) Tj  T* /F2 9.25 Tf (Backend and data:) Tj /F1 9.25 Tf ( Node.js, NestJS, FastAPI, Python, REST APIs, PostgreSQL, MongoDB, Redis, Prisma, BullMQ) Tj  T* /F2 9.25 Tf (Infrastructure and AI:) Tj /F1 9.25 Tf ( Docker, GitHub Actions, Railway, AWS EC2, S3, Groq, Hugging Face, Ollama, React Flow) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 531.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (EXPERIENCE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 511.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Lead Frontend Developer \267 WIRED Monash) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 498.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (March 2026 \226 ongoing) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 455.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 29.75 Tm /F1 9.25 Tf 13 TL (Lead frontend architecture and interface development for Monash University's IT student society. Coordinate) Tj T* (contributors, reusable component patterns and release planning to deliver accessible, responsive technology for the) Tj T* (student community.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 437.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Associate Full-Stack Engineer \267 PlasmIT Vector) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 424.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 381.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 29.75 Tm /F1 9.25 Tf 13 TL (Owned frontend, full-stack and mobile features for healthcare workflows, from requirements and user flows through) Tj T* (testing and production readiness. Managed development, staging and production configurations, standardized reusable) Tj T* (components, reviewed changes and supported developer onboarding.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 363.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Full-Stack Engineering Intern \267 PlasmIT Vector) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 350.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (March \226 June 2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 320.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 16.75 Tm /F1 9.25 Tf 13 TL (Contributed to healthcare web and mobile experiences, reusable UI components and responsive clinician workflows.) Tj T* (Supported feature testing, debugging and iterative refinement across desktop and mobile interfaces.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 302.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Software Engineer Intern \267 LENS Corporation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 289.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (September \226 December 2024) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 259.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 16.75 Tm /F1 9.25 Tf 13 TL (Developed modular interfaces for internal enterprise workflows and integrated REST APIs. Contributed across) Tj T* (requirements, implementation, debugging, code review, testing and deployment in an Agile engineering team.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 241.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Frontend Engineer Intern \267 MAI Health) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 228.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (May \226 June 2024) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 198.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 16.75 Tm /F1 9.25 Tf 13 TL -0.056101 Tw (Built React modules for patient portal workflows, appointments and health records. Integrated APIs, improved responsive) Tj T* 0 Tw (layouts, and migrated application state to Redux Toolkit for more maintainable frontend modules.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 180.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Campus Ambassador \267 Cisco) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 167.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (August 2023 \226 July 2024) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 137.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 16.75 Tm /F1 9.25 Tf 13 TL (Connected the campus community with Cisco learning resources, certifications and technology events. Coordinated) Tj T* (outreach and workshops, building experience in communication and community leadership.) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+
+endstream
+endobj
+10 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+11 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+12 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+13 0 obj
+<<
+/Annots [ 14 0 R 15 0 R 16 0 R 17 0 R ]
+/Contents 18 0 R
+/MediaBox [ 0 0 595.2756 841.8898 ]
+/Resources <<
+/Font <<
+/F1 10 0 R
+/F1-0 19 0 R
+/F2 12 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+14 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057aditya04tripathi\057ScamShield)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 51 612.6648 195.0166 623.6648 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+15 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057aditya04tripathi\057vapourvault)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 51 475.6648 193.6554 486.6648 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+16 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057aditya04tripathi\057dev\055event)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 51 338.6648 187.2758 349.6648 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+17 0 obj
+<<
+/A <<
+/S /URI
+/Type /Action
+/URI (https\072\057\057github\056com\057aditya04tripathi\057gnosis)
+>>
+/Border [ 0 0 0 ]
+/Rect [ 51 201.6648 174.9676 212.6648 ]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+18 0 obj
+<<
+/Length 6703
+>>
+stream
+q
+0.0 0.0 595.2756 841.8898 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+0 0 595.2756 841.8898 re
+f*
+Q
+
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+.862745 .882353 .921569 RG
+.5 w
+n 45 37 m 550.2756 37 l S
+BT /F1 7.5 Tf 9 TL ET
+.333333 .376471 .443137 rg
+BT 1 0 0 1 45 24 Tm (Aditya Tripathi \267 Software Engineer) Tj T* ET
+BT 1 0 0 1 546.1056 24 Tm (2) Tj T* ET
+q
+1 0 0 1 51 763.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 4 Tm /F2 25 Tf 29 TL (Selected engineering work) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 747.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.8 Tm /F1 8.2 Tf 11 TL (Aditya Tripathi \267 Software Engineer) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 719.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (SCAMSHIELD \267 2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 686.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 16.75 Tm /F1 9.25 Tf 13 TL (One interface for investigating suspicious emails, URLs, audio and AI prompts. Specialist analysis converges into a risk) Tj T* (score and an explanation.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 642.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 29.75 Tm /F1 9.25 Tf 13 TL (A Next.js interface connects to a Python FastAPI backend with separate processors for email, URL, audio and prompt) Tj T* (analysis. Hugging Face models and Librosa support classification and spectral audio analysis; Ollama provides local) Tj T* (LLM explanations. Redis coordinates processing, while MongoDB retains scan reports and history.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 626.8898 cm
+q
+BT 1 0 0 1 0 2.8 Tm 11 TL /F2 8.2 Tf .333333 .376471 .443137 rg (Technology:) Tj /F1 8.2 Tf ( Next.js, TypeScript, FastAPI, Python, MongoDB, Redis, Hugging Face, Librosa, Ollama) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 610.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 2.8 Tm /F1 8.2 Tf 11 TL (github.com/aditya04tripathi/ScamShield) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 582.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (VAPOR VAULT \267 2026) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 562.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3.75 Tm /F1 9.25 Tf 13 TL (Temporary file sharing with a complete lifecycle: upload, storage, processing, access and scheduled deletion.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 505.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 42.75 Tm /F1 9.25 Tf 13 TL -0.072926 Tw (A modular NestJS API uses PostgreSQL and Prisma for file and job metadata, SeaweedFS for object storage, and Redis) Tj T* 0 Tw (with BullMQ for asynchronous processing. The direct upload flow sends file bytes to storage before the API completes) Tj T* (metadata registration. Workers persist processing checkpoints, and an hourly cleanup task removes files older than 24) Tj T* (hours from storage and the database. Docker supports reproducible deployment.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 489.8898 cm
+q
+BT 1 0 0 1 0 2.8 Tm 11 TL /F2 8.2 Tf .333333 .376471 .443137 rg (Technology:) Tj /F1 8.2 Tf ( NestJS, TypeScript, PostgreSQL, Prisma, SeaweedFS, Redis, BullMQ, Docker) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 473.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 2.8 Tm /F1 8.2 Tf 11 TL (github.com/aditya04tripathi/vapourvault) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 445.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (DEVEVENT \267 2025) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 425.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3.75 Tm /F1 9.25 Tf 13 TL (A connected path from discovering a developer event to booking a place, receiving a QR ticket and checking in.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 368.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 42.75 Tm /F1 9.25 Tf 13 TL (A pnpm monorepo separates the Next.js 16 frontend from a NestJS API. MongoDB stores events, users and bookings;) Tj T* (MinIO handles media storage. API queries support search, tags, filters and pagination. Booking services generate QR) Tj T* (tickets, validate their event and attendee data, and record check-in. GitHub Actions builds Docker images for) Tj T* (deployment, with Railway configuration also maintained in the repository.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 352.8898 cm
+q
+BT 1 0 0 1 0 2.8 Tm 11 TL /F2 8.2 Tf .333333 .376471 .443137 rg (Technology:) Tj /F1 8.2 Tf ( Next.js, React, TypeScript, NestJS, MongoDB, MinIO, QR codes, Docker, GitHub Actions) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 336.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 2.8 Tm /F1 8.2 Tf 11 TL (github.com/aditya04tripathi/dev-event) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 308.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (GNOSIS AI \267 2025) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 288.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3.75 Tm /F1 9.25 Tf 13 TL (Turn a startup idea into a validation report, an execution plan, an interactive flowchart and a SCRUM board.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 231.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 42.75 Tm /F1 9.25 Tf 13 TL (A modular Next.js and TypeScript application integrates Groq for LLM inference, NextAuth.js for authentication and) Tj T* (MongoDB through Mongoose for stored reports and project history. Validation results feed project planning, React Flow) Tj T* (diagrams and SCRUM boards. Protected routes, usage tracking and access limits manage the AI workflow; the) Tj T* (repository also supports an optional local Ollama provider.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 215.8898 cm
+q
+BT 1 0 0 1 0 2.8 Tm 11 TL /F2 8.2 Tf .333333 .376471 .443137 rg (Technology:) Tj /F1 8.2 Tf ( Next.js, React, TypeScript, Groq, React Flow, NextAuth.js, MongoDB, Mongoose, Tailwind CSS, shadcn/ui) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 199.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 2.8 Tm /F1 8.2 Tf 11 TL (github.com/aditya04tripathi/gnosis) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 171.8898 cm
+q
+.352941 .282353 .909804 rg
+BT 1 0 0 1 0 5 Tm /F2 10 Tf 15 TL (EDUCATION) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 151.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Monash University) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 136.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3.75 Tm /F1 9.25 Tf 13 TL (Bachelor of Engineering \(Honours\) \226 Software Engineering) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 120.8898 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (February 2025 \226 2027 \(expected\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 103.8898 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Amity University) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 88.88976 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3.75 Tm /F1 9.25 Tf 13 TL (Diploma in Computer Science Engineering) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 72.88976 cm
+q
+.333333 .376471 .443137 rg
+BT 1 0 0 1 0 2.7 Tm /F1 8.3 Tf 11 TL (September 2022 \226 July 2024) Tj T* ET
+Q
+Q
+q
+1 0 0 1 51 55.88976 cm
+q
+.066667 .090196 .145098 rg
+BT 1 0 0 1 0 3 Tm /F2 10 Tf 13 TL (Manav Rachna) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+
+endstream
+endobj
+19 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000397 00000 n 
+0000000463 00000 n 
+0000000512 00000 n 
+0000000782 00000 n 
+0000000971 00000 n 
+0000001160 00000 n 
+0000001354 00000 n 
+0000001573 00000 n 
+0000007760 00000 n 
+0000007868 00000 n 
+0000007976 00000 n 
+0000008089 00000 n 
+0000008365 00000 n 
+0000008576 00000 n 
+0000008788 00000 n 
+0000009001 00000 n 
+0000009208 00000 n 
+0000015964 00000 n 
+trailer
+<<
+/Size 20
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+16072
+%%EOF
