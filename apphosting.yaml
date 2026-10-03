@@ -1,0 +1,26 @@
+# Firebase App Hosting: Gmail credentials are available only to the server.
+runConfig:
+  minInstances: 0
+
+env:
+  - variable: NEXT_PUBLIC_GA_MEASUREMENT_ID
+    value: G-8QFJP7YRD2
+    availability:
+      - BUILD
+      - RUNTIME
+  - variable: GMAIL_SMTP_USER
+    value: aditya.tripathi0404@gmail.com
+    availability:
+      - RUNTIME
+  - variable: CONTACT_EMAIL
+    value: adityatripathi.at04@gmail.com
+    availability:
+      - RUNTIME
+  - variable: CONTACT_ALLOWED_ORIGIN
+    value: https://adityatripathi.dev
+    availability:
+      - RUNTIME
+  - variable: GMAIL_SMTP_APP_PASSWORD
+    secret: smtp-pass
+    availability:
+      - RUNTIME

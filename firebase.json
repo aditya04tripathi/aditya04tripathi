@@ -1,0 +1,20 @@
+{
+  "apphosting": {
+    "backendId": "adityatripathi-backend",
+    "rootDir": "/",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "functions",
+      ".env*",
+      ".next",
+      ".agents",
+      ".codex",
+      "*.tsbuildinfo",
+      "not.java"
+    ],
+    "alwaysDeployFromSource": true
+  }
+}
