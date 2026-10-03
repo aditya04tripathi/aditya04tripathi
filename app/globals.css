@@ -522,7 +522,7 @@ button:disabled { cursor: default; }
 .ce-node { fill: var(--primary); animation: ce-pulse 4s ease-in-out infinite; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--primary), transparent 60%)); }
 .ce-node-two, .ce-node-five { animation-delay: -1.5s; }
 .ce-node-three, .ce-node-six { animation-delay: -3s; }
-.ce-form-panel { position: relative; border-top: 1px solid var(--border-strong); padding-top: 25px; animation: ce-enter .7s .1s ease-out both; }
+.ce-form-panel { position: relative; animation: ce-enter .7s .1s ease-out both; }
 .ce-form-heading { font-size: 23px; font-weight: 500; letter-spacing: -.035em; margin: 0 0 9px; }
 .ce-form-subtitle { font-size: 13px; line-height: 1.7; color: var(--text-subtle); margin: 0 0 29px; }
 .cf-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 23px 18px; padding: 0; margin: 0; border: 0; min-width: 0; }
@@ -570,7 +570,7 @@ button:disabled { cursor: default; }
   .ce-description { font-size: 15px; }
   .ce-signal { width: 260px; margin: 16px auto 5px; }
   .ce-footer { margin-top: 20px; }
-  .ce-form-panel { margin-top: 34px; padding-top: 23px; }
+  .ce-form-panel { margin-top: 34px; }
   .cf-input { font-size: 16px; }
   .cf-textarea { min-height: 150px; }
 }
